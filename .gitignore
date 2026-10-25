@@ -1,0 +1,16 @@
+# environment and caches
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# rebuilt locally by scripts/ingest.py (needs Ollama)
+data/chroma/
+
+# generated while the agent runs; the sample unanswered-question log is kept as evidence
+logs/*
+!logs/unanswered.jsonl
+outputs/
+
+# console logs of long runs
+eval/*.log

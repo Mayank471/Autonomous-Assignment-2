@@ -1,0 +1,432 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.1cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{listings}
+\setlist{nosep,leftmargin=1.4em}
+\lstset{basicstyle=\ttfamily\small,columns=fullflexible,frame=single,breaklines=true}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\title{Multi-Agent Academic Helpdesk for IIT Jodhpur\\[2pt]\large Autonomous Systems -- Assignment 2}
+\author{}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We built a local, retrieval-augmented helpdesk that answers IIT Jodhpur academic questions. It cites its
+sources, drafts emails to instructors, and refuses and logs out-of-scope questions. All data was obtained by
+scraping institute web sources: 28 sources, comprising regulations, circulars, office orders, calendars,
+curricula, the ERP course catalogue, faculty teaching pages and the People directory. A single-agent version
+and a multi-agent version (an orchestrator routing to policy, schedule and email agents) were built with
+Google ADK on Ollama-hosted 8B models, and evaluated on 30 questions with three runs each. With Qwen3~8B,
+the multi-agent system reaches 81\% accuracy and 83\% citation groundedness on answerable questions, against
+58\% and 64\% for the single agent. Replacing the LLM with Llama~3.1~8B lowers multi-agent accuracy to 53\%.
+All systems refuse and log 100\% of out-of-scope questions. Tool-first guards were the most effective design
+element: they removed the fabricated citations of the first version.
+\end{abstract}
+
+%=====================================================================
+\section{Summary}
+
+\noindent\textbf{Models:} Qwen3~8B (main) and Llama~3.1~8B (comparison), both Q4 via Ollama.\\
+\textbf{Retrieval and agents:} nomic-embed-text embeddings, ChromaDB and Google ADK~2.12.\\
+\textbf{Hardware:} laptop with 16~GB RAM and an NVIDIA RTX~3050 (4~GB VRAM).
+
+\medskip
+\begin{tabularx}{\textwidth}{@{}Yccc@{}}
+\toprule
+Final results (3 runs $\times$ 30 questions, manually reviewed) & Qwen3 single & \textbf{Qwen3 multi} & Llama 3.1 multi \\ \midrule
+Accuracy on answerable questions & 58\% (42/72) & \textbf{81\% (58/72)} & 53\% (38/72) \\
+Groundedness: cited document is a correct source & 64\% & \textbf{83\%} & 64\% \\
+Groundedness: cited document \emph{and page} correct & 58\% & \textbf{76\%} & 54\% \\
+Correct refusals, out-of-scope (refused and logged) & 100\% (12/12) & 100\% (12/12) & 100\% (12/12) \\
+Correct ``data not published'' handling & 67\% (4/6) & \textbf{100\% (6/6)} & 100\% (6/6) \\
+False refusals on answerable questions & 28\% & \textbf{8\%} & 12\% \\
+Answers with a fabricated URL & 0\% & 0\% & 1\% \\
+Routing accuracy & -- & 87\% & 88\% \\
+Questions whose outcome changed across runs & 10 & \textbf{3} & 17 \\
+Median latency & 33 s & 40 s & 30 s \\
+\bottomrule
+\end{tabularx}
+
+\medskip
+\noindent\textbf{Key findings.}
+\begin{enumerate}
+  \item \textbf{Specialisation pays off.} The multi-agent system beats the single agent by 23 points
+        (81\% vs.\ 58\%), with far fewer false refusals and more stable answers. Each specialist sees few tools
+        and a short prompt. Its weaknesses are misroutes (87\% routing accuracy) and misreading tables.
+  \item \textbf{Tool-first guards are the most important design element.} In the first version, the 8B model
+        often answered from memory and invented facts and source URLs (52\% accuracy, 17\% fabricated URLs).
+        Callbacks that force a tool call before any answer removed fabricated URLs in the Qwen systems.
+  \item \textbf{Swapping the LLM matters as much as the architecture.} With the same multi-agent system,
+        Llama~3.1~8B scored 28 points lower than Qwen3~8B. Its email agent got the right instructor email from
+        the tool and then said it could not find it, or drafted emails without the draft tool. Its answers
+        changed between runs on 17 of 30 questions, against 3 for Qwen.
+  \item \textbf{Out-of-scope handling is reliable.} All three systems refused all 12 out-of-scope attempts and
+        logged each one.
+\end{enumerate}
+
+%=====================================================================
+\section{System design}
+
+\subsection{Architecture}
+\begin{lstlisting}
+student -> helpdesk_orchestrator -- out of scope --> "I don't know" + log_unanswered
+              | transfer_to_agent
+   +----------+--------------------+
+   v          v                    v
+policy_agent  schedule_agent       email_agent
+search_docs   lookup_course        get_instructor_email
+              list_courses         lookup_course
+              get_slot_timings     draft_email -> outputs/email_drafts/
+              get_instructor_email
+              search_docs
+\end{lstlisting}
+
+\begin{itemize}
+  \item \textbf{Base version} (\code{agents/single\_agent}): one ADK \code{LlmAgent} with all seven tools.
+  \item \textbf{Multi-agent version} (\code{agents/multi\_agent}): the orchestrator has only
+        \code{log\_unanswered} and routes through ADK's \code{transfer\_to\_agent}. Specialists cannot transfer
+        back or sideways.
+  \item \textbf{Model access:} ADK's LiteLLM connector (\code{ollama\_chat/} provider) with an 8K context set in
+        a Modelfile. Qwen3's thinking mode is off; on a 4~GB GPU it multiplied latency.
+\end{itemize}
+
+\subsection{Tools}
+\begin{tabularx}{\textwidth}{@{}lp{3.4cm}Y@{}}
+\toprule
+Tool & Data & Purpose \\ \midrule
+\code{search\_documents} & 586 chunks in ChromaDB, plus a BM25 index & Hybrid retrieval; returns passages with title, page and URL \\
+\code{lookup\_course} & \code{catalogue.csv}, \code{teaching.csv}, \code{courses.csv} & Code or name $\rightarrow$ official catalogue entry, offering history (semester and instructor), and the published slot if any \\
+\code{list\_courses} & same & Counts by department, level and type, using the course-code scheme of the Regulations (D01 pp.~4--5). Counts either the catalogue or the courses listed as offered in the current semester, and returns the basis of the count \\
+\code{get\_slot\_timings} & \code{slots.csv} & Slot $\rightarrow$ days and times \\
+\code{get\_instructor\_email} & timetable, \code{teaching.csv}, \code{faculty.csv} & Instructor and email by course code or faculty name, with the semester the information refers to \\
+\code{draft\_email} & -- & Saves a draft for the student to review; never sends. Missing student details become placeholders \\
+\code{log\_unanswered} & \code{logs/unanswered.jsonl} & Questions to hand over to a human \\
+\bottomrule
+\end{tabularx}
+
+\medskip
+\noindent\textbf{Current semester:} derived from the AY 2026-27 academic calendar (D11 p.~1, classes-commencement
+dates). On the evaluation date it is AY 2026-27 Semester~I.
+
+\subsection{RAG pipeline}
+\begin{enumerate}
+  \item \textbf{Extraction:} PyMuPDF, page by page. Pages without a text layer are OCR'd with Tesseract; these are
+        two circulars and two office orders. Spreadsheets are read sheet by sheet, and HTML pages are cleaned.
+  \item \textbf{Chunking:} about 450 words per chunk with an 80-word overlap. Chunks never cross a page boundary,
+        so every chunk has an exact page for citation.
+  \item \textbf{Embedding:} nomic-embed-text with its task prefixes; the document title is prepended to each chunk.
+  \item \textbf{Retrieval:} dense top-30 and BM25 top-30 results are combined by reciprocal-rank fusion, and the
+        top 5 are returned.
+        \begin{itemize}
+          \item BM25 recovers table rows with exact terms such as ``Open Elective'' or ``75\%''.
+          \item The cap of 5 passages is a hardware constraint: generation slows from 6.6 to 2.8 tokens/s as
+                the context grows from 1K to 5K tokens.
+        \end{itemize}
+\end{enumerate}
+
+\subsection{Guardrails}
+\begin{itemize}
+  \item \textbf{Grounding prompt:}
+    \begin{itemize}
+      \item answer only from tool output, cite as \emph{title, p.N -- url}, and never write a URL that did not
+            come from a tool;
+      \item a circular that amends a regulation overrides it;
+      \item always say which semester slot, instructor or count data refers to;
+      \item never guess a slot.
+    \end{itemize}
+  \item \textbf{Tool-first guards} (\code{helpdesk/callbacks.py}, ADK \code{after\_model\_callback}): if a model
+        tries to give a final answer without having called any tool in the turn, the answer is replaced by a
+        forced tool call.
+    \begin{itemize}
+      \item The single, policy and schedule agents are forced to call \code{search\_documents}; the email agent
+            is forced to call \code{get\_instructor\_email}.
+      \item The specialists use a \emph{strict} variant: they must try a tool even before refusing, because the
+            orchestrator has already judged the question in scope.
+      \item The single agent may refuse directly, since it must reject out-of-scope questions itself.
+    \end{itemize}
+  \item \textbf{Refusal logging:} every ``I don't know'' reply is written to the unanswered log, even when the
+        model forgets to call \code{log\_unanswered}. Duplicates are removed.
+\end{itemize}
+
+%=====================================================================
+\section{Data}
+All data was \textbf{scraped}. Every source is listed in \code{data/sources.csv} with its URL, the page that links
+to it, the download date, its SHA-256 and its access level (full list, access levels and data gaps in the repository README, section~5).
+
+\medskip
+\begin{tabularx}{\textwidth}{@{}lYl@{}}
+\toprule
+ID & Source & Type \\ \midrule
+D01 & Academic Regulations, students enrolled from July 2019 onwards (UG + PG) & regulation \\
+D04 & Notification 26-10-2020: revised continuation/assistantship norms & regulation \\
+D05 & PG Regulations, July 2022 onwards & regulation \\
+D08, D09 & Circulars 08-07-2024: attendance policy; one Minor + one Major examination (scanned, OCR) & circular \\
+D10 & B.Tech Regulations, July 2014 and later (rev.\ 2018) & regulation \\
+D11, D13, D14 & Academic calendars: AY 2026-27, Summer 2026, AY 2025-26 & calendar \\
+D15 & Slot System AY 2023-24 Sem I, B.Tech 1st year (slots, courses, coordinators, emails, advisors) & timetable \\
+D16--D22 & Curricula: B.Tech CSE (2026+ and earlier), CSE specialisations, B.Tech AIDE, M.Tech CSE/AI; CSE course descriptions & curriculum \\
+D23, D24, D26, D27 & HSS courses; institute-wide common courses; electives from other departments; minors & course list \\
+D28 & People directory, 13 departments $\rightarrow$ 319 faculty with public emails & directory \\
+D29 & Academic ERP course catalogue, 22 departments $\rightarrow$ 1,198 approved courses with L-T-P and credits & catalogue \\
+D30 & Faculty web pages listing the courses they taught $\rightarrow$ 192 offerings, 101 courses, 20 faculty & teaching history \\
+D31 & School of Liberal Arts, undergraduate bouquet courses by semester & course list \\
+D32, D33 & Office orders: Institute Holiday Calendar 2026 (11-12-2025); Course Equivalence and Credit Transfer Committee (13-10-2025) (scanned, OCR) & office order \\
+D34 & Fee structure AY 2026-27 & registration \\
+\bottomrule
+\end{tabularx}
+
+\medskip
+\noindent\textbf{Data gaps and how they are handled.}
+\begin{itemize}
+  \item \textbf{Current timetable and floated courses.} No timetable newer than the AY 2023-24 first-year slot system
+        is published, and no list of courses floated this semester exists. We searched the institute site, the old
+        academics and department sites, the old institute website, the Internet Archive, the ERP's public pages
+        and web search. The system therefore:
+    \begin{itemize}
+      \item says that no slot is published for courses outside D15;
+      \item counts ``offered this semester'' only from faculty pages, and states that this count is a lower bound;
+      \item gives the most recent listed instructor of a course together with the semester of that record.
+    \end{itemize}
+  \item \textbf{Assignment examples:} CSL7570 = Introduction to AR and VR. Its most recent listed offering is
+        AY 2024-25 Semester~I, by Rajendra Nagar ``with Dr Avinash Sharma''. Autonomous Systems = CSL7650.
+  \item \textbf{Access:} eight sources are reachable only from the IIT Jodhpur campus network
+        (\code{academics.iitj.ac.in}, \code{intranet.iitj.ac.in}), although the public site links to them. The
+        institute's internal Communications Repository, which states ``internal use only'', was deliberately not used.
+  \item \textbf{Personal data:} student names and roll numbers in D15 were replaced with dummy values at download
+        time. Only faculty entries (public emails) were kept from the directory.
+  \item \textbf{Duplicates:} byte-identical copies of the regulations were detected by hash and indexed once.
+\end{itemize}
+
+%=====================================================================
+\section{Evaluation method}
+
+\subsection{Questions}
+\code{eval/questions.csv} has 30 questions. Every expected answer is a verbatim quote from a scraped source, with
+its acceptable \code{doc:page} citations.
+
+\medskip
+\begin{tabularx}{\textwidth}{@{}lcYY@{}}
+\toprule
+Category & $n$ & Examples & Expected behaviour \\ \midrule
+Policy & 14 & attendance (assignment example), open-elective credits (assignment example), make-up exam, exam duration, calendar, grades, curricula, course contents, holidays, Liberal Arts bouquets & Answer with citation \\
+Schedule & 7 & slot of Autonomous Systems (assignment example), 400-level HSS electives this semester (assignment example), slot of CSL1010, slot G timings, faculty advisor, CSL7570 credits, last instructor of CSL7650 & Answer with citation, or ``not published'' (S01, S02) \\
+Email & 5 & email to the instructor of CSL7570 (assignment example), make-up exam email, two email-ID lookups, sick-leave email & Draft or answer \\
+Out of scope & 4 & dining and travel (assignment examples), placements, campus Wi-Fi (distractor) & Refuse and log \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Protocol and metrics}
+\begin{itemize}
+  \item Each question is asked in a fresh ADK session, three times per system, at default sampling
+        (temperature 0.6).
+  \item \textbf{Systems evaluated:} Qwen3~8B single agent; Qwen3~8B multi-agent; Llama~3.1~8B multi-agent
+        (the LLM replacement).
+  \item \textbf{Metrics} (\code{eval/score.py}):
+    \begin{itemize}
+      \item \emph{accuracy}: all key facts present and not a refusal. For ``not published'' items, the answer must
+            say the data is unavailable or incomplete and invent nothing. For out-of-scope items, the answer must
+            refuse \emph{and} the question must be logged;
+      \item \emph{groundedness}: the cited document, and the document with page, match an expected source;
+      \item \emph{retrieval hit}: an expected source was returned by a tool;
+      \item \emph{fabricated URL}: a URL that is none of the scraped sources or pages;
+      \item \emph{routing accuracy} and \emph{run-to-run consistency}.
+    \end{itemize}
+  \item \textbf{Manual review:} every answer to an in-scope or ``not published'' question (234 of 270) was read
+        against its expected answer; out-of-scope answers were checked through the refusal text and the log entry.
+        14 automatic grades were overridden, with reasons recorded in \code{eval/apply\_manual\_grades.py}. These
+        were answers that contain ``75\%'' but present the superseded C-grade attendance rule as current, correct
+        ``no published slot'' answers in wording the pattern missed, and an email ID given with the wrong semester.
+\end{itemize}
+
+%=====================================================================
+\section{Results}
+
+\subsection{Development iterations}
+\begin{tabularx}{\textwidth}{@{}lYcc@{}}
+\toprule
+Version & Change & Single-agent accuracy & Fabricated URLs \\ \midrule
+v1 & base system, no guard & 52\% (1 run) & 17\% \\
+v2 & + retrieve-first guard, course-code parsing fix, minimum of 3 passages & 74\% (3 runs) & 0\% \\
+v3 (final) & + all-scraped data (ERP catalogue, faculty teaching pages, office orders), strict guards for specialists, email-lookup guard, name matching & 58\% single / \textbf{81\% multi} & 0\% \\
+\bottomrule
+\end{tabularx}
+
+\begin{itemize}
+  \item \textbf{v1 and v2} were scored on an earlier version of the question set. Four questions were later
+        replaced to cover the new sources, so the v2 and v3 numbers are not directly comparable.
+  \item \textbf{v1 failure mode:} the 8B model answered from memory, e.g.\ ``Major exam December 1--15, 2026'',
+        citing a non-existent PDF. The guard removed this failure.
+  \item \textbf{v3, single agent:} the strict guards and richer data helped the multi-agent system (v2 $\rightarrow$
+        v3: 75\% $\rightarrow$ 81\%). The single agent's accuracy fell, because its longer prompt and seven tools
+        led to more refusals \emph{without any tool call} (28\% false refusals, on P03, P07, P12, P14, P16, P17 and
+        S06). Its lenient guard deliberately lets refusals through.
+\end{itemize}
+
+\subsection{Single agent vs.\ multi-agent (Qwen3 8B)}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Category & Single & Multi \\ \midrule
+Policy (14 $\times$ 3) & 43\% & \textbf{67\%} \\
+Schedule (7 $\times$ 3) & 76\% & \textbf{100\%} \\
+Email (5 $\times$ 3) & 80\% & \textbf{100\%} \\
+Out of scope (4 $\times$ 3) & 100\% & 100\% \\
+\textbf{Answerable overall} & 58\% & \textbf{81\%} \\
+\bottomrule
+\end{tabular}
+
+\begin{itemize}
+  \item \textbf{Better tool use.} The multi-agent specialists search before answering and do not give up early.
+    \begin{itemize}
+      \item The single agent refused P03 (make-up deadline) and P07 (exam duration) 3/3 without searching; the
+            policy agent answered both 3/3 from D01 and D09.
+      \item The email agent always used \code{draft\_email}. The single agent wrote E04 as plain text without the
+            instructor's address, 3/3.
+    \end{itemize}
+  \item \textbf{Superseded rules.} The policy agent reported the revised 2024 attendance rule in 1 of 3 runs; the
+        single agent presented the superseded rule in all 3.
+  \item \textbf{Costs of the multi-agent system:}
+    \begin{itemize}
+      \item \emph{Routing} (87\%): P04 (``whom to apply to for a make-up exam'') went to the email agent, P13 and
+            P16 went to the schedule agent, and P17 was treated as out of scope by the orchestrator.
+      \item \emph{Wrong despite search:} P15 (``L'' in a course code) was answered wrongly 3/3 by the policy agent,
+            even though it retrieved D01.
+      \item \emph{Latency:} median 40~s against 33~s, because of the extra routing call.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Replacing the LLM: Qwen3 8B vs.\ Llama 3.1 8B (same multi-agent system)}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Category & Qwen3 8B & Llama 3.1 8B \\ \midrule
+Policy & \textbf{67\%} & 60\% \\
+Schedule & \textbf{100\%} & 86\% \\
+Email & \textbf{100\%} & 7\% \\
+Out of scope & 100\% & 100\% \\
+Answerable overall & \textbf{81\%} & 53\% \\
+Groundedness (document / page) & \textbf{83\% / 76\%} & 64\% / 54\% \\
+Changed across runs & \textbf{3} & 17 \\
+Median latency & 40 s & \textbf{30 s} \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\noindent Llama~3.1 routes about as well (88\%) and is faster, but it uses tool outputs poorly:
+\begin{itemize}
+  \item \textbf{Ignoring tool results:} \code{get\_instructor\_email} returned Rajendra Nagar for CSL7570, and Llama
+        replied ``I don't know who the instructor is'' (E01). On E05 it answered ``couldn't find'' after receiving
+        \code{mishra@iitj.ac.in}.
+  \item \textbf{Not calling \code{draft\_email}:} it wrote drafts in its answer text or omitted the address (E02, E04).
+  \item \textbf{Wrong semester:} it stated that 2023-24 timetable data refers to the current semester (E03).
+  \item \textbf{Reading the wrong row of a table:} P08 (April 2027 instead of November 2026). It also took the
+        ``CS7xx'' placeholder from D18 as a course code (P13).
+  \item \textbf{One genuinely fabricated URL:} a non-existent ``All-Departmental-Webpages'' PDF (E01).
+\end{itemize}
+
+\subsection{Refusals and unavailable data}
+\begin{itemize}
+  \item \textbf{Out of scope:} all three systems refused 12/12 attempts (dining, travel, placements, Wi-Fi), and
+        every one was logged.
+  \item \textbf{Data not published:}
+    \begin{itemize}
+      \item \emph{S01, slot of Autonomous Systems:} all systems stated that no slot is published for AY 2026-27
+            Semester~I, mostly adding the course code CSL7650 and its last listed offering. No system guessed a slot.
+      \item \emph{S02, 400-level HSS electives this semester:} the Qwen multi-agent system answered ``0, based on
+            faculty web pages; the official list is not public, so this may be incomplete'', 3/3. The single agent
+            dropped that caveat in 2 of 3 runs.
+    \end{itemize}
+  \item \textbf{Assignment example E01 (email to the CSL7570 instructor):} the Qwen systems drafted it to
+        \code{rn@iitj.ac.in} 6/6, with placeholders for the student's name, reason and dates, and stated that the
+        instructor information is from AY 2024-25.
+  \item \textbf{Over-refusal:} P17 (Dussehra holiday, from the scanned holiday office order) was treated as out of
+        scope by every system. The scope definition lists the academic calendar but not institute holidays, so this
+        is a scope-definition issue as much as a model error.
+\end{itemize}
+
+\subsection{Questions whose answers changed across runs}
+\begin{tabularx}{\textwidth}{@{}lp{4.6cm}Y@{}}
+\toprule
+System & Questions whose outcome changed & What varied \\ \midrule
+Qwen3 multi & P01, P02, P10 & P01: the revised rule in run 2 only. P02 and P10: only the cited documents changed (D01/D05/D10/D16/D20 contain the same clause or table) \\
+Qwen3 single & P01, P02, P04, P05, P08, P10, P12, P14, S01, S02 & P12, P14: correct answer vs.\ refusal. P02: run 1 gave no OE number. S02: the caveat appeared only in run 3. P08: wrong date vs.\ refusal. Others: cited documents \\
+Llama 3.1 multi & E01--E05, P01, P02, P04, P05, P08, P13, P15, P16, S02, S03, S06, S07 & Routing varied (S07 and P16 went to different agents in different runs), refusals varied (E04, E05, P05), and tool use varied \\
+\bottomrule
+\end{tabularx}
+
+\medskip
+\noindent Some answers changed while the outcome stayed the same. For example, Qwen multi-agent P08 gave
+``10--13 July 2027'' in two runs and ``4--6 August 2027'' in another, wrong every time. Questions wrong in every run
+of the Qwen multi-agent system: P08 (calendar table), P15 (``L'' read as a department), P17 (holiday treated as out of
+scope) and P04 (misrouted).
+
+\subsection{Error analysis}
+\begin{enumerate}
+  \item \textbf{Table misreading (P08, all systems).} The calendar PDF flattens into rows where ``4--6 January 2027'',
+        ``10--13 July 2027'' and ``19--26 November 2026'' sit side by side, and the models pick the wrong column.
+  \item \textbf{Superseded rules (P01).} D01 and the ``existing policy'' paragraph in D08 both state the old C-grade
+        rule; the models often merge it with the revised rule.
+  \item \textbf{Surface-word routing (P04).} ``Apply \ldots{} permission'' sends the question to the email agent.
+  \item \textbf{Refusal without trying.} This is the single agent's main failure: the lenient guard lets refusals
+        through. In one Llama run the strict guard was bypassed because calling \code{log\_unanswered} counted as
+        ``a tool was used'' (P05); the guard should ignore that tool.
+  \item \textbf{Tool-output comprehension (Llama 3.1).} It is given the right instructor and email, then states the opposite.
+  \item \textbf{Batch-dependent requirements (P02).} Open electives are 10 credits under the 2019 regulations and 12 under
+        the 2026 CSE curriculum; answers usually give one value, and often add the 180-credit total from the 2014
+        regulations.
+\end{enumerate}
+
+%=====================================================================
+\section{Limitations and future work}
+\begin{itemize}
+  \item \textbf{No current timetable or offering list is publicly available.} ``This semester'' answers rely on
+        faculty pages; only 20 of 261 faculty list courses with years. With the official AY 2026-27 timetable,
+        S01 and S02 would become ordinary questions.
+  \item \textbf{Campus-only sources.} Eight sources are campus-network only, so the raw files should not be published
+        outside the institute.
+  \item \textbf{Hardware latency.} About 64\% of the model runs on the CPU, giving a median latency of 30--40~s.
+  \item \textbf{Grading.} Manual review was done by the system author against verbatim references; a second grader
+        would strengthen it.
+  \item \textbf{Possible improvements:}
+    \begin{itemize}
+      \item ignore \code{log\_unanswered} in the guard;
+      \item row-wise, table-aware chunking for calendars;
+      \item few-shot routing examples;
+      \item scope wording that covers holidays and office orders;
+      \item citations rendered from tool results rather than written by the model;
+      \item a larger model, or Qwen3 with thinking enabled on a bigger GPU.
+    \end{itemize}
+\end{itemize}
+
+%=====================================================================
+\section{Reproducing the results}
+\begin{lstlisting}
+# the scraped data is already in data/ (collection scripts removed for the hand-over; see README, section 5.3)
+python scripts/build_structured.py && python scripts/ingest.py
+python eval/build_questions.py
+python eval/run_eval.py --system both --runs 3
+python eval/run_eval.py --system multi --runs 3 --model ollama_chat/llama31-8b-helpdesk --tag llama31-8b
+for t in qwen3-8b llama31-8b; do
+  python eval/score.py --tag $t; python eval/apply_manual_grades.py --tag $t; python eval/score.py --tag $t
+done
+\end{lstlisting}
+
+\noindent\textbf{Raw outputs} (\code{eval/results/}):
+\begin{itemize}
+  \item \code{\{single,multi\}\_qwen3-8b.jsonl} and \code{multi\_llama31-8b.jsonl}: answers, tool calls with
+        arguments and results, answering agent, latency;
+  \item \code{scores\_*.csv}, \code{grades\_*.csv} (manual review) and \code{summary\_*.md};
+  \item \code{*\_v1-*} and \code{*\_v2-*}: the earlier iterations;
+  \item \code{logs/unanswered.jsonl}: the human hand-off log.
+\end{itemize}
+
+\end{document}

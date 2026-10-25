@@ -1,0 +1,12 @@
+[
+ {
+  "page": 1,
+  "text": "S.N. \nDepartment Name \nOutside Department Programme \nelectives \n1. \nB.Tech. \nComputer \nScience \nand \nEngineering Students \nIntroduction to Internet of Things, EE \nIntroduction to Data Science, EE \nComputational Imaging, EE \nEmbedded System Design, EE \nEmbedded System Design Lab, EE \nImage Sensor Design and Applications, EE \nIntroduction to Cyber-Physical Systems, EE \nPrinciples of Data and System Security, EE \nResource Constrained AI, EE \nSensors and IoT Lab, EE \nSpeech and Audio Signal Processing, EE \nSystems-on-Chips Design, EE \nWireless Communication, EE \nData Communications and Networking, EE \nIntroduction to Robotics, ME \nQuantum Computing, CY/PH \nIntroduction to Quantum Information, \nCY/PH \nQuantum Cryptography and Coding, CY/PH \nFundamentals of Digital Humanities: \nFractal-2 (Data and Knowledge \nrepresentations), DH \nAnalysis of Social Media Networks, CS \nHuman Factors in Interaction Design, DH \nDigital Methods and Tools: All Three \nfractals, DH \nPlanning and Decision Making for Robots, \nME \nAutonomous Systems, CS \nComputational Game Theory, MA \n \n2. \nB.Tech. \nMechanical \nEngineering \nStudents \nMedical Devices and Implants, BB \nSolidification Processing, MT \nPowder Metallurgy, MT \nThermo-Mechanical Processing, MT \nNear-Net Forming, MT \nPlastic Deformation and \nMicrostructure Evaluation , MT \nIntroduction to Data Science, MA \nReliability Theory, MA \nAdvances Statistical Techniques, MA \nIntroduction to Modelling, MA \nArtificial Intelligence I, CS \nMachine Learning I, CS \nIntroduction to CPS, EE \nIntroduction to IoT, EE \nSensors and Measurements, EE \nMachine Learning 1 - CS \nNeuromorphic computing and design - CS \nArtificial Intelligence 1 - CS \nEdge and Fog Computing - CS \nRobotics (or any fractal)  - ME \nOptimization - MA \nIntroduction to Data Science, MA \n",
+  "method": "text"
+ },
+ {
+  "page": 2,
+  "text": "3. \nB.Tech. \nElectrical \nEngineering \nStudents \nReliability Theory, MA \nAdvances Statistical Techniques, MA \nIntroduction to Modelling, MA \nParticle Physics, PH \nQuantum Mechanics, PH \nQuantum Computing, CY/PH \nQuantum Field Theory, PH \nComputer Vision, CS \nDigital Image Analysis, CS \nBio-Image Computing, CS \n \n",
+  "method": "text"
+ }
+]

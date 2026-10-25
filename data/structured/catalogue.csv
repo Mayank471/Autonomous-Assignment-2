@@ -1,0 +1,1199 @@
+course_code,course_title,erp_department,dept_code,course_type,level,L,T,P,credits,source_doc_id
+AIL4010,Microeconomics I,AiDe,AI,L,400,3,0,0,3,D29
+AIL4020,Individual and Strategic Decision Making: Theory and Applications,AiDe,AI,L,400,2,0,0,2,D29
+AIL4030,Introduction to Cognitive Science,AiDe,AI,L,400,2,0,0,2,D29
+AIL4040,From Perception to Action,AiDe,AI,L,400,2,0,0,2,D29
+AIL4060,Microeconomic II,AiDe,AI,L,400,3,0,0,3,D29
+AIL4070,Fundamentals of Economics,AiDe,AI,L,400,3,0,0,3,D29
+AIL4080,Introduction to Cognitive Science,AiDe,AI,L,400,3,0,0,3,D29
+AIL4210,Connectomics,AiDe,AI,L,400,3,0,0,3,D29
+AIL4230,Basics of Computational Neuroscience,AiDe,AI,L,400,3,0,0,3,D29
+AIL4240,Cognitive Semantics,AiDe,AI,L,400,3,0,0,3,D29
+AIL4250,Cognitive Architectures,AiDe,AI,L,400,3,0,2,4,D29
+AIL4260,Theories of Intelligence,AiDe,AI,L,400,3,0,0,3,D29
+AIL4270,Advanced Cognitive Processes,AiDe,AI,L,400,3,0,0,3,D29
+AIL6010,Microeconomics I,AiDe,AI,L,600,3,0,0,3,D29
+AIL6020,Individual and Strategic Decision Making: Theory and Applications,AiDe,AI,L,600,2,0,0,2,D29
+AIL6060,Microeconomics 2,AiDe,AI,L,600,3,0,0,3,D29
+AIL7010,Linear Algebra for Big Data,AiDe,AI,L,700,2,0,0,2,D29
+AIL7060,Interaction and Experience Design for AR/VR,AiDe,AI,L,700,2,0,2,3,D29
+AIL7110,Introduction to Augmented Reality and Virtual Reality,AiDe,AI,L,700,3,0,0,3,D29
+AIL7140,Advanced Computer Vision,AiDe,AI,L,700,3,0,0,3,D29
+AIL7220,EEG Signal Analysis,AiDe,AI,L,700,3,0,0,3,D29
+AIL7230,Behavioral Economics and Decision Theory,AiDe,AI,L,700,3,0,0,3,D29
+AIL7240,Sensation and Perception,AiDe,AI,L,700,3,0,0,3,D29
+AIL7250,Computational Cognitive Neuroscience,AiDe,AI,L,700,3,0,0,3,D29
+AIL7280,Introduction to Mechanism Design,AiDe,AI,L,700,3,0,0,3,D29
+AIL7290,Psychophysics,AiDe,AI,L,700,3,0,0,3,D29
+AIL7310,Machine Learning for Economics,AiDe,AI,L,700,3,0,0,3,D29
+AIL7320,Theoretical Foundations of Econometrics,AiDe,AI,L,700,3,0,0,3,D29
+AIL7330,Spatial Audio,AiDe,AI,L,700,3,0,0,3,D29
+AIL7340,Content creation for VR/AR,AiDe,AI,L,700,1,0,4,3,D29
+AIL7380,Mathematics for Economics,AiDe,AI,L,700,3,0,0,3,D29
+AIL7410,Linear Algebra for Big Data,AiDe,AI,L,700,2,0,0,2,D29
+AIL7420,Statistics for Data Engineering,AiDe,AI,L,700,2,0,0,2,D29
+AIL7430,Python Programming for Data Engineering,AiDe,AI,L,700,2,0,2,3,D29
+AIL7440,Databases and SQL Programming,AiDe,AI,L,700,2,0,2,3,D29
+AIL7450,Political Economy,AiDe,AI,L,700,3,0,0,3,D29
+AIL7510,Neural Image Synthesis for VR/AR,AiDe,AI,L,700,2,0,2,3,D29
+AIL7520,Big Data Management,AiDe,AI,L,700,3,0,0,3,D29
+AIL7530,Big Data Retrieval and Integration,AiDe,AI,L,700,3,0,2,4,D29
+AIL7540,Digital Financial Services,AiDe,AI,L,700,3,0,0,3,D29
+AIL7560,Big Data Systems and Platforms,AiDe,AI,L,700,3,0,2,4,D29
+AIL7610,Advanced Econometrics,AiDe,AI,L,700,3,0,0,3,D29
+AIL7620,Fundamentals of Cloud Computing,AiDe,AI,L,700,3,0,2,4,D29
+AIL7630,Machine Learning with Big Data,AiDe,AI,L,700,3,0,0,3,D29
+AIL7640,Fundamentals of Distributed Systems,AiDe,AI,L,700,2,0,0,2,D29
+AIP4010,Method and tools of Science of Intelligence,AiDe,AI,P,400,0,0,4,2,D29
+AIP7410,Seminar,AiDe,AI,P,700,0,0,6,3,D29
+AIP7510,Seminar,AiDe,AI,P,700,0,0,6,3,D29
+MAL7067,ghjkhkjhkjnk,AM,MA,L,700,3,0,1,4,D29
+BBL1010,Introduction to Bioengineering,BB,BB,L,100,3,0,2,4,D29
+BBL1011,Introduction to Bioengineering Theory,BB,BB,L,100,3,0,0,3,D29
+BBL1012,Introduction to Bioengineering Lab,BB,BB,L,100,0,0,2,1,D29
+BBL1020,Introduction to Bioengineering Theory,BB,BB,L,100,3,0,0,3,D29
+BBL2010,Biochemistry,BB,BB,L,200,3,0,0,3,D29
+BBL2100,Concepts & Dynamics: Molecular Cell Biology,BB,BB,L,200,2,0,2,3,D29
+BBL2200,"The Human Immune System: Mechanisms to Detect, Defend and Attack",BB,BB,L,200,3,0,0,3,D29
+BBL2300,Microbiology,BB,BB,L,200,3,0,2,4,D29
+BBL3010,Introductory Omics,BB,BB,L,300,3,0,0,3,D29
+BBL3020,Biomaterials Engineering,BB,BB,L,300,3,0,0,3,D29
+BBL3030,Biophysics & Structural Biology,BB,BB,L,300,3,0,1,3.5,D29
+BBL3100,Computational and systems biology,BB,BB,L,300,3,0,2,4,D29
+BBL3110,The human machine for engineers: Quantitative Physiology,BB,BB,L,300,3,0,0,3,D29
+BBL3120,Genetics and Gene manipulation,BB,BB,L,300,3,0,2,4,D29
+BBL4040,Anticancer Drug Discovery and Development,BB,BB,L,400,3,0,0,3,D29
+BBL4050,Modern Approaches of drug designing,BB,BB,L,400,3,0,0,3,D29
+BBL4060,Introduction to Precision Medicine,BB,BB,L,400,3,0,0,3,D29
+BBL4062,AI based drug discovery,BB,BB,L,400,2,0,0,2,D29
+BBL4063,Modern Approaches of drug designing,BB,BB,L,400,3,0,0,3,D29
+BBL4064,Theranostic Systems,BB,BB,L,400,3,0,0,3,D29
+BBL4070,Theranostic Systems,BB,BB,L,400,3,0,0,3,D29
+BBL4100,Viral infection and antiviral drug development,BB,BB,L,400,3,0,0,3,D29
+BBL4110,Bioenergy,BB,BB,L,400,3,0,0,3,D29
+BBL4210,Viral infection and antiviral drug development,BB,BB,L,400,3,0,0,3,D29
+BBL4240,Cell-Material Interactions,BB,BB,L,400,3,0,0,3,D29
+BBL4250,Microbiomes and Metagenomics,BB,BB,L,400,3,0,0,3,D29
+BBL6310,Bioinformatics and Computational Biology,BB,BB,L,600,3,0,0,3,D29
+BBL6320,Sensory Neural Systems,BB,BB,L,600,3,0,0,3,D29
+BBL6321,Synaptic communication: function and dysfunction,BB,BB,L,600,1,0,0,1,D29
+BBL6322,Auditory perception: from cell to signal,BB,BB,L,600,1,0,0,1,D29
+BBL6323,Visual perception,BB,BB,L,600,1,0,0,1,D29
+BBL6330,Algorithms in Biology,BB,BB,L,600,3,0,0,3,D29
+BBL7010,Introduction to 'Omics' Technologies,BB,BB,L,700,2,0,0,2,D29
+BBL7020,Bioimaging: Instrumentation and Acquisition,BB,BB,L,700,2,0,2,3,D29
+BBL7030,Biosensors,BB,BB,L,700,2,0,0,2,D29
+BBL7031,Types of Biosensors and their Characterization,BB,BB,L,700,1,0,0,1,D29
+BBL7032,"Micro-fabrication Technologies, Sensor Signals, Interfacing and Read-out Electronics",BB,BB,L,700,1,0,0,1,D29
+BBL7040,Biomaterials Engineering,BB,BB,L,700,3,0,0,3,D29
+BBL7050,Systems Biology,BB,BB,L,700,3,0,2,4,D29
+BBL7080,Plant Genetic Engineering and functional genomics,BB,BB,L,700,3,0,0,3,D29
+BBL7081,Plant Genetic Engineering and functional genomics - Fractal 1,BB,BB,L,700,1,0,0,1,D29
+BBL7090,Experimental Design for Biologists,BB,BB,L,700,3,0,0,3,D29
+BBL7110,Selected Topics in Biomaterials Engineering,BB,BB,L,700,1,0,0,1,D29
+BBL7121,Omics Databases,BB,BB,L,700,1,0,0,1,D29
+BBL7130,Flux Balance Analysis,BB,BB,L,700,3,0,0,3,D29
+BBL7310,Microbiology and Biochemistry,BB,BB,L,700,3,0,2,4,D29
+BBL7311,Microbiology,BB,BB,L,700,2,0,0,2,D29
+BBL7312,Biochemistry,BB,BB,L,700,2,0,0,2,D29
+BBL7320,Molecular Bioengineering of the Cell,BB,BB,L,700,2,0,2,3,D29
+BBL7330,Quantitative Physiology,BB,BB,L,700,3,0,0,3,D29
+BBL7340,Cell and Molecular Biology,BB,BB,L,700,3,0,0,3,D29
+BBL7350,Bioenergy Systems,BB,BB,L,700,3,0,0,3,D29
+BBL7360,"Disease, Process, Diagnostic and Therapeutics",BB,BB,L,700,3,0,0,3,D29
+BBL7370,Microbial Genomes and Microbiomes,BB,BB,L,700,3,0,0,3,D29
+BBL7380,Immunotechnology,BB,BB,L,700,3,0,0,3,D29
+BBL7381,Fundamental Concepts: Antigen-Antibody Interactions,BB,BB,L,700,1,0,0,1,D29
+BBL7382,Clinical Immunology,BB,BB,L,700,1,0,0,1,D29
+BBL7383,Vaccines and Drug Therapy,BB,BB,L,700,1,0,0,1,D29
+BBL7390,Introductory Chemical Biology,BB,BB,L,700,3,0,0,3,D29
+BBL7400,Biomaterials Engineering,BB,BB,L,700,3,0,0,3,D29
+BBL7410,Tissue Engineering and Medical Devices and Implants,BB,BB,L,700,3,0,0,3,D29
+BBL7411,Tissue Engineering and Dynamics,BB,BB,L,700,1,0,0,1,D29
+BBL7412,Measurements of cell characteristics and Biomaterials,BB,BB,L,700,1,0,0,1,D29
+BBL7413,Medical devices and Implants,BB,BB,L,700,1,0,0,1,D29
+BBL7420,Sensory Neural Systems,BB,BB,L,700,3,0,0,3,D29
+BBL7421,Synaptic Communication: function and dysfunction,BB,BB,L,700,1,0,0,1,D29
+BBL7422,Visual Perception,BB,BB,L,700,1,0,0,1,D29
+BBL7423,Auditory Perception: from cell to signal,BB,BB,L,700,1,0,0,1,D29
+BBL7430,Environmental Biotechnology & Bioremediation,BB,BB,L,700,3,0,0,3,D29
+BBL7440,Microbes as sensors,BB,BB,L,700,1,0,0,1,D29
+BBL7450,Fundamentals of Neuroscience,BB,BB,L,700,3,0,0,3,D29
+BBL7460,Synthetic Biology,BB,BB,L,700,3,0,0,3,D29
+BBL7470,Theranostic Systems,BB,BB,L,700,3,0,0,3,D29
+BBL7480,Algorithms in Biology,BB,BB,L,700,3,0,0,3,D29
+BBL7490,Metabolomics and Proteomics,BB,BB,L,700,3,0,0,3,D29
+BBL7500,Biophysics,BB,BB,L,700,3,0,0,3,D29
+BBL7510,Systems Biology in Personalized Genomics,BB,BB,L,700,3,0,0,3,D29
+BBP1010,Introduction to Bioengineering Lab,BB,BB,P,100,0,0,2,1,D29
+BBP2010,Biochemistry Laboratory,BB,BB,P,200,0,0,2,1,D29
+BBP7010,Statistics and Data Analysis Lab,BB,BB,P,700,0,0,2,1,D29
+BBP7430,Environmental Biotechnology & Bioremediation Laboratory,BB,BB,P,700,0,0,2,1,D29
+CHL2010,Fluid Mechanics,CH,CH,L,200,3,1,0,4,D29
+CHL2013,Polymers,CH,CH,L,200,3,0,0,3,D29
+CHL2020,Molecular Engineering,CH,CH,L,200,3,0,0,3,D29
+CHL2023,Polymers,CH,CH,L,200,1,0,0,1,D29
+CHL2030,Material and Energy Balance,CH,CH,L,200,3,0,0,3,D29
+CHL3010,Mass Transfer 1,CH,CH,L,300,3,0,3,4.5,D29
+CHL3030,Chemical Reaction Engineering,CH,CH,L,300,3,0,3,4.5,D29
+CHL3040,Chemical Engineering Thermodynamics,CH,CH,L,300,3,0,0,3,D29
+CHL3070,Mass Transfer 2,CH,CH,L,300,3,0,3,4.5,D29
+CHL3080,Process Plant Design and Economics,CH,CH,L,300,3,0,3,4.5,D29
+CHL4010,Transport Phenomenon,CH,CH,L,400,3,1,0,4,D29
+CHL4020,Process Control and AI Applications,CH,CH,L,400,3,0,2,4,D29
+CHL4210,Solid Waste Management,CH,CH,L,400,3,0,0,3,D29
+CHL4320,Introduction to Complex Fluids,CH,CH,L,400,3,0,0,3,D29
+CHL4330,Unit Operation,CH,CH,L,400,3,0,0,3,D29
+CHL4340,Molecular Thermodynamics,CH,CH,L,400,3,0,0,3,D29
+CHL4350,Petrochemical Engineering,CH,CH,L,400,3,0,0,3,D29
+CHL4360,Biochemical Engineering,CH,CH,L,400,3,0,0,3,D29
+CHL4370,Introductory principles in polymer engineering,CH,CH,L,400,3,0,0,3,D29
+CHL7010,Advanced Reaction Engineering,CH,CH,L,700,2,0,2,3,D29
+CHL7020,Advanced Mathematical Methods in Chemical Engineering,CH,CH,L,700,3,0,0,3,D29
+CHL7030,Advanced Transport Phenomena,CH,CH,L,700,3,0,0,3,D29
+CHL7040,Advanced Chemical Engineering Thermodynamics,CH,CH,L,700,2,0,0,2,D29
+CHL7050,Multi-component Separation Processes,CH,CH,L,700,2,0,2,3,D29
+CHL7060,Advanced Process Control and AI Applications,CH,CH,L,700,3,0,0,3,D29
+CHL7071,MTech Project Part 1,CH,CH,L,700,0,0,10,5,D29
+CHL7140,Computational Fluid Dynamics,CH,CH,L,700,3,0,2,4,D29
+CHL7150,Process Optimization,CH,CH,L,700,3,0,2,4,D29
+CHL7170,Packaging of Electronic Devices ? Polymeric materials & Chemical Technology,CH,CH,L,700,3,0,2,4,D29
+CHL7230,Ocean Thermal Energy Conversion,CH,CH,L,700,1,0,0,1,D29
+CHL7240,Advanced Wastewater Treatment,CH,CH,L,700,3,0,2,4,D29
+CHL7250,Chemical Reactor Analysis,CH,CH,L,700,3,0,2,4,D29
+CHL7360,Data Analytics in Process Modelling and Simulation,CH,CH,L,700,2,0,2,3,D29
+CHL7370,Hydrogen and Methanol Economy,CH,CH,L,700,3,0,0,3,D29
+CHL7420,Advanced Mass Transfer,CH,CH,L,700,3,0,0,3,D29
+CHL7440,Capillarity and Wetting,CH,CH,L,700,3,0,0,3,D29
+CHL7450,Principles of Electrochemical Engineering,CH,CH,L,700,3,0,0,3,D29
+CHL7490,Structure & Property for Polymers,CH,CH,L,700,3,0,0,3,D29
+CHP2040,Introduction to Profession,CH,CH,P,200,0,0,2,1,D29
+CHP3010,Mass Transfer 1,CH,CH,P,300,3,0,3,4.5,D29
+CHP3030,Chemical Reaction Engineering,CH,CH,P,300,3,0,3,4.5,D29
+CHP3060,Fluid Mechanics-Lab,CH,CH,P,300,0,0,2,1,D29
+CIL2010,Geoinformatics,CI,CI,L,200,3,0,2,4,D29
+CIL2020,Introduction to Profession,CI,CI,L,200,0,0,2,1,D29
+CIL2030,Mechanics of solids,CI,CI,L,200,3,1,0,4,D29
+CIL2040,Fluid Mechanics,CI,CI,L,200,3,1,0,4,D29
+CIL2050,Fluid Mechanics,CI,CI,L,200,3,1,2,5,D29
+CIL3010,Transportation Engineering,CI,CI,L,300,3,0,0,3,D29
+CIL3020,Structural analysis,CI,CI,L,300,3,0,2,4,D29
+CIL3030,Environmental Engineering,CI,CI,L,300,3,0,2,4,D29
+CIL3040,Geotechnical Engineering,CI,CI,L,300,3,1,0,4,D29
+CIL3050,Construction Technology and Practices,CI,CI,L,300,3,0,2,4,D29
+CIL3060,Advanced Structural Analysis,CI,CI,L,300,3,0,2,4,D29
+CIL3070,Water Resources Engineering,CI,CI,L,300,3,0,2,4,D29
+CIL3080,Reinforced Concrete Design,CI,CI,L,300,3,0,2,4,D29
+CIL3090,Smart Infrastructure Engineering,CI,CI,L,300,3,0,0,3,D29
+CIL4010,Environmental Science,CI,CI,L,400,2,0,0,2,D29
+CIL4310,Cyber-Physical Systems for Infrastructure,CI,CI,L,400,3,0,0,3,D29
+CIL4320,Infrastructure planning and design for rail and air transport,CI,CI,L,400,3,0,0,3,D29
+CIL7010,Introduction to Sustainable Infrastructure Engineering,CI,CI,L,700,3,0,0,3,D29
+CIL7011,Introduction to Sustainable Infrastructure Engineering,CI,CI,L,700,1.5,0,0,1.5,D29
+CIL7012,Introduction to Sustainable Infrastructure Engineering,CI,CI,L,700,1.5,0,0,1.5,D29
+CIL7310,Offshore Wind Energy Harvesting,CI,CI,L,700,3,0,0,3,D29
+CIL7320,Air Pollution and Control,CI,CI,L,700,3,0,0,3,D29
+CIL7330,Contaminant transport to sub-surface environments,CI,CI,L,700,3,0,0,3,D29
+CIL7340,Wind turbine and field design,CI,CI,L,700,3,0,2,4,D29
+CIL7350,Offshore Tidal Energy Harvesting,CI,CI,L,700,3,0,0,3,D29
+CIL7370,Indoor Air Pollution,CI,CI,L,700,2,0,0,2,D29
+CIL7380,Remote Sensing and GIS for Environment Management,CI,CI,L,700,3,0,2,4,D29
+CIL7390,Climate Change and Impact,CI,CI,L,700,3,0,0,3,D29
+CIL7400,Traffic System and Management,CI,CI,L,700,3,0,0,3,D29
+CIL7410,Stability of Slopes,CI,CI,L,700,3,0,0,3,D29
+CIL7420,Traffic Flow Theory,CI,CI,L,700,3,0,0,3,D29
+CIL7430,Environmental Chemistry and Physics,CI,CI,L,700,3,0,0,3,D29
+CIL7440,Green Building and Sustainable Materials,CI,CI,L,700,3,0,0,3,D29
+CIL7450,Rock Mechanics and Rock Engineering,CI,CI,L,700,3,0,0,3,D29
+CIL7460,Structural Dynamics,CI,CI,L,700,3,0,0,3,D29
+CIL7470,Foundation Engineering,CI,CI,L,700,3,0,0,3,D29
+CIL7480,Wind and Earthquake Engineering,CI,CI,L,700,3,0,0,3,D29
+CIL7490,Soil Stabilization and Ground Improvement,CI,CI,L,700,3,0,0,3,D29
+CIL7500,Environmental Aspects of Power Plant,CI,CI,L,700,1,0,0,1,D29
+CIL7510,Fate of Chemicals in the Environment,CI,CI,L,700,3,0,0,3,D29
+CIL7520,Environmental Hydrology,CI,CI,L,700,3,0,2,4,D29
+CIL7530,AI/ML in Infrastructure Engineering,CI,CI,L,700,3,0,0,3,D29
+CIL7540,Fate of Chemicals in the Environment,CI,CI,L,700,3,0,0,3,D29
+CIL7550,Environmental Aspects of Power Plant,CI,CI,L,700,1,0,0,1,D29
+CIL7560,Wind turbine and field design,CI,CI,L,700,3,0,0,3,D29
+CIL7570,Environmental Economics and Management,CI,CI,L,700,3,0,0,3,D29
+CIL7580,Energy Economics and policy,CI,CI,L,700,1,0,0,1,D29
+CIL7590,Solar Energy and Applications,CI,CI,L,700,3,0,0,3,D29
+CIL7610,Materials for Electrochemical Energy Conversion and Storage,CI,CI,L,700,2,0,0,2,D29
+CIP2040,Fluid Mechanics Lab,CI,CI,P,200,0,0,2,1,D29
+CIP3040,Geotechnical Engineering Lab,CI,CI,P,300,0,0,2,1,D29
+CIP5010,Smart Infrastructure: Design and Simulation,CI,CI,P,500,0,0,4,2,D29
+CIP7310,Environmental Engineering Laboratory,CI,CI,P,700,1,0,4,3,D29
+CSL1010,Introduction to Computer Science,CS,CS,L,100,3,0,2,4,D29
+CSL2010,Introduction to Machine Learning,CS,CS,L,200,3,0,2,4,D29
+CSL2020,Data Structures and Algorithms,CS,CS,L,200,3,0,2,4,D29
+CSL2030,Computer Organization and Architecture,CS,CS,L,200,3,0,0,3,D29
+CSL2040,Maths for Computing,CS,CS,L,200,3,1,0,4,D29
+CSL2050,Pattern Recognition and Machine Learning,CS,CS,L,200,3,0,2,4,D29
+CSL2060,Software Engineering,CS,CS,L,200,3,0,2,4,D29
+CSL2070,Digital Design,CS,CS,L,200,2,0,2,3,D29
+CSL2080,Principles of Computer Systems - I,CS,CS,L,200,2,0,2,3,D29
+CSL2090,Principles of Computer Systems - II,CS,CS,L,200,3,0,2,4,D29
+CSL3010,Design and Analysis of Algorithms,CS,CS,L,300,3,1,0,4,D29
+CSL3020,Computer Architecture,CS,CS,L,300,3,0,0,3,D29
+CSL3030,Operating Systems,CS,CS,L,300,3,0,2,4,D29
+CSL3040,Principles of Programming Languages,CS,CS,L,300,3,0,0,3,D29
+CSL3050,Database Systems,CS,CS,L,300,3,0,2,4,D29
+CSL3060,Principles of Computer Systems - I,CS,CS,L,300,2,0,2,3,D29
+CSL3070,Principles of Computer Systems - II,CS,CS,L,300,3,0,2,4,D29
+CSL3080,Computer Networks,CS,CS,L,300,3,0,3,4.5,D29
+CSL3090,Artificial Intelligence,CS,CS,L,300,3,0,0,3,D29
+CSL3110,Computer Networks,CS,CS,L,300,3,0,0,3,D29
+CSL4010,Optimization for Machine Learning,CS,CS,L,400,3,0,3,4.5,D29
+CSL4020,Deep Learning,CS,CS,L,400,3,0,3,4.5,D29
+CSL4030,Data Engineering,CS,CS,L,400,3,0,3,4.5,D29
+CSL4040,Social Networks,CS,CS,L,400,3,0,0,3,D29
+CSL4050,Data Visualization,CS,CS,L,400,3,0,3,4.5,D29
+CSL6010,Cyber Security,CS,CS,L,600,3,0,2,4,D29
+CSL7010,Artificial Intelligence - I,CS,CS,L,700,3,0,0,3,D29
+CSL7020,Machine Learning - I,CS,CS,L,700,3,0,0,3,D29
+CSL7021,Machine Learning - I: Supervised Learning,CS,CS,L,700,1,0,0,1,D29
+CSL7022,Machine Learning - I: Unsupervised Learning and Generative Models,CS,CS,L,700,1,0,0,1,D29
+CSL7023,Machine Learning - I: Computational Theory and Deep Neural Network,CS,CS,L,700,1,0,0,1,D29
+CSL7030,Algorithms for Big Data,CS,CS,L,700,2,0,0,2,D29
+CSL7040,Artificial Intelligence - 2,CS,CS,L,700,3,0,0,3,D29
+CSL7041,Probabilistic Reasoning and Knowledge Representation,CS,CS,L,700,1,0,0,1,D29
+CSL7042,Making Decisions,CS,CS,L,700,1,0,0,1,D29
+CSL7043,Reinforcement Learning,CS,CS,L,700,1,0,0,1,D29
+CSL7050,Machine Learning - 2,CS,CS,L,700,3,0,0,3,D29
+CSL7051,Introduction to Deep Learning,CS,CS,L,700,1,0,0,1,D29
+CSL7052,Representation Learning &amp; Structured Models,CS,CS,L,700,1,0,0,1,D29
+CSL7053,Deep Generative Models,CS,CS,L,700,1,0,0,1,D29
+CSL7060,Real Time Autonomous System,CS,CS,L,700,2,0,0,2,D29
+CSL7070,Computer Architecture,CS,CS,L,700,3,0,0,3,D29
+CSL7071,Multi System Architecture,CS,CS,L,700,1,0,0,1,D29
+CSL7072,Multicore Processing,CS,CS,L,700,1,0,0,1,D29
+CSL7073,Fundamentals of Parallel Programming,CS,CS,L,700,1,0,0,1,D29
+CSL7080,Security and Applications,CS,CS,L,700,3,0,0,3,D29
+CSL7081,Introduction to Information Security,CS,CS,L,700,2,0,2,3,D29
+CSL7090,Software and Data Engineering,CS,CS,L,700,3,0,0,3,D29
+CSL7091,Cloud Computing and Virtualization,CS,CS,L,700,1,0,0,1,D29
+CSL7092,Data Management,CS,CS,L,700,1,0,0,1,D29
+CSL7093,Data Intensive Processing Systems,CS,CS,L,700,1,0,0,1,D29
+CSL7100,Social Network Analysis,CS,CS,L,700,3,0,0,3,D29
+CSL7110,Machine Learning with Big Data,CS,CS,L,700,3,0,0,3,D29
+CSL7140,Complexity Theory,CS,CS,L,700,3,0,0,3,D29
+CSL7170,Graph-theoretic Algorithms,CS,CS,L,700,3,0,0,3,D29
+CSL7180,Data Visualization,CS,CS,L,700,3,0,0,3,D29
+CSL7310,Vehicular Adhoc Networks,CS,CS,L,700,3,0,0,3,D29
+CSL7320,Digital Image Analysis,CS,CS,L,700,3,0,0,3,D29
+CSL7330,Neuromorphic Computing and Design,CS,CS,L,700,3,0,0,3,D29
+CSL7331,Introduction to Neuromorphic Engineering,CS,CS,L,700,1,0,0,1,D29
+CSL7332,Neuromorphic Computing,CS,CS,L,700,1,0,0,1,D29
+CSL7333,Neuromorphic Hardware Implementation,CS,CS,L,700,1,0,0,1,D29
+CSL7340,Natural Language Processing,CS,CS,L,700,3,0,0,3,D29
+CSL7350,Selected Topics in AI,CS,CS,L,700,3,0,0,3,D29
+CSL7360,Computer Vision,CS,CS,L,700,3,0,0,3,D29
+CSL7370,Dependable AI,CS,CS,L,700,3,0,0,3,D29
+CSL7382,Bioimage Computing,CS,CS,L,700,1,0,0,1,D29
+CSL7390,Social Network Analysis,CS,CS,L,700,3,0,0,3,D29
+CSL7410,Graph Theory and Applications,CS,CS,L,700,3,0,0,3,D29
+CSL7420,Principles of Biological Vision,CS,CS,L,700,3,0,0,3,D29
+CSL7430,Advanced Biometrics,CS,CS,L,700,3,0,0,3,D29
+CSL7440,Ubiquitous Computing,CS,CS,L,700,3,0,0,3,D29
+CSL7450,Computer Graphics,CS,CS,L,700,3,0,0,3,D29
+CSL7460,Mobile and Pervasive Computing,CS,CS,L,700,3,0,0,3,D29
+CSL7470,Advanced Algorithm,CS,CS,L,700,3,0,0,3,D29
+CSL7480,Cryptography,CS,CS,L,700,3,0,0,3,D29
+CSL7490,Introduction to Blockchain,CS,CS,L,700,3,0,0,3,D29
+CSL7510,Virtualization and Cloud Computing,CS,CS,L,700,3,0,0,3,D29
+CSL7520,GPU Programming,CS,CS,L,700,3,0,0,3,D29
+CSL7530,Advanced Machine Learning,CS,CS,L,700,3,0,0,3,D29
+CSL7540,Artificial Intelligence,CS,CS,L,700,3,0,0,3,D29
+CSL7550,Machine Learning,CS,CS,L,700,3,0,0,3,D29
+CSL7551,Supervised Learning,CS,CS,L,700,1,0,0,1,D29
+CSL7552,Unsupervised Learning,CS,CS,L,700,1,0,0,1,D29
+CSL7553,Kernels and Neural Networks,CS,CS,L,700,1,0,0,1,D29
+CSL7560,Advanced Data Structure and Algorithms,CS,CS,L,700,3,0,0,3,D29
+CSL7561,Data Structure and Algorithmic Techniques,CS,CS,L,700,2,0,0,2,D29
+CSL7570,Introduction to Augmented Reality and Virtual Reality,CS,CS,L,700,3,0,0,3,D29
+CSL7580,Advanced Artificial Intelligence,CS,CS,L,700,3,0,0,3,D29
+CSL7590,Deep Learning,CS,CS,L,700,3,0,0,3,D29
+CSL7610,Artificial Intelligence,CS,CS,L,700,3,0,0,3,D29
+CSL7620,Machine Learning,CS,CS,L,700,3,0,0,3,D29
+CSL7630,Algorithms for Big Data,CS,CS,L,700,3,0,0,3,D29
+CSL7640,Natural Language Understanding,CS,CS,L,700,3,0,0,3,D29
+CSL7650,Autonomous Systems,CS,CS,L,700,3,0,0,3,D29
+CSL7660,Computer Network Protocols and Applications,CS,CS,L,700,3,0,0,3,D29
+CSL7670,Fundamentals of Machine Learning,CS,CS,L,700,3,0,2,4,D29
+CSL7671,Neural Networks,CS,CS,L,700,1,0,0,1,D29
+CSL7680,Advance Computer Vision,CS,CS,L,700,3,0,0,3,D29
+CSL7690,Edge and Fog Computing,CS,CS,L,700,3,0,0,3,D29
+CSL7710,Parameterized Complexity,CS,CS,L,700,3,0,0,3,D29
+CSL7720,Advanced Computer Graphics,CS,CS,L,700,3,0,0,3,D29
+CSL7730,Bridge Course on DSA,CS,CS,L,700,1,0,0,1,D29
+CSL7740,Software Testing and Quality Assurance,CS,CS,L,700,3,0,0,3,D29
+CSL7750,Distributed Database Systems,CS,CS,L,700,3,0,0,3,D29
+CSL7760,Medical Image Analysis,CS,CS,L,700,3,0,0,3,D29
+CSL7910,Special Topics in Computer Science 1,CS,CS,L,700,3,0,0,3,D29
+CSL7920,Distributed Algorithms,CS,CS,L,700,3,0,0,3,D29
+CSL7930,Special Topics in Computer Science 3,CS,CS,L,700,1,0,0,1,D29
+CSL7940,Independent Study,CS,CS,L,700,3,0,0,3,D29
+CSL7950,Selected Topics in Artificial Intelligence - I,CS,CS,L,700,1,0,0,1,D29
+CSL7990,Thesis,CS,CS,L,700,0,0,12,12,D29
+CSL8010,Machine Learning with Big Data,CS,CS,L,800,3,0,0,3,D29
+CSP2020,Human-Machine Interaction,CS,CS,P,200,0,0,4,2,D29
+CSP3010,Digital System Lab,CS,CS,P,300,0,0,3,1.5,D29
+CSP4020,Visual Computing Lab,CS,CS,P,400,0,0,4,2,D29
+CSP7010,Data Structures and Practices,CS,CS,P,700,0,0,2,1,D29
+CSP7020,ML-Ops-1,CS,CS,P,700,0,0,2,1,D29
+CSP7030,DL-Ops,CS,CS,P,700,0,0,2,1,D29
+CSP7040,ML-Ops,CS,CS,P,700,0,0,2,1,D29
+CYL0010,Preparatory Chemistry 1,CY,CY,L,0,3,1,0,4,D29
+CYL0020,Preparatory Chemistry II,CY,CY,L,0,3,1,0,4,D29
+CYL1010,Chemistry,CY,CY,L,100,3,0,0,3,D29
+CYL2010,Nanoscience,CY,CY,L,200,3,0,0,3,D29
+CYL2020,Basic Organic Chemistry,CY,CY,L,200,3,0,0,3,D29
+CYL2021,Colloids & Suspensions,CY,CY,L,200,1,0,0,1,D29
+CYL2030,Fundamental Inorganic Chemistry,CY,CY,L,200,3,0,0,3,D29
+CYL4310,Quantum Information and Applications,CY,CY,L,400,3,0,0,3,D29
+CYL6010,Organic Reactions and Mechanisms,CY,CY,L,600,3,0,0,3,D29
+CYL6020,Transition Metal and Organometallic Chemistry,CY,CY,L,600,3,0,0,3,D29
+CYL6030,Quantum Chemistry and Spectroscopy,CY,CY,L,600,3,0,0,3,D29
+CYL6040,Physical Organic Chemistry,CY,CY,L,600,3,0,0,3,D29
+CYL6050,Maingroup and bioinorganic Chemistry,CY,CY,L,600,3,0,0,3,D29
+CYL6060,Organic Synthesis,CY,CY,L,600,0,0,0,3,D29
+CYL6070,Solid State and Material Chemistry,CY,CY,L,600,0,0,0,3,D29
+CYL6080,Molecular Thermodynamics and Chemical Kinetics,CY,CY,L,600,0,0,0,3,D29
+CYL6081,Thermodynamics,CY,CY,L,600,1,0,0,1,D29
+CYL6082,Statistical Thermodynamics,CY,CY,L,600,1,0,0,1,D29
+CYL6083,Chemical Kinetics,CY,CY,L,600,1,0,0,1,D29
+CYL6084,Advanced Main Group Chemistry,CY,CY,L,600,3,0,0,3,D29
+CYL6090,Theory and Applications of Spectroscopic Techniques,CY,CY,L,600,0,0,0,3,D29
+CYL6311,Electronic Spectroscopy,CY,CY,L,600,1,0,0,1,D29
+CYL6312,Infrared and Raman Specrtoscopy,CY,CY,L,600,1,0,0,1,D29
+CYL6313,NMR and EPR Spectroscopy,CY,CY,L,600,1,0,0,1,D29
+CYL6320,Chemical Binding,CY,CY,L,600,3,0,0,3,D29
+CYL6330,Numerical Methods and Group Theory,CY,CY,L,600,3,0,0,3,D29
+CYL6340,Principles of Nuclear Magnetic Resonance,CY,CY,L,600,3,0,0,3,D29
+CYL6350,Advanced Main Group Chemistry,CY,CY,L,600,3,0,0,3,D29
+CYL6360,Principles of Fluorescence Spectroscopy and Imaging,CY,CY,L,600,3,0,0,3,D29
+CYL6370,Modern NMR Methods for Chemists,CY,CY,L,600,3,0,0,3,D29
+CYL7310,Molecular Dynamics Simulations,CY,CY,L,700,3,0,0,3,D29
+CYL7320,Advance Materials Design,CY,CY,L,700,3,0,0,3,D29
+CYL7330,Catalysis for Energy,CY,CY,L,700,3,0,0,3,D29
+CYL7340,Frontiers in Organic Chemistry,CY,CY,L,700,3,0,0,3,D29
+CYL7350,Computational Chemistry,CY,CY,L,700,3,0,0,3,D29
+CYL7360,Spectroscopic Determination of Organic Compounds,CY,CY,L,700,3,0,0,3,D29
+CYL7370,Frontiers in Organometallic Catalysis,CY,CY,L,700,3,0,0,3,D29
+CYL7380,Modern Electronic Structure Theory,CY,CY,L,700,3,0,0,3,D29
+CYL7390,Chemical Reaction Dynamics,CY,CY,L,700,3,0,0,3,D29
+CYL7400,Polymer Dynamics,CY,CY,L,700,3,0,0,3,D29
+CYL7410,Stochastic Problems in Biophysics,CY,CY,L,700,3,0,0,3,D29
+CYL7420,Characterization Techniques in Inorganic Chemistry,CY,CY,L,700,3,0,0,3,D29
+CYL7430,Water Chemistry,CY,CY,L,700,3,0,0,3,D29
+CYL7440,Stereochemistry of Organic Compounds,CY,CY,L,700,3,0,0,3,D29
+CYL7450,Nanomaterials and Nanodevices,CY,CY,L,700,2,0,2,3,D29
+CYL7460,Isolation and Synthesis of Natural Products,CY,CY,L,700,3,0,0,3,D29
+CYL7470,Compounds of p-block elements and Applications,CY,CY,L,700,3,0,0,3,D29
+CYL7480,Plasma Catalysis for energy and Environment,CY,CY,L,700,3,0,0,3,D29
+CYL7490,NMR-Principles and Practices,CY,CY,L,700,3,0,0,3,D29
+CYL7500,Statistical Mechanics and Molecular Simulations,CY,CY,L,700,3,0,0,3,D29
+CYL7510,Advanced Fluorescence Microscopy Techniques and Applications,CY,CY,L,700,0,0,3,3,D29
+CYP1010,Chemistry Laboratory,CY,CY,P,100,0,0,2,1,D29
+CYP2020,Organic Chemistry Lab1,CY,CY,P,200,0,0,3,1.5,D29
+CYP6010,Organic Laboratory,CY,CY,P,600,0,0,3,1.5,D29
+CYP6020,Inorganic Chemistry Laboratory,CY,CY,P,600,0,0,3,1.5,D29
+CYP6030,Hands-on - I,CY,CY,P,600,0,0,3,1.5,D29
+CYP6040,Physical Chemistry Laboratory,CY,CY,P,600,0,3,0,1.5,D29
+CYP6050,Hands on-2,CY,CY,P,600,0,0,3,1.5,D29
+CYP6060,Computational Lab,CY,CY,P,600,0,0,3,1.5,D29
+AIL7460,Applied Mathematics and Statistics,DEi,AI,L,700,3,0,0,3,D29
+AIL7470,Fundamentals of Business and Data Analytics,DEi,AI,L,700,3,0,0,3,D29
+AIL7480,Fundamentals of Data Science,DEi,AI,L,700,3,0,0,3,D29
+DHL5010,Foundations of Digital Humanities,DH,DH,L,500,3,0,2,4,D29
+DHL5020,Principles of Digital Economics,DH,DH,L,500,3,0,0,3,D29
+DHL5030,Place and Identity in the Digital Age,DH,DH,L,500,3,0,0,3,D29
+DHL5040,Archiving and Databases,DH,DH,L,500,0,2,0,4,D29
+DHL5050,Machine Learning for Digital Humanities,DH,DH,L,500,3,0,0,3,D29
+DHL5060,Methods and Methodologies in Digital Humanities,DH,DH,L,500,0,2,0,4,D29
+DHL6010,Perspectives in Language and Literary Studies,DH,DH,L,600,3,0,0,3,D29
+DHL6020,"Civilizations, Cultures, and Technologies",DH,DH,L,600,3,0,0,3,D29
+DHL7010,Fundamentals of Digital Humanities,DH,DH,L,700,3,0,0,3,D29
+DHL7011,Digital Humanities: Emerging Contours,DH,DH,L,700,1,0,0,1,D29
+DHL7012,Data and Knowledge Representations,DH,DH,L,700,1,0,0,1,D29
+DHL7013,Digital Archives,DH,DH,L,700,1,0,0,1,D29
+DHL7020,Digital Tools and Methods,DH,DH,L,700,2,0,0,2,D29
+DHL7021,Qualitative and Quantitative Analyses,DH,DH,L,700,1,0,0,1,D29
+DHL7022,Visualization Analysis and Design,DH,DH,L,700,1,0,0,1,D29
+DHL7030,New Media Studies,DH,DH,L,700,3,0,0,3,D29
+DHL7031,"Images, Imaginations, and Digital Cultures",DH,DH,L,700,3,0,0,3,D29
+DHL7032,Human factors in interaction design,DH,DH,L,700,3,0,0,3,D29
+DHL7040,Digital Storytelling,DH,DH,L,700,3,0,0,3,D29
+DHL7300,Selected Topics in Digital Humanities I,DH,DH,L,700,1,0,0,1,D29
+DHL7910,Selected Topics in Digital Humanities (Linguistics and NLP),DH,DH,L,700,3,0,0,3,D29
+DHP7010,Social Media Application Development,DH,DH,P,700,0,2,0,2,D29
+EEL1010,Introduction to Electrical Engineering,EE,EE,L,100,3,0,2,4,D29
+EEL2010,Signals and Systems,EE,EE,L,200,3,1,0,4,D29
+EEL2020,Digital Design,EE,EE,L,200,2,0,2,3,D29
+EEL2030,Circuit Theory,EE,EE,L,200,3,0,0,3,D29
+EEL2040,Engineering Electromagnetics,EE,EE,L,200,3,0,0,3,D29
+EEL2050,Physical Electronics,EE,EE,L,200,3,0,0,3,D29
+EEL2060,Embedded Systems and IoT,EE,EE,L,200,3,0,2,4,D29
+EEL2070,Modelling and Simulation,EE,EE,L,200,3,0,2,4,D29
+EEL3010,Analog Circuits,EE,EE,L,300,3,0,3,4.5,D29
+EEL3020,Electrical Machines,EE,EE,L,300,3,0,0,3,D29
+EEL3030,Communication Systems,EE,EE,L,300,3,0,0,3,D29
+EEL3040,Control Systems,EE,EE,L,300,3,0,3,4.5,D29
+EEL3050,Biosensors,EE,EE,L,300,3,0,2,4,D29
+EEL3060,Power Engineering,EE,EE,L,300,3,0,3,4.5,D29
+EEL3070,Digital Signal Processing,EE,EE,L,300,3,0,0,3,D29
+EEL3080,Data Communication Networks,EE,EE,L,300,3,0,0,3,D29
+EEL3090,Embedded Systems,EE,EE,L,300,3,0,0,3,D29
+EEL3100,Bioimaging,EE,EE,L,300,3,0,0,3,D29
+EEL3310,Information Theory and Coding,EE,EE,L,300,3,0,0,3,D29
+EEL3320,VLSI Design,EE,EE,L,300,3,0,0,3,D29
+EEL3330,Modern Control,EE,EE,L,300,3,0,0,3,D29
+EEL3340,Measurement and Instrumentation,EE,EE,L,300,3,0,0,3,D29
+EEL4310,Physics and Modelling of MOS Transistor,EE,EE,L,400,3,0,0,3,D29
+EEL4320,Sensors and Actuators,EE,EE,L,400,3,0,0,3,D29
+EEL4330,Speech processing,EE,EE,L,400,3,0,0,3,D29
+EEL4350,Microwave Engineering,EE,EE,L,400,3,0,0,3,D29
+EEL4360,Optical Communication Systems,EE,EE,L,400,3,0,0,3,D29
+EEL4370,Power System Operation and Control,EE,EE,L,400,3,0,0,3,D29
+EEL4380,Power Electronics,EE,EE,L,400,3,0,0,3,D29
+EEL4390,System Identification,EE,EE,L,400,3,0,0,3,D29
+EEL4400,Multimodal Interface,EE,EE,L,400,0,0,4,2,D29
+EEL4410,Power System Analysis and Stability,EE,EE,L,400,3,0,0,3,D29
+EEL4420,Satellite Communications,EE,EE,L,400,3,0,0,3,D29
+EEL4430,Foundation of Cyber-Physical System,EE,EE,L,400,3,0,0,3,D29
+EEL4440,Quantum Nanoelectronics,EE,EE,L,400,3,0,0,3,D29
+EEL4450,Semiconductor Optoelectronics,EE,EE,L,400,3,0,0,3,D29
+EEL4460,Spread Spectrum Communications,EE,EE,L,400,3,0,0,3,D29
+EEL7010,Statistical Signal Analysis,EE,EE,L,700,3,0,0,3,D29
+EEL7011,Characterization of Random Processes,EE,EE,L,700,1,0,0,1,D29
+EEL7012,Estimation Theory,EE,EE,L,700,1,0,0,1,D29
+EEL7013,Multiple Parameter Estimation,EE,EE,L,700,1,0,0,1,D29
+EEL7020,Wireless Communication,EE,EE,L,700,3,0,0,3,D29
+EEL7030,Advanced Digital Signal Processing,EE,EE,L,700,3,0,0,3,D29
+EEL7040,Sensors and Measurement,EE,EE,L,700,3,0,0,3,D29
+EEL7041,Sensor Characteristics,EE,EE,L,700,1,0,0,1,D29
+EEL7042,Physical Principal of Sciences,EE,EE,L,700,1,0,0,1,D29
+EEL7043,Sensor Interface and Application,EE,EE,L,700,1,0,0,1,D29
+EEL7050,Microsystems Fabrication Technology,EE,EE,L,700,3,0,0,3,D29
+EEL7060,Analog and Interfacing Circuits,EE,EE,L,700,3,0,0,3,D29
+EEL7061,Fundamentals of Analog Circuits and Design,EE,EE,L,700,1,0,0,1,D29
+EEL7062,Readout Electronics,EE,EE,L,700,1,0,0,1,D29
+EEL7063,Digital to Analog Converter Design,EE,EE,L,700,1,0,0,1,D29
+EEL7070,Introduction to Internet of Things,EE,EE,L,700,1,0,0,1,D29
+EEL7080,Introduction to Cyber Physical Systems,EE,EE,L,700,3,0,0,3,D29
+EEL7090,Simulation of Dynamical Systems,EE,EE,L,700,1,0,0,1,D29
+EEL7100,Data Communication and Networking,EE,EE,L,700,3,0,0,3,D29
+EEL7110,MIMO Wireless Communications,EE,EE,L,700,3,0,0,3,D29
+EEL7120,Digital and Systems-on-Chip Design,EE,EE,L,700,3,0,0,3,D29
+EEL7130,Security in CPS,EE,EE,L,700,2,0,0,2,D29
+EEL7140,Advanced Control System,EE,EE,L,700,3,0,0,3,D29
+EEL7150,Embedded System Design,EE,EE,L,700,3,0,0,3,D29
+EEL7160,Analog and Interfacing Circuits,EE,EE,L,700,3,0,2,4,D29
+EEL7170,Introduction to IoT Systems,EE,EE,L,700,2,0,2,3,D29
+EEL7171,IoT Systems Architecture,EE,EE,L,700,1,0,0,1,D29
+EEL7172,Embedded Computing and IoT Applications,EE,EE,L,700,1,0,0,1,D29
+EEL7180,Sensors and Measurement,EE,EE,L,700,2,0,0,2,D29
+EEL7181,Sensor Characteristics,EE,EE,L,700,1,0,0,1,D29
+EEL7182,Sensor Interface and Application,EE,EE,L,700,1,0,0,1,D29
+EEL7190,Microsystems Fabrication Technology,EE,EE,L,700,2,0,2,3,D29
+EEL7200,Data Communication and Networking,EE,EE,L,700,2,0,2,3,D29
+EEL7210,Hardware Software Co-Design,EE,EE,L,700,3,0,2,4,D29
+EEL7220,Renewable Energy Systems,EE,EE,L,700,3,0,0,3,D29
+EEL7230,Modern Communication Networks,EE,EE,L,700,3,0,0,3,D29
+EEL7240,Cellular Communication Networks,EE,EE,L,700,3,0,0,3,D29
+EEL7250,Introduction to Immersive Multimedia,EE,EE,L,700,3,0,0,3,D29
+EEL7260,Information - Centric Networks,EE,EE,L,700,3,0,2,4,D29
+EEL7270,Mulsemedia Techniques and Systems,EE,EE,L,700,3,0,0,3,D29
+EEL7310,Antenna Engineering,EE,EE,L,700,3,0,0,3,D29
+EEL7320,Digital VLSI Design,EE,EE,L,700,3,0,0,3,D29
+EEL7330,Flexible and Printed Electronics,EE,EE,L,700,3,0,0,3,D29
+EEL7340,Power System Protection,EE,EE,L,700,3,0,0,3,D29
+EEL7350,Selected Topics in Communication I,EE,EE,L,700,1,0,0,1,D29
+EEL7360,Statistical Decision Theory,EE,EE,L,700,2,0,0,2,D29
+EEL7370,Optical Fiber Communications,EE,EE,L,700,3,0,0,3,D29
+EEL7371,Optical Fiber Waveguide,EE,EE,L,700,1,0,0,1,D29
+EEL7372,Optical Sources and Receivers,EE,EE,L,700,1,0,0,1,D29
+EEL7373,Optical Fiber Link Design,EE,EE,L,700,1,0,0,1,D29
+EEL7380,Millimeter-wave Technology,EE,EE,L,700,3,0,0,3,D29
+EEL7390,Radio Frequency Integrated Circuit Design,EE,EE,L,700,3,0,0,3,D29
+EEL7400,Digital Video Processing,EE,EE,L,700,3,0,0,3,D29
+EEL7410,Computational Imaging,EE,EE,L,700,3,0,0,3,D29
+EEL7420,Digital Image Processing and Applications,EE,EE,L,700,3,0,0,3,D29
+EEL7430,Compressive Sensing,EE,EE,L,700,3,0,0,3,D29
+EEL7440,Image Sensor Design and Applications,EE,EE,L,700,3,0,0,3,D29
+EEL7450,Nano Sensors,EE,EE,L,700,3,0,0,3,D29
+EEL7460,Adaptive Signal Processing,EE,EE,L,700,3,0,0,3,D29
+EEL7470,Selected Topics in Signal Processing II,EE,EE,L,700,2,0,0,2,D29
+EEL7480,Machine Learning for Communications,EE,EE,L,700,3,0,0,3,D29
+EEL7490,Digital Twin,EE,EE,L,700,3,0,0,3,D29
+EEL7500,IC Technology,EE,EE,L,700,3,0,0,3,D29
+EEL7510,Selected Topics in Signal Processing I,EE,EE,L,700,1,0,0,1,D29
+EEL7520,"Micro-fabrication Technologies, Sensor Signals, Interfacing and Read-out Electronics",EE,EE,L,700,1,0,0,1.5,D29
+EEL7530,Queuing Theory,EE,EE,L,700,3,0,0,3,D29
+EEL7540,Selected topics in CPS 3,EE,EE,L,700,3,0,0,3,D29
+EEL7550,Selected topics in CPS 1,EE,EE,L,700,1,0,0,1,D29
+EEL7560,Data Compression,EE,EE,L,700,3,0,0,3,D29
+EEL7570,Selected Topics in SIoT-III,EE,EE,L,700,3,0,0,3,D29
+EEL7580,Introduction to Smart Grid,EE,EE,L,700,3,0,0,3,D29
+EEL7590,Selected Topics in SIoT-I,EE,EE,L,700,1,0,0,1,D29
+EEL7600,Multimedia Communications,EE,EE,L,700,3,0,0,3,D29
+EEL7610,Visual Perception,EE,EE,L,700,3,0,0,3,D29
+EEL7620,Multirate Digital Signal Processing,EE,EE,L,700,2,0,0,2,D29
+EEL7630,Coding Theory,EE,EE,L,700,3,0,0,3,D29
+EEL7640,Selected Topics in Distributed Generation,EE,EE,L,700,3,0,0,3,D29
+EEL7650,Selected Topics in Communication-III,EE,EE,L,700,3,0,0,3,D29
+EEL7660,Real Time Communications,EE,EE,L,700,3,0,0,3,D29
+EEL7670,Introduction to Haptics,EE,EE,L,700,3,0,0,3,D29
+EEL7680,3D Shape Analysis,EE,EE,L,700,3,0,0,3,D29
+EEL7690,Selected Topics in SIoT-II,EE,EE,L,700,2,0,0,2,D29
+EEL7710,Special Drives for Electric Vehicles,EE,EE,L,700,3,0,0,3,D29
+EEL7720,VLSI Broadband Communication Circuits,EE,EE,L,700,3,0,0,3,D29
+EEL7730,Transmission Infrastructure,EE,EE,L,700,3,0,0,3,D29
+EEL7740,Smart Grid,EE,EE,L,700,3,0,2,4,D29
+EEL7750,Real Time Communications,EE,EE,L,700,3,0,0,3,D29
+EEL7760,Design and Analysis of Communication Networks,EE,EE,L,700,3,0,2,4,D29
+EEL7770,Formal Verification,EE,EE,L,700,2,0,0,2,D29
+EEL7780,Image and Video forensics,EE,EE,L,700,3,0,0,3,D29
+EEL7790,Plugin Electric Vehicles,EE,EE,L,700,3,0,2,4,D29
+EEL7800,Optical Networks,EE,EE,L,700,3,0,0,3,D29
+EEL7810,VLSI Testing,EE,EE,L,700,2,0,0,2,D29
+EEL7820,Active Filter Design,EE,EE,L,700,3,0,0,3,D29
+EEL7830,Nano Sensors,EE,EE,L,700,3,0,0,3,D29
+EEL7840,Point of care devices/diagnostics,EE,EE,L,700,2,0,0,2,D29
+EEL7850,Energy Storage,EE,EE,L,700,3,0,2,4,D29
+EEL7860,High Level Synthesis,EE,EE,L,700,3,0,0,3,D29
+EEL7870,Selected Topics in Distributed Generation,EE,EE,L,700,3,0,0,3,D29
+EEL7880,Spatial Audio,EE,EE,L,700,3,0,0,3,D29
+EEL7890,Mobile Robots,EE,EE,L,700,3,0,0,3,D29
+EEL7900,Physics and Modeling of MOS Transistors,EE,EE,L,700,3,0,0,3,D29
+EEL7910,Image Synthesis,EE,EE,L,700,3,0,0,3,D29
+EEL7920,Automotive Electronics Design,EE,EE,L,700,3,0,2,4,D29
+EEL7930,Optical Communication Systems,EE,EE,L,700,3,0,0,3,D29
+EEL7940,Signal and Power Integrity,EE,EE,L,700,3,0,0,3,D29
+EEL7950,In-Memory Computing,EE,EE,L,700,2,0,0,2,D29
+EEL7960,Digital Communications: Hands On,EE,EE,L,700,1,0,2,2,D29
+EEL7970,Introduction to Wireless Standards,EE,EE,L,700,3,0,0,3,D29
+EEL7980,Analog IC Design,EE,EE,L,700,3,0,2,4,D29
+EEL7990,RF system design for Communications,EE,EE,L,700,3,0,0,3,D29
+EEP3010,Communication Systems Lab,EE,EE,P,300,0,0,3,1.5,D29
+EEP3020,Digital Systems Lab,EE,EE,P,300,0,0,3,1.5,D29
+EEP3030,Electrical Machines Lab,EE,EE,P,300,0,0,3,1.5,D29
+EEP4400,Multimodal Interface Lab,EE,EE,P,400,0,0,4,2,D29
+EEP7010,Digital Signal Processing Lab,EE,EE,P,700,0,0,2,1,D29
+EEP7020,Communications Engineering Lab,EE,EE,P,700,0,0,2,1,D29
+EEP7030,Sensors and IoT Lab,EE,EE,P,700,0,0,2,1,D29
+EEP7040,Cyber Physical System Modelling and Simulation Laboratory,EE,EE,P,700,0,0,2,1,D29
+EEP7050,VLSI Design Lab,EE,EE,P,700,0,0,2,1,D29
+EEP7060,Embedded System Design Laboratory,EE,EE,P,700,0,0,2,1,D29
+EEP7070,Radio Frequency Integrated Circuit Design Lab,EE,EE,P,700,1,0,2,2,D29
+EEP7080,Digital image and video processing lab,EE,EE,P,700,1,0,2,2,D29
+EEP7090,Machine Learning for Communication lab,EE,EE,P,700,1,0,2,2,D29
+EEP7100,Integrated Circuits Design Lab,EE,EE,P,700,1,0,2,2,D29
+EEP7110,Winter Internship,EE,EE,P,700,0,0,2,1,D29
+EEP7120,Digital ASIC Design Lab,EE,EE,P,700,0,0,2,1,D29
+EEP7130,Digital Communications: Hands On,EE,EE,P,700,1,0,2,2,D29
+EES7990,Independent Study,EE,EE,S,700,3,0,0,3,D29
+ESP4070,B.Tech. Project,ES,ES,P,400,0,0,6,3,D29
+CGL4010,Advanced Cognitive Processes,HS,CG,L,400,3,0,0,3,D29
+CGL4020,Cognitive Psychology,HS,CG,L,400,3,0,03,3,D29
+CGL4030,Cognitive Psychology,HS,CG,L,400,3,0,0,3,D29
+HSL0010,Preparatory English 1,HS,HS,L,0,2,1,0,3,D29
+HSL0020,Preparatory English II,HS,HS,L,0,2,1,0,3,D29
+HSL2010,Introduction to Film Studies,HS,HS,L,200,3,0,0,3,D29
+HSL2020,Short Fiction from India,HS,HS,L,200,3,0,0,3,D29
+HSL2030,Regional Literature in Translation,HS,HS,L,200,3,0,0,3,D29
+HSL2040,Short stories from around the world,HS,HS,L,200,3,0,0,3,D29
+HSL2050,Short Fiction from South Asian Diaspora,HS,HS,L,200,3,0,0,3,D29
+HSL2060,Postcolonial Fiction,HS,HS,L,200,3,0,0,3,D29
+HSL2070,Creative Writing,HS,HS,L,200,3,0,0,3,D29
+HSL2080,Science Fiction,HS,HS,L,200,3,0,0,3,D29
+HSL2090,Classic Detective Fiction,HS,HS,L,200,3,0,0,3,D29
+HSL2110,Introduction to Theatre,HS,HS,L,200,3,0,0,3,D29
+HSL3010,Principles of Psychology,HS,HS,L,300,3,0,0,3,D29
+HSL3020,Popular Classics,HS,HS,L,300,3,0,0,3,D29
+HSL3030,Introduction to Sociology,HS,HS,L,300,3,0,0,3,D29
+HSL3040,Law and Society,HS,HS,L,300,3,0,0,3,D29
+HSL3050,Youth Studies,HS,HS,L,300,3,0,0,3,D29
+HSL3060,Development and Environment,HS,HS,L,300,3,0,0,3,D29
+HSL3070,Indian Society: A Sociological Introduction,HS,HS,L,300,3,0,0,3,D29
+HSL3080,Digital Societies,HS,HS,L,300,3,0,0,3,D29
+HSL3090,Social Stratification,HS,HS,L,300,3,0,0,3,D29
+HSL4010,Fundamentals of Logic,HS,HS,L,400,3,0,0,3,D29
+HSL4020,Philosophical Problems,HS,HS,L,400,3,0,0,3,D29
+HSL4030,Disaster risk reduction and management,HS,HS,L,400,3,0,0,3,D29
+HSL4040,Foundations of Sustainability,HS,HS,L,400,3,0,0,3,D29
+HSL4050,Critical Thinking,HS,HS,L,400,3,0,0,3,D29
+HSL4060,Positive Psychology and Wellbeing,HS,HS,L,400,3,0,0,3,D29
+HSL4070,Health Economics,HS,HS,L,400,3,0,0,3,D29
+HSL4080,Bioethics,HS,HS,L,400,3,0,0,3,D29
+HSL4090,Health and Development,HS,HS,L,400,3,0,0,3,D29
+HSL4100,Digital Society,HS,HS,L,400,3,0,0,3,D29
+HSL4110,Basics of Leadership,HS,HS,L,400,3,0,0,3,D29
+HSL4120,Social Stratification,HS,HS,L,400,3,0,0,3,D29
+HSL4130,Foundations of Finance,HS,HS,L,400,3,0,0,3,D29
+HSL4140,Introduction to Contemporary Arts,HS,HS,L,400,3,0,0,3,D29
+HSL4310,Professional Ethics,HS,HS,L,400,3,0,0,3,D29
+HSL4350,Gandhian Thought,HS,HS,L,400,3,0,0,3,D29
+HSL4360,Political and Cultural Ecology,HS,HS,L,400,3,0,0,3,D29
+HSL4370,Cognitive Semantics,HS,HS,L,400,0,0,0,3,D29
+HSL4380,Role of Technology in Development,HS,HS,L,400,3,0,0,3,D29
+HSL4390,Theories of Justice,HS,HS,L,400,3,0,0,3,D29
+HSL4400,Mental Illness and Mental Health,HS,HS,L,400,3,0,0,3,D29
+HSL4550,Introduction to Socioloy,HS,HS,L,400,3,0,0,3,D29
+HSL4560,Introduction to Sociology,HS,HS,L,400,3,0,0,3,D29
+HSL6010,Basics of HRM,HS,HS,L,600,2,0,0,2,D29
+HSL6020,Operations Management,HS,HS,L,600,2,0,0,2,D29
+HSL6030,Social Science Research Methods 1,HS,HS,L,600,3,0,2,4,D29
+HSL6050,Fundamentals of Computational Social Sciences,HS,HS,L,600,3,0,0,3,D29
+HSL6060,Perspectives in Computational Sociology,HS,HS,L,600,3,0,0,3,D29
+HSL6070,Understanding Social Realities,HS,HS,L,600,3,0,0,3,D29
+HSL6080,Principles of Macroeconomics,HS,HS,L,600,3,0,0,3,D29
+HSL6090,Introduction to Computational Methods for CSS,HS,HS,L,600,3,0,2,4,D29
+HSL6110,Ethics for CSS,HS,HS,L,600,3,0,0,3,D29
+HSL6120,Social Science Research Methods 2,HS,HS,L,600,3,0,2,4,D29
+HSL6130,Introduction to Policy Analysis,HS,HS,L,600,3,0,0,3,D29
+HSL6140,Sociology of Digital Era,HS,HS,L,600,3,0,2,4,D29
+HSL6150,New Forms of Social Oganisation,HS,HS,L,600,3,0,0,3,D29
+HSL6160,Sociology of Media,HS,HS,L,600,3,0,0,3,D29
+HSL6170,Work and Modern Organisations,HS,HS,L,600,3,0,0,3,D29
+HSL6180,Climate Change and Society,HS,HS,L,600,3,0,0,3,D29
+HSL6190,Sociology of Digital Era,HS,HS,L,600,3,0,0,3,D29
+HSL6330,Peer Learning,HS,HS,L,600,0,0,2,1,D29
+HSL6340,Design Thinking,HS,HS,L,600,2,0,2,3,D29
+HSL7010,Introduction to Cognitive Neuroscience,HS,HS,L,700,3,0,0,3,D29
+HSL7020,Industrial Organisation,HS,HS,L,700,3,0,0,3,D29
+HSL7030,Modern Indian Theatre,HS,HS,L,700,3,0,0,3,D29
+HSL7310,Sociology of Science and Technology,HS,HS,L,700,3,0,0,3,D29
+HSL7320,Ethical Theories and Moral Practices,HS,HS,L,700,3,0,0,3,D29
+HSL7330,Cine-Politics under the National Emergency,HS,HS,L,700,3,0,0,3,D29
+HSL7340,Qualitative and Quantitative Methodology,HS,HS,L,700,3,0,0,3,D29
+HSL7350,Professional Ethics,HS,HS,L,700,3,0,0,3,D29
+HSL7360,Gender and Society,HS,HS,L,700,3,0,0,3,D29
+HSL7370,Sociocultural Theories,HS,HS,L,700,3,0,0,3,D29
+HSL7380,Climate Change and Society,HS,HS,L,700,3,0,0,3,D29
+HSL7390,Consciousness,HS,HS,L,700,3,0,0,3,D29
+HSL7410,History and Philosophy of Science,HS,HS,L,700,3,0,0,3,D29
+HSL7420,Politics of Water Governance,HS,HS,L,700,3,0,0,3,D29
+HSL7430,Consumer Culture and Commodities,HS,HS,L,700,3,0,0,3,D29
+HSL7440,Introduction to Literatures from India?s Northeast,HS,HS,L,700,3,0,0,3,D29
+HSL7450,Indian Cinemas: Many Histories,HS,HS,L,700,3,0,0,3,D29
+HSL7460,Political and Institutional Economics of Development,HS,HS,L,700,3,0,0,3,D29
+HSL7470,Asian American Literature,HS,HS,L,700,3,0,0,3,D29
+HSL7480,Philosophy of Mind,HS,HS,L,700,3,0,0,3,D29
+HSL7490,Indian Economic Development and Policy,HS,HS,L,700,3,0,0,3,D29
+HSL7510,"Health Policy, Systems and Financing",HS,HS,L,700,3,0,0,3,D29
+HSL7520,Human Nature,HS,HS,L,700,3,0,0,3,D29
+HSL7530,Environmental Economics and Management,HS,HS,L,700,3,0,0,3,D29
+HSL7540,Philosophical Anthropology,HS,HS,L,700,3,0,0,3,D29
+HSL7550,Introduction to Editing and Publishing,HS,HS,L,700,3,0,0,3,D29
+HSL7560,World Literature and Global Cinema,HS,HS,L,700,3,0,0,3,D29
+HSL7580,Literature and Environment,HS,HS,L,700,3,0,0,3,D29
+HSL7590,Dalit Movement and Literature,HS,HS,L,700,3,0,0,3,D29
+HSL7610,Time and Literary Narratives,HS,HS,L,700,3,0,0,3,D29
+HSL7620,Economic Challenges and Data Driven Approaches,HS,HS,L,700,3,0,0,3,D29
+HSP6090,Seminar in CSS,HS,HS,P,600,0,0,2,1,D29
+MAL0010,Preparatory Mathematics 1,MA,MA,L,0,3,1,0,4,D29
+MAL0020,Preparatory Mathematics II,MA,MA,L,0,3,1,0,4,D29
+MAL1010,Mathematics I,MA,MA,L,100,3,1,0,4,D29
+MAL1020,Mathematics II,MA,MA,L,100,3,1,0,4,D29
+MAL2010,"Probability, Statistics and Stochastic process",MA,MA,L,200,1,0,0,4,D29
+MAL2020,Scientific Computations,MA,MA,L,200,3,0,2,4,D29
+MAL2030,Design and analysis of Experiments,MA,MA,L,200,3,0,2,4,D29
+MAL2040,Design and analysis of Experiments,MA,MA,L,200,3,0,0,3,D29
+MAL4310,Introduction to Game Theory,MA,MA,L,400,3,0,0,3,D29
+MAL4320,Statistical Inference and Simulation Techniques,MA,MA,L,400,3,0,0,3,D29
+MAL4330,Introduction to financial engineering,MA,MA,L,400,3,0,0,3,D29
+MAL5010,Probability and Statistics,MA,MA,L,500,0,0,1,4,D29
+MAL5020,Programming Techniques,MA,MA,L,500,0,2,0,3,D29
+MAL5030,Complex Analysis,MA,MA,L,500,0,0,1,4,D29
+MAL6010,Linear Algebra,MA,MA,L,600,0,0,1,4,D29
+MAL6020,Ordinary Differential Equations,MA,MA,L,600,0,0,1,4,D29
+MAL6030,Real Analysis,MA,MA,L,600,0,0,1,4,D29
+MAL6040,Abstract Algebra,MA,MA,L,600,0,0,1,4,D29
+MAL6050,Partial Differential Equations,MA,MA,L,600,0,0,0,3,D29
+MAL6060,Functional Analysis,MA,MA,L,600,0,0,0,3,D29
+MAL6070,Abstract Algebra,MA,MA,L,600,0,0,1,4,D29
+MAL6080,Topology,MA,MA,L,600,0,0,0,3,D29
+MAL6310,Measure and Integration,MA,MA,L,600,0,0,0,3,D29
+MAL6320,Optimization,MA,MA,L,600,0,0,0,3,D29
+MAL6330,Discrete Mathematical Structures and Applications,MA,MA,L,600,0,0,0,3,D29
+MAL7011,Introduction to Data Science,MA,MA,L,700,1,0,0,1,D29
+MAL7012,Introduction to Modelling,MA,MA,L,700,1,0,0,1,D29
+MAL7020,Mathematics for Data Science,MA,MA,L,700,3,0,0,3,D29
+MAL7021,Statistical Techniques,MA,MA,L,700,1,0,0,1,D29
+MAL7022,Matrix Computation,MA,MA,L,700,1,0,0,1,D29
+MAL7023,Optimization,MA,MA,L,700,1,0,0,1,D29
+MAL7030,Advanced Statistical Techniques,MA,MA,L,700,2,0,0,2,D29
+MAL7040,Numerical Methods for PDE,MA,MA,L,700,0,0,0,1,D29
+MAL7041,Numerical Methods for PDE,MA,MA,L,700,1,0,0,1,D29
+MAL7050,Linear Algebra for Data Science,MA,MA,L,700,0,0,0,2,D29
+MAL7051,Matrix Theory,MA,MA,L,700,0,0,0,1,D29
+MAL7052,Numerical Linear Algebra,MA,MA,L,700,0,0,0,1,D29
+MAL7053,Linear Algebra with Data,MA,MA,L,700,0,0,0,1,D29
+MAL7060,Statistics for Data Science,MA,MA,L,700,0,0,0,2,D29
+MAL7061,Statistical Inference,MA,MA,L,700,0,0,0,1,D29
+MAL7062,Statistical Techniques,MA,MA,L,700,0,0,0,1,D29
+MAL7070,Optimization for Data Science,MA,MA,L,700,0,0,0,2,D29
+MAL7071,Unconstrained Optimization,MA,MA,L,700,0,0,0,1,D29
+MAL7072,Constrained Optimization,MA,MA,L,700,0,0,0,1,D29
+MAL7073,Evolutionary Optimization,MA,MA,L,700,0,0,0,1,D29
+MAL7080,Mathematical Modeling and Simulations,MA,MA,L,700,0,2,0,2,D29
+MAL7090,Numerical Solutions of Partial Differential Equations,MA,MA,L,700,0,0,0,3,D29
+MAL7091,Numerical Methods for PDE,MA,MA,L,700,1,0,0,1,D29
+MAL7310,Calculus of Variations and Integral Equations,MA,MA,L,700,3,0,0,3,D29
+MAL7320,Dynamical Systems,MA,MA,L,700,3,0,0,3,D29
+MAL7330,Chaos Theory and its Applications,MA,MA,L,700,0,0,0,3,D29
+MAL7340,Number Theory,MA,MA,L,700,0,0,0,3,D29
+MAL7350,Financial engineering,MA,MA,L,700,0,0,0,3,D29
+MAL7360,Numerical Analysis,MA,MA,L,700,0,0,0,3,D29
+MAL7363,Numerical Methods for ODE,MA,MA,L,700,0,0,0,1,D29
+MAL7370,Functional Analysis,MA,MA,L,700,0,0,0,3,D29
+MAL7380,Representation of Finite Groups,MA,MA,L,700,0,0,0,3,D29
+MAL7390,Group Theory for Machine Learning,MA,MA,L,700,0,0,0,3,D29
+MAL7400,Computational Game Theory,MA,MA,L,700,3,0,0,3,D29
+MAL7420,Statistical Models and Regression,MA,MA,L,700,0,0,0,3,D29
+MAL7421,Statistical Models and Regression,MA,MA,L,700,0,0,0,1,D29
+MAL7430,Time Series Analysis,MA,MA,L,700,3,0,0,3,D29
+MAL7440,Machine Learning and Pattern Recognition,MA,MA,L,700,3,0,0,3,D29
+MAL7441,Linear Models,MA,MA,L,700,0,0,0,1,D29
+MAL8310,Advanced topics in computational PDE,MA,MA,L,800,0,0,0,3,D29
+MAP5010,Data Structures and Algorithms,MA,MA,P,500,0,2,0,2,D29
+MAP7010,Data Analytics Lab,MA,MA,P,700,0,2,0,1,D29
+MAP7020,Applied ML Lab,MA,MA,P,700,0,0,2,1,D29
+MEL1010,Engineering Mechanics,ME,ME,L,100,2,1,0,3,D29
+MEL2010,Mechanics of solids,ME,ME,L,200,3,1,0,4,D29
+MEL2020,Thermodynamics,ME,ME,L,200,3,1,0,4,D29
+MEL2030,Manufacturing Processes,ME,ME,L,200,3,0,0,3,D29
+MEL2040,Fluid Mechanics,ME,ME,L,200,3,1,0,4,D29
+MEL3010,Heat Transfer,ME,ME,L,300,3,0,0,3,D29
+MEL3020,Kinematics and Dynamics of Machines,ME,ME,L,300,3,0,2,4,D29
+MEL3030,Production and Operations Management,ME,ME,L,300,3,0,0,3,D29
+MEL3040,Machining Science and Metrology,ME,ME,L,300,3,0,0,3,D29
+MEL3050,Digital Fabrication,ME,ME,L,300,3,0,0,3,D29
+MEL3060,Design of Machine Elements,ME,ME,L,300,3,0,2,4,D29
+MEL3070,Thermofluids Engineering,ME,ME,L,300,3,1,0,4,D29
+MEL3080,Control of Mechanical Systems,ME,ME,L,300,3,0,4,5,D29
+MEL3090,Smart Manufacturing,ME,ME,L,300,2,0,2,3,D29
+MEL4410,Introduction to Acoustics,ME,ME,L,400,3,0,0,3,D29
+MEL4420,Micro-nano Manufacturing,ME,ME,L,400,3,0,0,3,D29
+MEL4430,Computer Aided Design,ME,ME,L,400,3,0,2,4,D29
+MEL6030,Fundamentals of Metal Forming Technology,ME,ME,L,600,3,0,0,3,D29
+MEL6040,Mechanics of Soft Materials,ME,ME,L,600,3,0,0,3,D29
+MEL6050,Finite Element Methods and Applications,ME,ME,L,600,3,0,0,3,D29
+MEL6060,Computer Integrated Manufacturing,ME,ME,L,600,3,0,0,3,D29
+MEL7010,Advance Mechanics of Solids,ME,ME,L,700,3,0,0,3,D29
+MEL7020,Smart Manufacturing,ME,ME,L,700,1,0,2,2,D29
+MEL7030,Geometric Modelling and CAD,ME,ME,L,700,2,0,2,3,D29
+MEL7040,Incompressible Fluid Flow,ME,ME,L,700,3,0,0,3,D29
+MEL7050,Classical and Statistical Thermodynamics,ME,ME,L,700,3,0,0,3,D29
+MEL7051,Multiphase Systems and Chemical Reactions,ME,ME,L,700,1,0,0,1,D29
+MEL7052,Kinetic Theory,ME,ME,L,700,1,0,0,1,D29
+MEL7053,Statistical Thermodynamics,ME,ME,L,700,1,0,0,1,D29
+MEL7060,Applied Heat and Mass Transfer,ME,ME,L,700,3,0,0,3,D29
+MEL7070,Experimental Techniques in Thermofluids,ME,ME,L,700,3,0,0,3,D29
+MEL7080,Robotics,ME,ME,L,700,3,0,2,4,D29
+MEL7081,Robot Modeling,ME,ME,L,700,1,0,0,1,D29
+MEL7082,Motion Planning and Programming,ME,ME,L,700,1,0,0,1,D29
+MEL7083,Robot Control,ME,ME,L,700,1,0,0,1,D29
+MEL7084,Robot Motion Planning and Visual Servoing,ME,ME,L,700,1,0,0,1,D29
+MEL7085,Robotics,ME,ME,L,700,3,0,0,3,D29
+MEL7090,Industry 4.0 Applications in Manufacturing Systems,ME,ME,L,700,1,0,0,1,D29
+MEL7100,Materials and Manufacturing Processes,ME,ME,L,700,2,0,2,3,D29
+MEL7110,Selected Topics in Thermofluids Engineering,ME,ME,L,700,3,0,0,3,D29
+MEL7111,Introduction to Lattice Boltzmann Method,ME,ME,L,700,1,0,0,1,D29
+MEL7120,Aerial Robots,ME,ME,L,700,3,0,0,3,D29
+MEL7130,Rotor Dynamics,ME,ME,L,700,3,0,0,3,D29
+MEL7140,Mechanical Vibrations,ME,ME,L,700,3,0,0,3,D29
+MEL7210,Combustion Technology,ME,ME,L,700,3,0,2,4,D29
+MEL7310,Computer Aided Manufacturing,ME,ME,L,700,3,0,2,4,D29
+MEL7320,Finite Element Methods in Engineering Design,ME,ME,L,700,3,0,0,3,D29
+MEL7330,Additive Manufacturing,ME,ME,L,700,3,0,0,3,D29
+MEL7340,Mechanical Metallurgy,ME,ME,L,700,3,0,0,3,D29
+MEL7350,Rotor Dynamics,ME,ME,L,700,3,0,0,3,D29
+MEL7360,Theory of Vibrations,ME,ME,L,700,3,0,0,3,D29
+MEL7370,Microfluidics Technology,ME,ME,L,700,3,0,0,3,D29
+MEL7380,Conduction and Radiation,ME,ME,L,700,3,1,0,4,D29
+MEL7390,Convective Heat and Mass Transfer,ME,ME,L,700,3,1,0,4,D29
+MEL7400,Computational Fluid Dynamics and Heat Transfer,ME,ME,L,700,3,1,0,4,D29
+MEL7410,Soil and Water Conservation Engineering,ME,ME,L,700,3,0,0,3,D29
+MEL7420,Nanosensors,ME,ME,L,700,3,0,0,3,D29
+MEL7430,Precision and Micro Manufacturing,ME,ME,L,700,3,0,0,3,D29
+MEL7440,Helicopter Dynamics,ME,ME,L,700,3,0,0,3,D29
+MEL7450,Hydropower,ME,ME,L,700,3,0,0,3,D29
+MEL7451,Hydropower Fractal ? 1,ME,ME,L,700,1,0,0,1,D29
+MEL7452,Hydropower Fractal ? 2,ME,ME,L,700,1,0,0,1,D29
+MEL7453,Hydropower Fractal ? 3,ME,ME,L,700,1,0,0,1,D29
+MEL7460,Solar Energy and Application,ME,ME,L,700,3,0,0,3,D29
+MEL7470,Compressible Fluid Flows,ME,ME,L,700,3,0,2,4,D29
+MEL7480,Solid Waste Management,ME,ME,L,700,3,0,0,3,D29
+MEL7490,Theory of Arc Welding,ME,ME,L,700,3,0,0,3,D29
+MEL7500,Two Phase Flow and Heat Transfer,ME,ME,L,700,3,1,0,4,D29
+MEL7510,Mechanical Vibration,ME,ME,L,700,3,0,0,3,D29
+MEL7520,Modeling and Control of Mechanical Systems,ME,ME,L,700,3,0,0,3,D29
+MEL7530,MEMS and Microsystems Technology,ME,ME,L,700,3,0,2,4,D29
+MEL7540,Finite Element Methods in Engineering,ME,ME,L,700,3,0,0,3,D29
+MEL7550,Turbulent Flows,ME,ME,L,700,3,0,0,3,D29
+MEL7560,Solar Energy and Application,ME,ME,L,700,3,0,2,4,D29
+MEL7570,Vehicle Dynamics,ME,ME,L,700,3,0,0,3,D29
+MEL7580,Mechanics of Soft Materials,ME,ME,L,700,3,0,0,3,D29
+MEL7590,Solar Energy and Application,ME,ME,L,700,3,0,2,4,D29
+MEL7600,Aerodynamics and Hydrodynamics of Unmanned vehicles,ME,ME,L,700,3,1,0,4,D29
+MEL7610,Jet and Rocket Propulsion,ME,ME,L,700,3,0,0,3,D29
+MEL7910,Selected Topics in Thermofluids Engineering,ME,ME,L,700,1,0,0,1,D29
+MEL7920,Selected Topics in Mechanical Design,ME,ME,L,700,3,0,0,3,D29
+MEL7930,Convective Heat and Mass Transfer,ME,ME,L,700,3,1,0,4,D29
+MEL8990,Research Proposal,ME,ME,L,800,0,0,10,10,D29
+MEP1010,Engineering Visualization,ME,ME,P,100,0,0,2,1,D29
+MEP1020,Engineering Realization,ME,ME,P,100,0,0,2,1,D29
+MEP2010,Fluid Mechanics Lab,ME,ME,P,200,0,0,2,1,D29
+MEP3010,Heat Transfer Lab,ME,ME,P,300,0,0,2,1,D29
+MEP3020,Manufacturing Processes and Systems lab,ME,ME,P,300,0,0,2,1,D29
+MEP3030,Machining and Automated Manufacturing lab,ME,ME,P,300,0,0,2,1,D29
+MEP3040,Thermofluids Lab,ME,ME,P,300,0,0,2,1,D29
+MEP4010,Thermofluids Lab,ME,ME,P,400,0,0,2,1,D29
+MEP7010,Fluid Engineering Lab,ME,ME,P,700,0,0,2,1,D29
+MEP7020,Thermal Engineering Lab,ME,ME,P,700,0,0,2,1,D29
+MEP7030,Solar Energy and Application Lab,ME,ME,P,700,0,0,2,1,D29
+MEP7040,Advanced Computational Lab for Thermofluids Engineering,ME,ME,P,700,0,0,2,1,D29
+MTL2010,Materials Science & Engineering,MT,MT,L,200,3,0,0,3,D29
+MTL2011,Energy Materials,MT,MT,L,200,1,0,0,1,D29
+MTL2012,Structure of Materials,MT,MT,L,200,1,0,0,1,D29
+MTL2013,Materials Selection,MT,MT,L,200,1,0,0,1,D29
+MTL2014,Computational Material Design,MT,MT,L,200,1,0,0,1,D29
+MTL2015,Physical Metallurgy,MT,MT,L,200,1,0,0,1,D29
+MTL2016,Corrosion,MT,MT,L,200,1,0,0,1,D29
+MTL2020,Materials for Energy Conversion and Storage,MT,MT,L,200,3,0,0,3,D29
+MTL2040,Materials at Equilibrium,MT,MT,L,200,3,1,0,4,D29
+MTL3010,Electronic Materials,MT,MT,L,300,3,0,0,3,D29
+MTL3020,Mechanical Behavior of Materials,MT,MT,L,300,3,0,0,3,D29
+MTL3030,Phase Transformations,MT,MT,L,300,3,0,0,3,D29
+MTL3040,Materials Characterization,MT,MT,L,300,3,0,0,3,D29
+MTL3050,Computational Modelling of Materials,MT,MT,L,300,3,0,0,3,D29
+MTL3060,Materials Processing and Manufacturing,MT,MT,L,300,3,0,0,3,D29
+MTL3070,Extraction of Non-Ferrous Metals,MT,MT,L,300,3,0,0,3,D29
+MTL3080,Iron and Steel Making,MT,MT,L,300,3,0,0,3,D29
+MTL3090,Smart Materials,MT,MT,L,300,3,0,0,3,D29
+MTL4310,Processing-Microstructure and Properties of Steels,MT,MT,L,400,3,0,0,3,D29
+MTL4320,Magnetism and Magnetic Materials,MT,MT,L,400,3,0,0,3,D29
+MTL6310,Metallurgy of Joining,MT,MT,L,600,3,0,0,3,D29
+MTL6320,Computational Thermodynamics,MT,MT,L,600,2,0,2,3,D29
+MTL7010,Metallurgical Thermodynamics and Kinetics,MT,MT,L,700,3,1,0,4,D29
+MTL7020,"Characterization of Minerals, Metals and Materials",MT,MT,L,700,3,0,2,4,D29
+MTL7030,Computational Materials Engineering,MT,MT,L,700,3,2,0,4,D29
+MTL7040,Phase Transformations in Solids,MT,MT,L,700,3,0,2,4,D29
+MTL7050,Computational Thermodynamics and Kinetics of Materials,MT,MT,L,700,3,0,2,4,D29
+MTL7060,Advanced Phase Transformations,MT,MT,L,700,3,0,0,3,D29
+MTL7070,Principles of Engineering Material Selection,MT,MT,L,700,3,0,0,3,D29
+MTL7080,Plastic Deformation and Microstructure Evolution,MT,MT,L,700,3,0,0,3,D29
+MTL7090,High Entropy Alloys,MT,MT,L,700,3,0,0,3,D29
+MTL7100,Structure and Characterization of Materials,MT,MT,L,700,3,0,2,4,D29
+MTL7110,Solidification of Metals and Alloys,MT,MT,L,700,3,0,0,3,D29
+MTL7120,Modelling of Metallurgical Processes,MT,MT,L,700,3,1,0,4,D29
+MTL7130,Non ferrous metal extraction,MT,MT,L,700,3,0,0,3,D29
+MTL7140,Ceramic Processing,MT,MT,L,700,3,0,0,3,D29
+MTL7151,Fuel Cells and Supercapacitors,MT,MT,L,700,1,0,0,1,D29
+MTL7160,Fracture and Fatigue,MT,MT,L,700,3,0,0,3,D29
+MTL7170,Symmetry Structure and Tensor Properties,MT,MT,L,700,3,0,0,3,D29
+MTL7180,Industry 4.0 in Metallurgical Engineering,MT,MT,L,700,2,0,0,2,D29
+MTL7190,Industry 4.0: Applications in Metallurgical and Materials Engineering,MT,MT,L,700,2,0,0,2,D29
+MTL7200,Modelling in Materials Engineering,MT,MT,L,700,2,0,0,2,D29
+MTL7210,Microstructure Image Processing,MT,MT,L,700,2,0,0,2,D29
+MTL7220,Functional Materials,MT,MT,L,700,3,0,0,3,D29
+MTL7310,Plastic Deformation and Microstructure Evolution,MT,MT,L,700,3,0,0,3,D29
+MTL7320,Mechanical Behaviour of Materials,MT,MT,L,700,3,0,0,3,D29
+MTL7330,Alloy Design: Computational Thermodynamic approach,MT,MT,L,700,3,0,2,4,D29
+MTL7340,Thermo Mechanical Processing,MT,MT,L,700,3,0,0,3,D29
+MTL7350,Principles of Engineering Material Selection,MT,MT,L,700,3,0,0,3,D29
+MTL7360,Principles of Continuum Mechanics,MT,MT,L,700,3,0,0,3,D29
+MTL7370,High Entropy Alloys,MT,MT,L,700,3,0,0,3,D29
+MTL7380,Light Metals and Alloys,MT,MT,L,700,3,0,0,3,D29
+MTL7390,Material Aspects in Additive Manufacturing,MT,MT,L,700,3,0,0,3,D29
+MTL7400,Advances in Iron and Steel Making,MT,MT,L,700,3,0,0,3,D29
+MTL7410,Diffusion in Solids,MT,MT,L,700,3,0,0,3,D29
+MTL7420,Mass and Energy Balance in Metallurgical Processes,MT,MT,L,700,3,0,0,3,D29
+MTL7430,Glass Science and Technology,MT,MT,L,700,3,0,0,3,D29
+MTL7440,High Temperature Materials,MT,MT,L,700,3,0,0,3,D29
+MTL7450,First-Principles Calculations,MT,MT,L,700,2,0,2,3,D29
+MTL7460,Crystal Plasticity and Its Applications,MT,MT,L,700,3,0,0,3,D29
+MTL7470,Light Metals and Alloys,MT,MT,L,700,3,0,0,3,D29
+MTP3010,Electronic Materials Lab,MT,MT,P,300,0,0,3,1.5,D29
+MTP3020,Physical Metallurgy Lab,MT,MT,P,300,0,0,3,1.5,D29
+MTP3030,Energy Materials Lab,MT,MT,P,300,0,0,3,1.5,D29
+MTP3040,Computational Modelling of Materials Lab,MT,MT,P,300,0,0,2,1,D29
+MTP3050,Materials Charaterization Lab,MT,MT,P,300,0,0,3,1.5,D29
+MTP3060,Materials Processing and Manufacturing Lab,MT,MT,P,300,0,0,3,1.5,D29
+MTP7010,Structural Materials Laboratory,MT,MT,P,700,0,0,2,1,D29
+OAL7010,Innovation and IP Management,OA,OA,L,700,1,0,0,1,D29
+OAL7020,Foundations in IPR,OA,OA,L,700,0,0,0,1,D29
+PHL0010,Preparatory Physics 1,PH,PH,L,0,3,1,0,4,D29
+PHL0020,Preparatory Physics II,PH,PH,L,0,3,1,0,4,D29
+PHL1010,Electromagnetism and Optics,PH,PH,L,100,3,0,0,3,D29
+PHL2011,Metrology,PH,PH,L,200,1,0,0,1,D29
+PHL2012,Statistical Mechanics,PH,PH,L,200,2,0,0,2,D29
+PHL2021,Electronic Materials,PH,PH,L,200,1,0,0,1,D29
+PHL2031,Magnetic Materials,PH,PH,L,200,1,0,0,1,D29
+PHL2040,Physics of Complex Liquids,PH,PH,L,200,3,0,0,3,D29
+PHL2050,Introduction to Analytical Mechanics,PH,PH,L,200,3,0,0,3,D29
+PHL2060,Modern Physics,PH,PH,L,200,3,0,0,3,D29
+PHL2070,Introductory Condensed Matter Physics,PH,PH,L,200,3,0,0,3,D29
+PHL2080,Mechanics I,PH,PH,L,200,3,0,0,3,D29
+PHL2090,Mechanics II,PH,PH,L,200,3,0,0,3,D29
+PHL2100,Thermal Physics,PH,PH,L,200,3,0,0,3,D29
+PHL6010,Mathematical Physics,PH,PH,L,600,3,0,0,3,D29
+PHL6020,Classical Mechanics,PH,PH,L,600,3,0,0,3,D29
+PHL6030,Quantum Mechanics,PH,PH,L,600,3,0,0,3,D29
+PHL6040,Electronics,PH,PH,L,600,3,0,0,3,D29
+PHL6050,Statistical Physics,PH,PH,L,600,3,0,0,3,D29
+PHL6060,Electrodynamics,PH,PH,L,600,3,0,0,3,D29
+PHL6070,Condensed Matter Physics,PH,PH,L,600,3,0,0,3,D29
+PHL6080,Physics of Atoms and Molecules,PH,PH,L,600,3,0,0,3,D29
+PHL6090,Nuclear and Particle Physics,PH,PH,L,600,3,0,0,3,D29
+PHL6100,Relativistic Quantum Mechanics,PH,PH,L,600,3,0,0,3,D29
+PHL6110,Introduction to Soft Matter Physics,PH,PH,L,600,3,0,0,3,D29
+PHL6120,Engineering Optics,PH,PH,L,600,3,0,0,3,D29
+PHL6130,Introduction to Medical Physics,PH,PH,L,600,3,0,0,3,D29
+PHL6310,Engineering Optics,PH,PH,L,600,3,0,0,3,D29
+PHL6320,Relativistic Quantum Mechanics,PH,PH,L,600,3,0,0,3,D29
+PHL6330,Introduction to Soft Matter Physics,PH,PH,L,600,3,0,0,3,D29
+PHL6340,Introduction to Medical Physics,PH,PH,L,600,3,0,0,3,D29
+PHL7310,Computational Materials Science,PH,PH,L,700,3,0,0,3,D29
+PHL7311,Basic Concepts in Density Functional Theory,PH,PH,L,700,1,0,0,1,D29
+PHL7312,Molecular Dynamic Simulations,PH,PH,L,700,1,0,0,1,D29
+PHL7313,Monte Carlo Simulations,PH,PH,L,700,1,0,0,1,D29
+PHL7320,Critical Phenomena and Renormalization Group,PH,PH,L,700,3,0,0,3,D29
+PHL7330,Laser Technologies,PH,PH,L,700,3,0,0,3,D29
+PHL7340,Quantum Field Theory,PH,PH,L,700,3,0,0,3,D29
+PHL7350,Magnetism and Superconductivity,PH,PH,L,700,3,0,0,3,D29
+PHL7360,Introduction to Material Characterization,PH,PH,L,700,3,0,0,3,D29
+PHL7370,Cold Plasma Technologies,PH,PH,L,700,3,0,0,3,D29
+PHL7380,Particle Physics,PH,PH,L,700,3,0,0,3,D29
+PHL7390,Physics of Solar Cells,PH,PH,L,700,3,0,0,3,D29
+PHL7400,Fundamentals of Plasma and Fusion Science,PH,PH,L,700,3,0,0,3,D29
+PHL7410,Non-perturbative Aspects of Quantum Field Theory,PH,PH,L,700,3,0,0,3,D29
+PHL7420,Introduction to Space Science,PH,PH,L,700,3,0,0,3,D29
+PHL7430,Computational Physics,PH,PH,L,700,3,0,0,3,D29
+PHL7440,Nanoscience and Nanotechnology,PH,PH,L,700,3,0,0,3,D29
+PHL7441,"Basics of Nanomaterials, Nanoparticles and Clusters",PH,PH,L,700,1,0,0,1,D29
+PHL7442,Nanotechnology for Energy,PH,PH,L,700,1,0,0,1,D29
+PHL7443,Nanotechnology for Water and Healthcare,PH,PH,L,700,1,0,0,1,D29
+PHL7450,General Theory of Relativity,PH,PH,L,700,3,0,0,3,D29
+PHL7460,General Theory of Relativity,PH,PH,L,700,3,0,0,3,D29
+PHL7470,Soft Matter Physics,PH,PH,L,700,3,0,0,3,D29
+PHL7480,Open Quantum Systems,PH,PH,L,700,3,0,0,3,D29
+PHL7490,High Energy Physics,PH,PH,L,700,3,0,0,3,D29
+PHL7500,Quantum Optics and Engineering,PH,PH,L,700,3,0,0,3,D29
+PHL7510,Energy Harvesting,PH,PH,L,700,3,0,0,3,D29
+PHL7520,Optics for Solar Energy Applications,PH,PH,L,700,3,0,0,3,D29
+PHL7521,Materials For Electrochemical Energy Conversion and Storage: Batteries,PH,PH,L,700,1,0,0,1,D29
+PHL7530,Astrophysics,PH,PH,L,700,3,0,0,3,D29
+PHL7540,Statistical methods of Data analysis,PH,PH,L,700,3,0,0,3,D29
+PHL7550,Advanced Condensed Matter Physics,PH,PH,L,700,3,0,0,3,D29
+PHL8010,Gauge Theory of Weak Interactions,PH,PH,L,800,3,0,0,3,D29
+PHL8020,Physics of Neutrinos,PH,PH,L,800,3,0,0,3,D29
+PHL8310,Gauge Theory of Weak Interactions,PH,PH,L,800,3,0,0,3,D29
+PHL8320,Vacuum Systems and Thin Film Technology,PH,PH,L,800,3,0,0,3,D29
+PHP1010,Physics Laboratory,PH,PH,P,100,0,0,2,1,D29
+PHP2010,Basic Computational Lab,PH,PH,P,200,0,0,3,1.5,D29
+PHP6010,Electronics Lab,PH,PH,P,600,0,0,3,1.5,D29
+PHP6020,Condensed Matter Physics Lab,PH,PH,P,600,0,0,3,1.5,D29
+PHP6030,Hands-on,PH,PH,P,600,0,0,3,1.5,D29
+PHP6040,Atomic and Nuclear Physics Laboratory,PH,PH,P,600,0,0,3,1.5,D29
+PHP6050,Optics and Lasers Laboratory,PH,PH,P,600,0,0,3,1.5,D29
+PHP6060,Hands On II,PH,PH,P,600,0,0,3,1.5,D29
+PHP6070,Computational Physics Lab,PH,PH,P,600,0,0,3,1.5,D29
+PHL6032,Quantum Mechanics,QC,PH,L,600,2,0,0,2,D29
+QCL2010,Foundations of Quantum Information,QC,QC,L,200,3,0,0,3,D29
+QCL7010,Seminal Features of Quantum Information Processing,QC,QC,L,700,3,0,0,3,D29
+QCL7020,Quantum Machine Learning,QC,QC,L,700,3,0,0,3,D29
+QCL7030,Introduction to Quantum Information,QC,QC,L,700,3,0,0,3,D29
+QCL7040,Quantum Computation,QC,QC,L,700,3,0,0,3,D29
+QCL7050,Introduction to Quantum Technologies,QC,QC,L,700,1,0,0,1,D29
+QCP7010,Introduction Quantum Information Laboratory,QC,QC,P,700,0,0,4,2,D29
+RML6010,Introduction to Robotics,RM,RM,L,600,3,0,0,3,D29
+RML6020,Autonomous Systems,RM,RM,L,600,3,0,0,3,D29
+RML7020,Introduction to Mobility Systems,RM,RM,L,700,3,0,0,3,D29
+RML7030,Unmanned Vehicles,RM,RM,L,700,3,0,03,3,D29
+RML7120,Advanced Robotic Manipulations,RM,RM,L,700,3,0,0,3,D29
+RML7220,Mobile Robots,RM,RM,L,700,3,0,0,3,D29
+RML7230,Aerial Robots,RM,RM,L,700,3,0,0,3,D29
+RML7240,Battery Management System,RM,RM,L,700,3,0,0,3,D29
+RML7250,Flight Mechanics,RM,RM,L,700,3,0,0,3,D29
+RML7260,UAV Control,RM,RM,L,700,3,0,0,3,D29
+RML7270,Estimation Navigation and Guidance,RM,RM,L,700,3,0,0,3,D29
+RML7310,Networked Dynamical Systems and Control,RM,RM,L,700,3,0,0,3,D29
+RML7970,Selected Topics in Robotics I,RM,RM,L,700,1,0,0,1,D29
+RMP7010,Experimental Robotics,RM,RM,P,700,0,1,2,2,D29
+RMP7020,Mobility Systems and Unmanned Vehicles Lab,RM,RM,P,700,0,0,2,1,D29
+SHL7010,Fundamentals of Medical Informatics,SH,SH,L,700,3,0,2,4,D29
+SHL7020,Biomedical Signals and Systems,SH,SH,L,700,3,0,2,4,D29
+SHL7030,Innovation & Entrepreneurship in Healthcare,SH,SH,L,700,3,0,0,3,D29
+SHL7031,Telemedicine: Technology and Frameworks,SH,SH,L,700,3,0,0,3,D29
+SHL7032,Medical 3D printing,SH,SH,L,700,3,0,0,3,D29
+SHL7033,Point of care Diagnostics,SH,SH,L,700,2,0,2,3,D29
+SHL7034,Imaging Applications in Healthcare,SH,SH,L,700,3,0,0,3,D29
+SHL7036,Personalized medicine/ Molecular techniques for precision medicine,SH,SH,L,700,2,0,2,3,D29
+SHL7037,Biomarkers/Identification of novel markers,SH,SH,L,700,2,0,2,3,D29
+SHL7038,Drug screening and testing,SH,SH,L,700,2,0,2,3,D29
+SHL7039,Animal models,SH,SH,L,700,2,0,2,3,D29
+SHL7040,Physiology,SH,SH,L,700,3,0,2,4,D29
+SHL7041,Advanced Laparoscopy Methods,SH,SH,L,700,2,0,2,3,D29
+SHL7042,Surgical device development,SH,SH,L,700,2,0,2,3,D29
+SHL7043,MEMS Technology for Biomedical Applications,SH,SH,L,700,2,0,2,3,D29
+SHL7050,Anatomy,SH,SH,L,700,3,0,2,4,D29
+SHL7060,Immersion,SH,SH,L,700,0,1,6,4,D29
+SHL7120,Diagnostics and Therapeutics,SH,SH,L,700,2,0,2,3,D29
+SHL7130,Prosthetics and Implants,SH,SH,L,700,2,0,0,2,D29
+SHL7140,AI in Healthcare,SH,SH,L,700,2,0,2,3,D29
+SHL7150,Biomedical nanomaterials,SH,SH,L,700,2,0,2,3,D29
+SHL7160,Introduction to Medical robotics,SH,SH,L,700,3,0,0,3,D29
+SHL7310,Telemedicine: Technology and Frameworks,SH,SH,L,700,3,0,0,3,D29
+SHL7320,Medical 3D printing,SH,SH,L,700,3,0,0,3,D29
+SHL7340,Imaging Applications in Healthcare,SH,SH,L,700,3,0,0,3,D29
+SHL7360,Personalized medicine/ Molecular techniques for precision medicine,SH,SH,L,700,2,0,2,3,D29
+SHL7370,Biomarkers/Identification of novel markers,SH,SH,L,700,2,0,2,3,D29
+SHL7380,Drug screening and testing,SH,SH,L,700,2,0,2,3,D29
+SHL7390,Animal models,SH,SH,L,700,2,0,2,3,D29
+SHL7410,Advanced Laparoscopy Methods,SH,SH,L,700,2,0,2,3,D29
+SHL7420,Surgical device development,SH,SH,L,700,2,0,2,3,D29
+SHL7430,MEMS Technology for Biomedical Applications,SH,SH,L,700,2,0,2,3,D29
+SHL7440,Qualitative and Quantitative Assay,SH,SH,L,700,2,0,2,3,D29
+SHL7450,Disease Processes/Understanding disease development,SH,SH,L,700,2,0,2,3,D29
+SHL7460,Drug Designing and Development,SH,SH,L,700,2,0,2,3,D29
+SHL7470,Foundation of Medical Informatics,SH,SH,L,700,3,0,2,4,D29
+SHL7480,Point of care diagnostics,SH,SH,L,700,2,0,2,3,D29
+STL7100,Dynamics of Space System,SH,ST,L,700,3,0,0,3,D29
+LDL6010,"History of Art, Design and Media",SL,LD,L,600,,,,,D29
+LDL6020,Elements and Principles of Art and Design,SL,LD,L,600,,,,,D29
+LDL6030,Sketching and Representation,SL,LD,L,600,,,,,D29
+LDL6040,3D Visualization,SL,LD,L,600,,,,,D29
+LDL6050,Typography for Digital Media,SL,LD,L,600,,,,,D29
+MSL7010,Organizational Behaviour,SME,MS,L,700,2,0,0,2,D29
+MSL7020,Management Accounting,SME,MS,L,700,2,0,0,2,D29
+MSL7030,Statistics for Management,SME,MS,L,700,2,0,0,2,D29
+MSL7040,Decision Sciences-I,SME,MS,L,700,2,0,0,2,D29
+MSL7050,Managerial Economics,SME,MS,L,700,2,0,0,2,D29
+MSL7060,Marketing Management-1,SME,MS,L,700,2,0,0,2,D29
+MSL7070,Macroeconomic Environment of Business,SME,MS,L,700,2,0,0,2,D29
+MSL7080,Business Research Methods,SME,MS,L,700,1,0,0,1,D29
+MSL7090,Decision Sciences-II,SME,MS,L,700,1,0,0,1,D29
+MSL7100,Marketing Management-II,SME,MS,L,700,1,0,0,1,D29
+MSL7110,Global Economy,SME,MS,L,700,1,0,0,1,D29
+MSL7120,Managing Human Capital,SME,MS,L,700,2,0,0,2,D29
+MSL7130,Corporate Finance-I,SME,MS,L,700,2,0,0,2,D29
+MSL7140,Managing Digital Enterprises,SME,MS,L,700,2,0,0,2,D29
+MSL7150,Legal Aspects of Business,SME,MS,L,700,2,0,0,2,D29
+MSL7160,Strategy Formulation,SME,MS,L,700,2,0,0,2,D29
+MSL7170,Econometrics,SME,MS,L,700,2,0,0,2,D29
+MSL7180,Operations Management,SME,MS,L,700,2,0,0,2,D29
+MSL7190,Entrepreneurial Experiences,SME,MS,L,700,2,0,0,2,D29
+MSL7200,Strategy Execution,SME,MS,L,700,1,0,0,1,D29
+MSL7210,Corporate Finance-II,SME,MS,L,700,1,0,0,1,D29
+MSL7220,Managing New Ventures,SME,MS,L,700,2,0,0,2,D29
+MSL7230,Managing Innovation,SME,MS,L,700,2,0,0,2,D29
+MSL7240,Starting up New Venture,SME,MS,L,700,2,0,0,2,D29
+MSL7250,Ideation & Prototyping,SME,MS,L,700,2,0,0,2,D29
+MSL7260,New Venture Financing,SME,MS,L,700,2,0,0,2,D29
+MSL7270,IPR & Legal Issues for Startups,SME,MS,L,700,1,0,0,1,D29
+MSL7280,Systems Engineering and Project Management,SME,MS,L,700,1,0,0,1,D29
+MSL7290,Artificial Intelligence (AI) for Business,SME,MS,L,700,2,0,0,2,D29
+MSL7300,Big Data & Cloud Computing,SME,MS,L,700,2,0,0,2,D29
+MSL7310,Blockchain for Business,SME,MS,L,700,2,0,0,2,D29
+MSL7320,Data Visualization,SME,MS,L,700,1,0,0,1,D29
+MSL7330,Analytics Lab (R & Python),SME,MS,L,700,0,0,4,2,D29
+MSL7340,IOT: Competing in the age of Internet of Things,SME,MS,L,700,1,0,2,2,D29
+MSL7350,Business Models for Digital Economy,SME,MS,L,700,2,0,0,2,D29
+MSL7360,Industry 4.0- Applications and Future of Business,SME,MS,L,700,2,0,0,2,D29
+MSL7370,Deep Learning Applications for Business,SME,MS,L,700,2,0,0,2,D29
+MSL7380,Machine Learning (ML) Applications for Business,SME,MS,L,700,1,0,0,1,D29
+MSL7390,People Analytics and Intelligence,SME,MS,L,700,2,0,0,2,D29
+MSL7400,Pricing Analytics,SME,MS,L,700,2,0,0,2,D29
+MSL7410,Social Media Analytics,SME,MS,L,700,2,0,0,2,D29
+MSL7420,Trends in FinTech,SME,MS,L,700,2,0,0,2,D29
+MSL7430,Analytics in Project Management,SME,MS,L,700,2,0,0,2,D29
+MSL7440,Technology Leadership,SME,MS,L,700,2,0,0,2,D29
+MSL7450,Digital Product Management,SME,MS,L,700,2,0,0,2,D29
+MSL7460,Financial Analytics,SME,MS,L,700,1,0,2,2,D29
+MSL7470,Algorithmic Trading,SME,MS,L,700,2,0,0,2,D29
+MSL7480,Financial Engineering,SME,MS,L,700,2,0,0,2,D29
+MSL7490,Financial Risk Management,SME,MS,L,700,2,0,0,2,D29
+MSL7500,Ethical Issues with AI,SME,MS,L,700,2,0,0,2,D29
+MSL7510,Digital Marketing Analytics & Optimization,SME,MS,L,700,2,0,0,2,D29
+MSL7520,Digital Platform Economy,SME,MS,L,700,2,0,0,2,D29
+MSL7530,Analytics for Strategy,SME,MS,L,700,2,0,0,2,D29
+MSL7550,Supply Chain Analytics,SME,MS,L,700,2,0,0,2,D29
+MSL7560,Advanced Operations Research,SME,MS,L,700,2,0,0,2,D29
+MSL7570,Game Theory for Business Decisions,SME,MS,L,700,2,0,0,2,D29
+MSL7580,Consumer Behaviour,SME,MS,L,700,2,0,0,2,D29
+MSL7590,Sales & Distribution Management,SME,MS,L,700,2,0,0,2,D29
+MSL7600,Marketing Research,SME,MS,L,700,2,0,0,2,D29
+MSL7610,Product Management,SME,MS,L,700,2,0,0,2,D29
+MSL7620,"Money, Banking and Financial Markets",SME,MS,L,700,2,0,0,2,D29
+MSL7630,Active Investment Management,SME,MS,L,700,2,0,0,2,D29
+MSL7640,International Finance,SME,MS,L,700,2,0,0,2,D29
+MSL7650,Logistics Management,SME,MS,L,700,2,0,0,2,D29
+MSL7660,Design of Manufacturing systems,SME,MS,L,700,2,0,0,2,D29
+MSL7670,Strategic Thinking,SME,MS,L,700,2,0,0,2,D29
+MSL7680,E-commerce,SME,MS,L,700,2,0,0,2,D29
+MSL7690,Strategic Brand Management,SME,MS,L,700,2,0,0,2,D29
+MSL7700,B2B Marketing,SME,MS,L,700,2,0,0,2,D29
+MSL7710,Investment Banking,SME,MS,L,700,2,0,0,2,D29
+MSL7720,Financial Derivatives,SME,MS,L,700,2,0,0,2,D29
+MSL7730,Financial Statement Analysis,SME,MS,L,700,2,0,0,2,D29
+MSL7740,Infrastructure and Project Finance,SME,MS,L,700,2,0,0,2,D29
+MSL7750,Services Operations Management,SME,MS,L,700,2,0,0,2,D29
+MSL7760,Procurement Management,SME,MS,L,700,2,0,0,2,D29
+MSL7770,Strategic Consulting,SME,MS,L,700,2,0,0,2,D29
+MSL7780,Strategic Marketing,SME,MS,L,700,2,0,0,2,D29
+MSL7790,International Marketing,SME,MS,L,700,2,0,0,2,D29
+MSL7800,Integrated Marketing Communication,SME,MS,L,700,2,0,0,2,D29
+MSL7810,Fixed Income Securities,SME,MS,L,700,2,0,0,2,D29
+MSL7820,High Frequency Finance and News Analytics,SME,MS,L,700,2,0,0,2,D29
+MSL7830,Management of Banks and Financial Institutions,SME,MS,L,700,2,0,0,2,D29
+MSL7840,Working Capital Management,SME,MS,L,700,2,0,0,2,D29
+MSL7850,Minds & Machines,SME,MS,L,700,2,0,0,2,D29
+MSL7860,Methodological Approaches in Management Research,SME,MS,L,700,3,0,0,3,D29
+MSL7870,Philosophy of Science,SME,MS,L,700,2,0,0,2,D29
+MSL7880,"Literature Review, Theory Building and Publication process",SME,MS,L,700,2,0,0,2,D29
+MSL7890,Economic Thought,SME,MS,L,700,1,0,0,1,D29
+MSL7900,Introduction to Sociological Thought for Management,SME,MS,L,700,1,0,0,1,D29
+MSL7910,IS Foundation,SME,MS,L,700,2,0,0,2,D29
+MSL7920,Foundations of Organization Dynamics,SME,MS,L,700,2,0,0,2,D29
+MSL7930,Fundamentals of Accounting and Finance,SME,MS,L,700,2,0,0,2,D29
+MSL7940,Fundamentals of Entrepreneurship,SME,MS,L,700,2,0,0,2,D29
+MSL7950,Introductory Economics,SME,MS,L,700,2,0,0,2,D29
+MSL7960,Fundamentals of Research in Marketing,SME,MS,L,700,2,0,0,2,D29
+MSL7970,Introduction to Operations,SME,MS,L,700,2,0,0,2,D29
+MSL7980,Understanding and Managing Strategy,SME,MS,L,700,2,0,0,2,D29
+MSL7990,Research in Judgement and Decision-making,SME,MS,L,700,2,0,0,2,D29
+MSL8010,Introduction to Management,SME,MS,L,800,2,0,0,2,D29
+MSL8020,Literature Review,SME,MS,L,800,2,0,0,2,D29
+MSL8030,Philosophy of Science,SME,MS,L,800,2,0,0,2,D29
+MSL8040,Introduction to Research & Theory Building,SME,MS,L,800,1,0,0,1,D29
+MSL8050,Qualitative Research Methods,SME,MS,L,800,2,0,0,2,D29
+MSL8060,Case study Teaching and Writing,SME,MS,L,800,1,0,0,1,D29
+MSL8070,Advance Data Analysis for Management,SME,MS,L,800,2,0,0,2,D29
+MSL8080,Logistics in Supply Chain Management,SME,MS,L,800,3,0,0,3,D29
+MSL8090,Production and Inventory Control,SME,MS,L,800,3,0,0,3,D29
+MSL8100,E-Governance,SME,MS,L,800,2,0,0,2,D29
+MSL8110,Computational Intelligence,SME,MS,L,800,3,0,0,3,D29
+MSL8120,Healthcare IT,SME,MS,L,800,2,0,0,2,D29
+MSL8130,Seminar course in Contemporary Indian Economy,SME,MS,L,800,3,0,0,3,D29
+MSL8140,Empirical Methods in Finance,SME,MS,L,800,3,0,0,3,D29
+MSL8150,Perspectives in Finance,SME,MS,L,800,3,0,0,3,D29
+MSL8160,Behaviour Change Research and Practice,SME,MS,L,800,2,0,0,2,D29
+MSL8170,Behaviour Research in Organizations,SME,MS,L,800,2,0,0,2,D29
+MSL8180,Designing and Executing Behaviourial Research,SME,MS,L,800,3,0,0,3,D29
+MSL8190,Entrepreneurship as Practice,SME,MS,L,800,3,0,0,3,D29
+MSL8200,Frugal Innovation: An emerging research arena,SME,MS,L,800,2,0,0,2,D29
+MSL8210,Designing a Marketing Program,SME,MS,L,800,2,0,0,2,D29
+MSL8220,Understanding Markets and Consumers,SME,MS,L,800,2,0,0,2,D29
+MSL8230,Consultancy Practices,SME,MS,L,800,2,0,0,2,D29
+MSL8550,Advanced Project Planning and Control,SME,MS,L,800,3,0,0,3,D29
+MSP7030,Business Plan Phase-I,SME,MS,P,700,0,0,8,4,D29
+MSP7040,Business Plan Phase-II,SME,MS,P,700,0,0,16,8,D29
+MSP7050,Technology Lab-I,SME,MS,P,700,0,0,2,1,D29
+MSP7060,Data Management & Analysis,SME,MS,P,700,0,0,4,2,D29
+MSP7070,Business Analytics Lab-1,SME,MS,P,700,0,0,2,1,D29
+MSP7080,Technology Lab -II,SME,MS,P,700,0,0,2,1,D29
+MSP7090,MBA project/Tech solution,SME,MS,P,700,0,0,6,3,D29

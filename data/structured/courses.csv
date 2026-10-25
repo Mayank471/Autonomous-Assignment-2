@@ -1,0 +1,26 @@
+course_code,course_name,offered_to,credits,ltp,instructor,instructor_email,slot,room,semester,source_doc_id
+CYL1010,Chemistry,ME/MT/CI/BB/CH/CY/PY,3,3-0-0,Rakesh Kumar Sharma,rks@iitj.ac.in,G,LHB110,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+MEL1010,Engineering Mechanics,ME/MT/CI/BB/CH/CY/PY,3,2-1-0,Amrita Puri,amritapuri@iitj.ac.in,F,LHB110,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+PHL1010,Electromagnetism and Optics,ME/MT/CI/BB/CH/CY/PY,3,3-0-0,Durgamadhab Mishra,durgamadhab@iitj.ac.in,K,LHB110,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+MAL1010,Mathematics I,ME/MT/CI/BB/CH/CY/PY,4,3-1-0,Kirankumar Hiremath,k.r.hiremath@iitj.ac.in,N,LHB110,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+PHP1010,Physics Lab,ME/MT/CI/BB/CH/CY/PY,1,0-0-2,B M Krishna Mariserla,bmkrishna@iitj.ac.in,M1,Physics Department,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+CYP1010,Chemistry Lab,ME/MT/CI/BB/CH/CY/PY,1,0-0-2,Nirmal Kumar Rana,nirmalrana@iitj.ac.in,M2,Chemistry Department,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+MEP1010,Engineering Visualization,ME/MT/CI/BB/CH/CY/PY,1,0-0-2,Prodyut Ranjan Chakraborty,pchakraborty@iitj.ac.in,M3,Computer Centre,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+OAE1010,Engineering Design - I,ME/MT/CI/BB/CH/CY/PY,1,0-0-2,Sandip Murarka,sandipmurarka@iitj.ac.in,M8,PH/MT Department,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+HSN1010,Communication Skill - I,ME/MT/CI/BB/CH/CY/PY,1,0-0-2,Anupama Mohan,amohan@iitj.ac.in,M4,Computer Centre,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+OSN1020/OSN1030,Performing Arts I /Sport I,ME/MT/CI/BB/CH/CY/PY,0.5,0-0-1,Ankita Sharma,ankitasharma@iitj.ac.in,NG-2,Sport Ground / Berm,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+OSN1010,Social Connect and Responsibilities - I,ME/MT/CI/BB/CH/CY/PY,0.5,0-0-1,Ananya Debnath,ananya@iitj.ac.in,NG-1,LHB110,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+BBL1020,Introduction to Bioengineering Theory,CS/AI/EE,3,3-0-0,Raviraj Vankayala,rvankayala@iitj.ac.in,F,LHB308,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+BBP1010,Introduction to Bioengineering Lab,CS/AI/EE,1,0-0-2,Dinesh Ahirwar,dineshahirwar@iitj.ac.in,M1,Bioengineering Dept,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+EEL1010,Introduction to Electrical Engineering,CS/AI/EE,4,3-0-2,Rajlaxmi Chouhan Soumava Mukherjee,rajlaxmichouhan@iitj.ac.in soumava@iitj.ac.in,K,LHB308,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+MAL1010,Mathematics I,CS/AI/EE,4,3-1-0,Kirankumar Hiremath,k.r.hiremath@iitj.ac.in,N,LHB308,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+CSL1010,Introduction to Computer Science,CS/AI/EE,4,3-0-2,Richa Singh,richa@iitj.ac.in,G,LHB308,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+MEP1010,Engineering Visualization,CS/AI/EE,1,0-0-2,Prodyut Ranjan Chakraborty,pchakraborty@iitj.ac.in,M3,Computer Centre,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+OAE1010,Engineering Design - I,CS/AI/EE,1,0-0-2,Sandip Murarka,sandipmurarka@iitj.ac.in,M8,PH/MT Department,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+HSN1010,Communication Skill - I,CS/AI/EE,1,0-0-2,Anupama Mohan,amohan@iitj.ac.in,M4,Computer Centre,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+OSN1020/30,Performing Arts I / Sport I,CS/AI/EE,0.5,0-0-1,Ankita Sharma,ankitasharma@iitj.ac.in,NG-2,Sport Ground / Berm,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+OSN1010,Social Connect and Responsibilities - I,CS/AI/EE,0.5,0-0-1,Ananya Debnath,ananya@iitj.ac.in,NG-1,LHB308,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+CYL0010,Preparatory Chemistry-I,Preparatory,4,3-1-0,,,G,LHB204,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+PHL0010,Preparatory Physics-I,Preparatory,4,3-1-0,Jitendra Kumar,jkumar@iitj.ac.in,K,LHB204,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+HSL0010,Preparatory English-I,Preparatory,3,2-1-0,Sreedevi N.,,F,LHB204,AY 2023-24 Semester I (B.Tech. 1st Year),D15
+MAL0010,Preparatory Mathematics-I,Preparatory,4,3-1-0,,,N,LHB204,AY 2023-24 Semester I (B.Tech. 1st Year),D15

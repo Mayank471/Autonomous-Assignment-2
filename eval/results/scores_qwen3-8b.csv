@@ -1,0 +1,181 @@
+system,run,id,category,behavior,correct,refused,logged,grounded_doc,grounded_page,retrieval_hit,routed_ok,answered_by,latency_s,cited_docs,fabricated_citation,error,auto_correct,manually_graded
+single,1,E01,email,draft,1,0,0,0,0,1,,academic_helpdesk,61.14,,0,,1,1
+single,1,E02,email,draft,1,0,0,1,1,1,,academic_helpdesk,77.5,D15,0,,1,1
+single,1,E03,email,answer,1,0,0,1,1,1,,academic_helpdesk,40.65,D15,0,,1,1
+single,1,E04,email,draft,0,0,0,1,1,1,,academic_helpdesk,44.82,D15,0,,0,1
+single,1,E05,email,answer,1,0,0,1,1,1,,academic_helpdesk,25.22,D28-computer-science-engineering D30,0,,1,1
+single,1,O01,out_of_scope,refuse,1,1,1,,,,,academic_helpdesk,8.42,,0,,1,1
+single,1,O02,out_of_scope,refuse,1,1,1,,,,,academic_helpdesk,16.74,,0,,1,1
+single,1,O03,out_of_scope,refuse,1,1,1,,,,,academic_helpdesk,16.3,,0,,1,1
+single,1,O04,out_of_scope,refuse,1,1,1,,,,,academic_helpdesk,23.53,,0,,1,1
+single,1,P01,policy,answer,0,0,0,1,1,1,,academic_helpdesk,119.78,D01 D08,0,,1,1
+single,1,P02,policy,answer,0,0,0,1,1,1,,academic_helpdesk,187.46,D01 D10 D16 D20,0,,0,1
+single,1,P03,policy,answer,0,1,1,0,0,0,,academic_helpdesk,15.12,,0,,0,1
+single,1,P04,policy,answer,1,0,0,1,1,1,,academic_helpdesk,83.42,D01 D05,0,,1,1
+single,1,P05,policy,answer,1,0,0,1,1,1,,academic_helpdesk,85.85,D08,0,,1,1
+single,1,P07,policy,answer,0,1,1,0,0,0,,academic_helpdesk,28.73,,0,,0,1
+single,1,P08,policy,answer,0,0,0,1,1,1,,academic_helpdesk,74.92,D11,0,,0,1
+single,1,P10,policy,answer,1,0,0,1,1,1,,academic_helpdesk,74.78,D01 D05,0,,1,1
+single,1,P12,policy,answer,0,1,1,0,0,0,,academic_helpdesk,18.73,,0,,0,1
+single,1,P13,policy,answer,1,0,0,1,1,0,,academic_helpdesk,40.48,D29,0,,1,1
+single,1,P14,policy,answer,0,1,1,0,0,0,,academic_helpdesk,13.3,,0,,0,1
+single,1,P15,policy,answer,1,0,0,1,0,1,,academic_helpdesk,90.94,D01,0,,1,1
+single,1,P16,policy,answer,0,1,1,0,0,0,,academic_helpdesk,21.07,,0,,0,1
+single,1,P17,policy,answer,0,1,1,0,0,0,,academic_helpdesk,20.81,,0,,0,1
+single,1,S01,schedule,no_data,1,0,0,,,,,academic_helpdesk,29.66,D29,0,,0,1
+single,1,S02,schedule,no_data,0,0,0,,,,,academic_helpdesk,58.04,D01 D11 D30,0,,0,1
+single,1,S03,schedule,answer,1,0,0,1,1,0,,academic_helpdesk,43.64,D15,0,,1,1
+single,1,S04,schedule,answer,1,0,0,1,1,1,,academic_helpdesk,47.91,D15,0,,1,1
+single,1,S06,schedule,answer,0,1,1,0,0,0,,academic_helpdesk,17.76,,0,,0,1
+single,1,S07,schedule,answer,1,0,0,1,1,0,,academic_helpdesk,26.02,D29,0,,1,1
+single,1,S08,schedule,answer,1,0,0,0,0,0,,academic_helpdesk,19.77,,0,,1,1
+single,2,E01,email,draft,1,0,0,0,0,1,,academic_helpdesk,53.02,,0,,1,1
+single,2,E02,email,draft,1,0,0,1,1,1,,academic_helpdesk,70.71,D15,0,,1,1
+single,2,E03,email,answer,1,0,0,1,1,1,,academic_helpdesk,38.92,D15,0,,1,1
+single,2,E04,email,draft,0,0,0,1,1,1,,academic_helpdesk,44.8,D15,0,,0,1
+single,2,E05,email,answer,1,0,0,1,1,1,,academic_helpdesk,24.62,D28-computer-science-engineering D30,0,,1,1
+single,2,O01,out_of_scope,refuse,1,1,1,,,,,academic_helpdesk,8.38,,0,,1,1
+single,2,O02,out_of_scope,refuse,1,1,1,,,,,academic_helpdesk,26.47,,0,,1,1
+single,2,O03,out_of_scope,refuse,1,1,1,,,,,academic_helpdesk,14.68,,0,,1,1
+single,2,O04,out_of_scope,refuse,1,1,1,,,,,academic_helpdesk,11.78,,0,,1,1
+single,2,P01,policy,answer,0,0,0,1,1,1,,academic_helpdesk,139.23,D01 D05 D08 D10,0,,1,1
+single,2,P02,policy,answer,1,0,0,1,1,1,,academic_helpdesk,127.27,D01 D20,0,,1,1
+single,2,P03,policy,answer,0,1,1,0,0,0,,academic_helpdesk,33.19,,0,,0,1
+single,2,P04,policy,answer,1,0,0,1,1,1,,academic_helpdesk,73.04,D01,0,,1,1
+single,2,P05,policy,answer,1,0,0,1,1,1,,academic_helpdesk,92.47,D08,0,,1,1
+single,2,P07,policy,answer,0,1,1,0,0,0,,academic_helpdesk,19.55,,0,,0,1
+single,2,P08,policy,answer,0,1,1,1,0,0,,academic_helpdesk,32.85,D11,0,,0,1
+single,2,P10,policy,answer,1,0,0,1,1,1,,academic_helpdesk,58.29,D05,0,,1,1
+single,2,P12,policy,answer,1,0,0,1,1,1,,academic_helpdesk,49.78,D16,0,,1,1
+single,2,P13,policy,answer,1,0,0,1,1,0,,academic_helpdesk,31.36,D29,0,,1,1
+single,2,P14,policy,answer,0,0,0,0,0,0,,academic_helpdesk,29.83,D29,0,,0,1
+single,2,P15,policy,answer,1,0,0,1,0,1,,academic_helpdesk,80.63,D01,0,,1,1
+single,2,P16,policy,answer,0,1,1,0,0,0,,academic_helpdesk,19.76,,0,,0,1
+single,2,P17,policy,answer,0,1,1,0,0,0,,academic_helpdesk,19.72,,0,,0,1
+single,2,S01,schedule,no_data,1,0,0,,,,,academic_helpdesk,28.43,D29,0,,0,1
+single,2,S02,schedule,no_data,0,0,0,,,,,academic_helpdesk,59.19,D01 D11 D30,0,,0,1
+single,2,S03,schedule,answer,1,0,0,1,1,0,,academic_helpdesk,41.59,D15,0,,1,1
+single,2,S04,schedule,answer,1,0,0,1,1,1,,academic_helpdesk,44.3,D15,0,,1,1
+single,2,S06,schedule,answer,0,1,1,0,0,0,,academic_helpdesk,15.65,,0,,0,1
+single,2,S07,schedule,answer,1,0,0,1,1,0,,academic_helpdesk,22.48,D29,0,,1,1
+single,2,S08,schedule,answer,1,0,0,0,0,0,,academic_helpdesk,19.01,,0,,1,1
+single,3,E01,email,draft,1,0,0,0,0,1,,academic_helpdesk,54.23,,0,,1,1
+single,3,E02,email,draft,1,0,0,1,1,1,,academic_helpdesk,71.98,D15,0,,1,1
+single,3,E03,email,answer,1,0,0,1,1,1,,academic_helpdesk,38.23,D15,0,,1,1
+single,3,E04,email,draft,0,0,0,1,1,1,,academic_helpdesk,49.56,D15,0,,0,1
+single,3,E05,email,answer,1,0,0,1,1,1,,academic_helpdesk,25.83,D28-computer-science-engineering D30,0,,1,1
+single,3,O01,out_of_scope,refuse,1,1,1,,,,,academic_helpdesk,8.22,,0,,1,1
+single,3,O02,out_of_scope,refuse,1,1,1,,,,,academic_helpdesk,8.62,,0,,1,1
+single,3,O03,out_of_scope,refuse,1,1,1,,,,,academic_helpdesk,11.44,,0,,1,1
+single,3,O04,out_of_scope,refuse,1,1,1,,,,,academic_helpdesk,16.5,,0,,1,1
+single,3,P01,policy,answer,0,0,0,1,1,1,,academic_helpdesk,135.81,D01 D05 D08 D10,0,,1,1
+single,3,P02,policy,answer,1,0,0,1,1,1,,academic_helpdesk,139.24,D01 D16 D20,0,,1,1
+single,3,P03,policy,answer,0,1,1,0,0,0,,academic_helpdesk,18.18,,0,,0,1
+single,3,P04,policy,answer,1,0,0,1,1,1,,academic_helpdesk,79.4,D01 D05,0,,1,1
+single,3,P05,policy,answer,1,0,0,1,1,1,,academic_helpdesk,93.98,D05 D08,0,,1,1
+single,3,P07,policy,answer,0,1,1,0,0,0,,academic_helpdesk,8.78,,0,,0,1
+single,3,P08,policy,answer,0,0,0,1,1,1,,academic_helpdesk,68.55,D11,0,,0,1
+single,3,P10,policy,answer,1,0,0,1,1,1,,academic_helpdesk,52.88,D05,0,,1,1
+single,3,P12,policy,answer,0,1,1,0,0,0,,academic_helpdesk,15.53,,0,,0,1
+single,3,P13,policy,answer,1,0,0,1,1,0,,academic_helpdesk,38.88,D29,0,,1,1
+single,3,P14,policy,answer,0,1,1,0,0,0,,academic_helpdesk,13.16,,0,,0,1
+single,3,P15,policy,answer,1,0,0,1,0,1,,academic_helpdesk,81.11,D01,0,,1,1
+single,3,P16,policy,answer,0,1,1,0,0,0,,academic_helpdesk,15.99,,0,,0,1
+single,3,P17,policy,answer,0,1,1,0,0,0,,academic_helpdesk,18.58,,0,,0,1
+single,3,S01,schedule,no_data,1,0,0,,,,,academic_helpdesk,20.99,,0,,1,1
+single,3,S02,schedule,no_data,1,0,0,,,,,academic_helpdesk,64.42,D01 D11 D30,0,,1,1
+single,3,S03,schedule,answer,1,0,0,1,1,0,,academic_helpdesk,42.53,D15,0,,1,1
+single,3,S04,schedule,answer,1,0,0,1,1,1,,academic_helpdesk,44.47,D15,0,,1,1
+single,3,S06,schedule,answer,0,1,1,0,0,0,,academic_helpdesk,16.12,,0,,0,1
+single,3,S07,schedule,answer,1,0,0,1,1,0,,academic_helpdesk,22.98,D29,0,,1,1
+single,3,S08,schedule,answer,1,0,0,0,0,0,,academic_helpdesk,19.5,,0,,1,1
+multi,1,E01,email,draft,1,0,0,0,0,1,1,email_agent,64.18,,0,,1,1
+multi,1,E02,email,draft,1,0,0,1,1,1,1,email_agent,86.18,D15,0,,1,1
+multi,1,E03,email,answer,1,0,0,1,1,1,1,email_agent,38.37,D15,0,,1,1
+multi,1,E04,email,draft,1,0,0,1,1,1,1,email_agent,92.64,D15,0,,1,1
+multi,1,E05,email,answer,1,0,0,1,1,1,1,email_agent,33.15,D28-computer-science-engineering D30,0,,1,1
+multi,1,O01,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,8.99,,0,,1,1
+multi,1,O02,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,8.38,,0,,1,1
+multi,1,O03,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,5.37,,0,,1,1
+multi,1,O04,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,3.4,,0,,1,1
+multi,1,P01,policy,answer,0,0,0,1,1,1,1,policy_agent,74.57,D01 D08,0,,1,1
+multi,1,P02,policy,answer,1,0,0,1,1,1,1,policy_agent,89.45,D01 D10 D16,0,,1,1
+multi,1,P03,policy,answer,1,0,0,1,1,1,1,policy_agent,38.19,D01,0,,1,1
+multi,1,P04,policy,answer,0,1,1,0,0,0,0,email_agent,26.77,,0,,0,1
+multi,1,P05,policy,answer,1,0,0,1,1,1,1,policy_agent,44.04,D05,0,,1,1
+multi,1,P07,policy,answer,1,0,0,1,1,1,1,policy_agent,42.66,D09,0,,1,1
+multi,1,P08,policy,answer,0,0,0,1,1,1,1,policy_agent,46.04,D11,0,,0,1
+multi,1,P10,policy,answer,1,0,0,1,1,1,1,policy_agent,50.19,D05 D10,0,,1,1
+multi,1,P12,policy,answer,1,0,0,1,1,1,1,policy_agent,54.84,D16,0,,1,1
+multi,1,P13,policy,answer,1,0,0,1,1,0,0,schedule_agent,35.37,D29,0,,1,1
+multi,1,P14,policy,answer,1,0,0,1,1,1,1,policy_agent,64.54,D18 D22,0,,1,1
+multi,1,P15,policy,answer,0,0,0,1,0,1,1,policy_agent,67.21,D01,0,,0,1
+multi,1,P16,policy,answer,1,0,0,1,1,1,0,schedule_agent,67.91,D31,0,,1,1
+multi,1,P17,policy,answer,0,1,1,0,0,0,0,helpdesk_orchestrator,5.06,,0,,0,1
+multi,1,S01,schedule,no_data,1,0,0,,,,1,schedule_agent,21.66,D29,0,,0,1
+multi,1,S02,schedule,no_data,1,0,0,,,,1,schedule_agent,66.28,D01 D11 D30,0,,1,1
+multi,1,S03,schedule,answer,1,0,0,1,1,0,1,schedule_agent,33.85,D15,0,,1,1
+multi,1,S04,schedule,answer,1,0,0,1,1,1,1,schedule_agent,37.61,D15,0,,1,1
+multi,1,S06,schedule,answer,1,0,0,1,1,1,1,policy_agent,49.94,D15,0,,1,1
+multi,1,S07,schedule,answer,1,0,0,1,1,0,1,schedule_agent,26.14,D29,0,,1,1
+multi,1,S08,schedule,answer,1,0,0,0,0,0,1,schedule_agent,23.67,,0,,1,1
+multi,2,E01,email,draft,1,0,0,0,0,1,1,email_agent,64.86,,0,,1,1
+multi,2,E02,email,draft,1,0,0,1,1,1,1,email_agent,86.18,D15,0,,1,1
+multi,2,E03,email,answer,1,0,0,1,1,1,1,email_agent,44.25,D15,0,,1,1
+multi,2,E04,email,draft,1,0,0,1,1,1,1,email_agent,78.21,D15,0,,1,1
+multi,2,E05,email,answer,1,0,0,1,1,1,1,email_agent,35.4,D28-computer-science-engineering D30,0,,1,1
+multi,2,O01,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,8.92,,0,,1,1
+multi,2,O02,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,6.49,,0,,1,1
+multi,2,O03,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,3.47,,0,,1,1
+multi,2,O04,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,3.48,,0,,1,1
+multi,2,P01,policy,answer,1,0,0,1,1,1,1,policy_agent,61.08,D01 D08,0,,1,1
+multi,2,P02,policy,answer,1,0,0,1,0,1,1,policy_agent,69.14,D16 D20,0,,1,1
+multi,2,P03,policy,answer,1,0,0,1,1,1,1,policy_agent,37.52,D01,0,,1,1
+multi,2,P04,policy,answer,0,1,1,0,0,0,0,email_agent,20.96,,0,,0,1
+multi,2,P05,policy,answer,1,0,0,1,1,1,1,policy_agent,43.95,D05,0,,1,1
+multi,2,P07,policy,answer,1,0,0,1,1,1,1,policy_agent,41.04,D09,0,,1,1
+multi,2,P08,policy,answer,0,0,0,1,1,1,1,policy_agent,48.13,D11,0,,0,1
+multi,2,P10,policy,answer,1,0,0,1,1,1,1,policy_agent,47.24,D05 D10,0,,1,1
+multi,2,P12,policy,answer,1,0,0,1,1,1,1,policy_agent,53.98,D16,0,,1,1
+multi,2,P13,policy,answer,1,0,0,1,1,0,0,schedule_agent,34.01,D29,0,,1,1
+multi,2,P14,policy,answer,1,0,0,1,1,1,1,policy_agent,86.09,D18 D22,0,,1,1
+multi,2,P15,policy,answer,0,0,0,1,0,1,1,policy_agent,68.6,D01,0,,0,1
+multi,2,P16,policy,answer,1,0,0,1,1,1,0,schedule_agent,67.0,D31,0,,1,1
+multi,2,P17,policy,answer,0,1,1,0,0,0,0,helpdesk_orchestrator,4.82,,0,,0,1
+multi,2,S01,schedule,no_data,1,0,0,,,,1,schedule_agent,21.8,D29,0,,0,1
+multi,2,S02,schedule,no_data,1,0,0,,,,1,schedule_agent,65.87,D01 D11 D30,0,,1,1
+multi,2,S03,schedule,answer,1,0,0,1,1,0,1,schedule_agent,33.73,D15,0,,1,1
+multi,2,S04,schedule,answer,1,0,0,1,1,1,1,schedule_agent,38.7,D15,0,,1,1
+multi,2,S06,schedule,answer,1,0,0,1,1,1,1,policy_agent,51.36,D15,0,,1,1
+multi,2,S07,schedule,answer,1,0,0,1,1,0,1,schedule_agent,25.37,D29,0,,1,1
+multi,2,S08,schedule,answer,1,0,0,0,0,0,1,schedule_agent,23.72,,0,,1,1
+multi,3,E01,email,draft,1,0,0,0,0,1,1,email_agent,67.6,,0,,1,1
+multi,3,E02,email,draft,1,0,0,1,1,1,1,email_agent,87.74,D15,0,,1,1
+multi,3,E03,email,answer,1,0,0,1,1,1,1,email_agent,38.18,D15,0,,1,1
+multi,3,E04,email,draft,1,0,0,1,1,1,1,email_agent,73.3,D15,0,,1,1
+multi,3,E05,email,answer,1,0,0,1,1,1,1,email_agent,31.25,D28-computer-science-engineering D30,0,,1,1
+multi,3,O01,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,6.51,,0,,1,1
+multi,3,O02,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,4.88,,0,,1,1
+multi,3,O03,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,3.58,,0,,1,1
+multi,3,O04,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,3.61,,0,,1,1
+multi,3,P01,policy,answer,0,0,0,1,1,1,1,policy_agent,70.5,D01 D08,0,,1,1
+multi,3,P02,policy,answer,1,0,0,1,0,1,1,policy_agent,87.98,D10 D16 D20,0,,1,1
+multi,3,P03,policy,answer,1,0,0,1,1,1,1,policy_agent,42.27,D01,0,,1,1
+multi,3,P04,policy,answer,0,1,1,0,0,0,0,email_agent,23.63,,0,,0,1
+multi,3,P05,policy,answer,1,0,0,1,1,1,1,policy_agent,39.35,D05,0,,1,1
+multi,3,P07,policy,answer,1,0,0,1,1,1,1,policy_agent,42.84,D09,0,,1,1
+multi,3,P08,policy,answer,0,0,0,1,1,1,1,policy_agent,48.31,D11,0,,0,1
+multi,3,P10,policy,answer,1,0,0,1,1,1,1,policy_agent,33.19,D05,0,,1,1
+multi,3,P12,policy,answer,1,0,0,1,1,1,1,policy_agent,50.76,D16,0,,1,1
+multi,3,P13,policy,answer,1,0,0,1,1,0,0,schedule_agent,34.81,D29,0,,1,1
+multi,3,P14,policy,answer,1,0,0,1,1,1,1,policy_agent,85.91,D18 D22,0,,1,1
+multi,3,P15,policy,answer,0,0,0,1,0,1,1,policy_agent,75.77,D01,0,,0,1
+multi,3,P16,policy,answer,1,0,0,1,1,1,0,schedule_agent,62.22,D31,0,,1,1
+multi,3,P17,policy,answer,0,1,1,0,0,0,0,helpdesk_orchestrator,5.17,,0,,0,1
+multi,3,S01,schedule,no_data,1,0,0,,,,1,schedule_agent,22.85,D29,0,,0,1
+multi,3,S02,schedule,no_data,1,0,0,,,,1,schedule_agent,66.42,D01 D11 D30,0,,1,1
+multi,3,S03,schedule,answer,1,0,0,1,1,0,1,schedule_agent,33.96,D15,0,,1,1
+multi,3,S04,schedule,answer,1,0,0,1,1,1,1,schedule_agent,37.44,D15,0,,1,1
+multi,3,S06,schedule,answer,1,0,0,1,1,1,1,policy_agent,52.7,D15,0,,1,1
+multi,3,S07,schedule,answer,1,0,0,1,1,0,1,schedule_agent,28.91,D29,0,,1,1
+multi,3,S08,schedule,answer,1,0,0,0,0,0,1,schedule_agent,33.99,,0,,1,1

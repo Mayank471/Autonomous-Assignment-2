@@ -1,0 +1,2 @@
+# keep scraped files byte-identical so the SHA-256 values in data/sources.csv stay valid after a clone
+data/raw/** -text

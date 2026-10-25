@@ -1,0 +1,91 @@
+system,run,id,category,behavior,correct,refused,logged,grounded_doc,grounded_page,retrieval_hit,routed_ok,answered_by,latency_s,cited_docs,fabricated_citation,error,auto_correct,manually_graded
+multi,1,E01,email,draft,0,1,1,0,0,1,1,email_agent,30.06,,1,,0,1
+multi,1,E02,email,draft,0,0,0,0,0,0,1,email_agent,26.78,,0,,0,1
+multi,1,E03,email,answer,0,0,0,1,1,1,1,email_agent,23.6,D15,0,,1,1
+multi,1,E04,email,draft,0,0,0,1,1,1,1,email_agent,52.11,D15,0,,0,1
+multi,1,E05,email,answer,0,0,0,0,0,1,1,email_agent,26.77,D30,0,,0,1
+multi,1,O01,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,11.24,,0,,1,1
+multi,1,O02,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,9.4,,0,,1,1
+multi,1,O03,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,6.52,,0,,1,1
+multi,1,O04,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,14.88,,0,,1,1
+multi,1,P01,policy,answer,0,0,0,1,1,1,1,policy_agent,68.28,D08,0,,1,1
+multi,1,P02,policy,answer,1,0,0,1,0,1,1,policy_agent,79.9,D10 D16 D20,0,,1,1
+multi,1,P03,policy,answer,1,0,0,1,1,1,1,policy_agent,38.07,D01 D05,0,,1,1
+multi,1,P04,policy,answer,1,0,0,1,1,1,1,policy_agent,38.64,D01 D05,0,,1,1
+multi,1,P05,policy,answer,0,1,1,0,0,0,1,policy_agent,15.41,,0,,0,1
+multi,1,P07,policy,answer,1,0,0,1,1,1,1,policy_agent,35.68,D09,0,,1,1
+multi,1,P08,policy,answer,0,0,0,1,0,1,1,policy_agent,55.34,D09 D11,0,,0,1
+multi,1,P10,policy,answer,1,0,0,0,0,1,1,policy_agent,65.58,D10,0,,1,1
+multi,1,P12,policy,answer,1,0,0,1,1,1,1,policy_agent,51.57,D16,0,,1,1
+multi,1,P13,policy,answer,0,0,0,1,1,1,1,policy_agent,50.91,D01 D05 D18,0,,0,1
+multi,1,P14,policy,answer,1,0,0,1,1,1,1,policy_agent,63.8,D18 D22,0,,1,1
+multi,1,P15,policy,answer,0,0,0,1,0,1,1,policy_agent,43.01,D05 D14,0,,0,1
+multi,1,P16,policy,answer,0,0,0,0,0,1,1,policy_agent,69.89,D10 D20,0,,0,1
+multi,1,P17,policy,answer,0,1,1,0,0,0,0,helpdesk_orchestrator,14.09,,0,,0,1
+multi,1,S01,schedule,no_data,1,0,0,,,,1,schedule_agent,19.82,D29,0,,1,1
+multi,1,S02,schedule,no_data,1,0,0,,,,1,schedule_agent,27.43,,0,,0,1
+multi,1,S03,schedule,answer,1,0,0,1,1,0,1,schedule_agent,28.52,D15,0,,1,1
+multi,1,S04,schedule,answer,1,0,0,1,1,1,1,schedule_agent,29.42,D15,0,,1,1
+multi,1,S06,schedule,answer,1,0,0,1,1,1,1,schedule_agent,37.88,D15,0,,1,1
+multi,1,S07,schedule,answer,1,0,0,1,1,0,1,schedule_agent,24.43,D29,0,,1,1
+multi,1,S08,schedule,answer,1,0,0,0,0,0,1,schedule_agent,25.42,D29,0,,1,1
+multi,2,E01,email,draft,0,0,0,0,0,1,1,email_agent,32.81,,0,,0,1
+multi,2,E02,email,draft,0,0,0,1,1,1,1,email_agent,37.66,D15,0,,0,1
+multi,2,E03,email,answer,1,0,0,1,1,1,1,email_agent,28.74,D15,0,,1,1
+multi,2,E04,email,draft,0,0,0,1,1,1,1,email_agent,35.49,D15,0,,0,1
+multi,2,E05,email,answer,0,1,1,0,0,1,1,email_agent,12.46,,0,,0,1
+multi,2,O01,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,7.08,,0,,1,1
+multi,2,O02,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,12.38,,0,,1,1
+multi,2,O03,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,8.34,,0,,1,1
+multi,2,O04,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,8.04,,0,,1,1
+multi,2,P01,policy,answer,1,0,0,1,1,1,1,policy_agent,63.34,D01 D05 D08,0,,1,1
+multi,2,P02,policy,answer,0,0,0,0,0,1,1,policy_agent,62.63,D10,0,,0,1
+multi,2,P03,policy,answer,1,0,0,1,1,1,1,policy_agent,40.64,D01 D05,0,,1,1
+multi,2,P04,policy,answer,0,0,0,0,0,0,0,email_agent,23.18,,0,,0,1
+multi,2,P05,policy,answer,1,0,0,1,1,1,1,policy_agent,38.57,D08,0,,1,1
+multi,2,P07,policy,answer,1,0,0,1,1,1,1,policy_agent,46.04,D09,0,,1,1
+multi,2,P08,policy,answer,0,0,0,1,0,1,1,policy_agent,29.95,D11,0,,0,1
+multi,2,P10,policy,answer,1,0,0,0,0,1,1,policy_agent,54.21,D10,0,,1,1
+multi,2,P12,policy,answer,1,0,0,1,1,1,1,policy_agent,58.77,D16,0,,1,1
+multi,2,P13,policy,answer,1,0,0,1,1,0,0,schedule_agent,25.6,D29,0,,1,1
+multi,2,P14,policy,answer,1,0,0,1,1,1,0,schedule_agent,52.82,D18 D22,0,,1,1
+multi,2,P15,policy,answer,0,0,0,1,0,1,1,policy_agent,43.99,D01 D05 D22,0,,0,1
+multi,2,P16,policy,answer,1,0,0,1,1,1,0,schedule_agent,45.96,D31,0,,1,1
+multi,2,P17,policy,answer,0,1,1,0,0,0,0,helpdesk_orchestrator,13.48,,0,,0,1
+multi,2,S01,schedule,no_data,1,0,0,,,,1,schedule_agent,20.69,D29,0,,1,1
+multi,2,S02,schedule,no_data,1,1,1,,,,1,schedule_agent,104.99,D23,0,,1,1
+multi,2,S03,schedule,answer,1,0,0,1,1,0,1,schedule_agent,29.17,D15,0,,1,1
+multi,2,S04,schedule,answer,1,0,0,1,1,1,1,schedule_agent,25.75,D15,0,,1,1
+multi,2,S06,schedule,answer,1,0,0,1,1,1,1,schedule_agent,33.08,D15,0,,1,1
+multi,2,S07,schedule,answer,0,1,0,0,0,0,1,policy_agent,57.09,D10 D17 D21,0,,0,1
+multi,2,S08,schedule,answer,1,0,0,0,0,0,1,schedule_agent,22.3,D29,0,,1,1
+multi,3,E01,email,draft,0,0,0,0,0,1,1,email_agent,33.69,D11,0,,0,1
+multi,3,E02,email,draft,0,0,0,1,1,1,1,email_agent,58.77,D15,0,,0,1
+multi,3,E03,email,answer,0,0,0,1,1,1,1,email_agent,21.54,D15,0,,0,1
+multi,3,E04,email,draft,0,1,0,0,0,1,1,email_agent,16.54,,0,,0,1
+multi,3,E05,email,answer,0,1,0,1,1,1,1,email_agent,21.95,D28-computer-science-engineering D30,0,,0,1
+multi,3,O01,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,9.64,,0,,1,1
+multi,3,O02,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,9.16,,0,,1,1
+multi,3,O03,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,8.24,,0,,1,1
+multi,3,O04,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,6.47,,0,,1,1
+multi,3,P01,policy,answer,1,0,0,1,1,1,1,policy_agent,47.61,D08,0,,1,1
+multi,3,P02,policy,answer,1,0,0,0,0,1,1,policy_agent,38.81,D10,0,,1,1
+multi,3,P03,policy,answer,1,0,0,1,1,1,1,policy_agent,41.25,D01 D05,0,,1,1
+multi,3,P04,policy,answer,0,0,0,0,0,0,0,email_agent,22.81,,0,,0,1
+multi,3,P05,policy,answer,1,0,0,1,1,1,1,policy_agent,54.16,D08,0,,1,1
+multi,3,P07,policy,answer,1,0,0,1,1,1,1,policy_agent,34.28,D09,0,,1,1
+multi,3,P08,policy,answer,0,0,0,1,0,1,1,policy_agent,30.17,D11,0,,0,1
+multi,3,P10,policy,answer,1,0,0,0,0,1,1,policy_agent,59.41,D10,0,,1,1
+multi,3,P12,policy,answer,1,0,0,1,1,1,1,policy_agent,50.14,D16,0,,1,1
+multi,3,P13,policy,answer,1,0,0,1,1,1,1,policy_agent,47.92,D18 D22,0,,1,1
+multi,3,P14,policy,answer,1,0,0,1,1,1,0,schedule_agent,55.94,D18 D22,0,,1,1
+multi,3,P15,policy,answer,0,0,0,1,0,1,0,schedule_agent,50.26,D01 D05,0,,0,1
+multi,3,P16,policy,answer,0,0,0,0,0,0,0,schedule_agent,34.56,D11 D30,0,,0,1
+multi,3,P17,policy,answer,0,1,1,0,0,0,0,helpdesk_orchestrator,13.18,,0,,0,1
+multi,3,S01,schedule,no_data,1,0,0,,,,1,schedule_agent,12.6,D29,0,,1,1
+multi,3,S02,schedule,no_data,1,0,0,,,,1,schedule_agent,23.17,,0,,0,1
+multi,3,S03,schedule,answer,1,0,0,1,1,0,1,schedule_agent,30.28,D15 D29,0,,1,1
+multi,3,S04,schedule,answer,1,0,0,1,1,1,1,schedule_agent,25.85,D15,0,,1,1
+multi,3,S06,schedule,answer,0,0,0,0,0,0,1,schedule_agent,21.06,,0,,0,1
+multi,3,S07,schedule,answer,0,0,0,0,0,0,1,policy_agent,34.41,D17,0,,0,1
+multi,3,S08,schedule,answer,1,0,0,0,0,0,1,schedule_agent,23.68,D29,0,,1,1

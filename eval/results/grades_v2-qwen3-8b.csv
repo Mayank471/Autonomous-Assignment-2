@@ -1,0 +1,938 @@
+system,run,id,question,expected_answer,answer,auto_correct,manual_correct,reviewer_note
+single,1,E01,Write an email to the course instructor of CSL7570 that I need leave for 2 days,"CSL7570 is not in the timetable data and does not appear in any collected document, so its instructor/email is unknown; the system must not invent an instructor or email and should say it does not know.","I don't know who the instructor of CSL7570 is, as the course is not listed in the timetable data. Please provide the instructor's name or check if the course code is correct. Call log_unanswered with reason ""not in documents"".",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,E02,Write an email to the instructor of MAL1010 asking for permission to take a make-up exam because I missed the minor exam due to hospitalisation.,"Draft addressed to Kirankumar Hiremath <k.r.hiremath@iitj.ac.in> (course coordinator of MAL1010, AY 2023-24 Sem I).","Here is the draft email you can review and send to the instructor:
+
+```
+To: k.r.hiremath@iitj.ac.in
+Subject: MAL1010: Permission for makeup exam
+
+Dear Kirankumar Hiremath,
+
+I missed the minor exam for MAL1010 due to hospitalisation. I would like to request permission to take a make-up exam.
+
+Thank you for your consideration.
+
+Sincerely,
+[Your Name]
+Roll No.: [Your Roll Number]
+```
+
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), https://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,E03,What is the email ID of the instructor of PHL1010?,"courses.csv (from D15): PHL1010 Electromagnetism and Optics - Durgamadhab Mishra, durgamadhab@iitj.ac.in","The email ID of the instructor for PHL1010 is **durgamadhab@iitj.ac.in**.
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p.1 - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,E04,Write an email to the instructor of CSL1010 requesting sick leave for 3 days.,"Draft addressed to Richa Singh <richa@iitj.ac.in> (course coordinator of CSL1010, AY 2023-24 Sem I).","Here is the draft email you can review and modify as needed:
+
+To: richa@iitj.ac.in  
+Subject: CSL1010: Sick leave for 3 days  
+
+Dear Richa Singh,  
+
+I am writing to request sick leave for 3 days due to [reason]. The dates are [dates]. I apologize for any inconvenience this may cause.  
+
+Thank you for your consideration.  
+
+Sincerely,  
+[Your Name]  
+Roll No.: [Your Roll Number]  
+
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,E05,What is the email ID of Prof. Anand Mishra of the Computer Science and Engineering department?,"People directory (CSE): Anand Mishra, Assistant Professor, mishra[at]iitj[dot]ac[dot]in","The email ID of Prof. Anand Mishra is **mishra@iitj.ac.in**.
+
+Sources:
+- IIT Jodhpur People directory - computer-science-engineering, p. - https://iitj.ac.in/People/Profile/e9793af3-6d4f-4560-8489-2c256912a72a",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,O01,What are the available dining options on the campus?,I don't know (out of scope) + logged,"I don't know. The question is outside the academic helpdesk's scope.  
+Sources: None  
+Log:  
+
+I don't know. The question is outside the academic helpdesk's scope.  
+Sources: None  
+Log:  
+{""logged"": true}",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,O02,What is the best way to reach the campus from Jodhpur city center?,I don't know (out of scope) + logged,"I don't know. This question is outside the academic helpdesk's scope. It concerns travel and transportation, which is not related to academic matters at IIT Jodhpur.
+
+Sources:  
+- None (out of scope)",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,O03,What is the average placement package for CSE graduates?,I don't know (out of scope) + logged,"I don't know. The academic helpdesk does not provide information on placement packages or career statistics, as this is outside the scope of academic matters. 
+
+Sources:  
+- None (information is outside the academic helpdesk's scope).",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,O04,How do I get a Wi-Fi account on campus?,I don't know (out of scope) + logged,"I don't know. Setting up a Wi-Fi account on campus is outside the academic helpdesk's scope. Please contact the IIT Jodhpur IT department or visit the campus helpdesk for assistance.
+
+log_unanswered
+{""question"": ""How do I get a Wi-Fi account on campus?"", ""reason"": ""out of scope""}",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P01,What is the attendance requirement to sit in the Major exam?,"Revised policy (Circular 08-07-2024): ""students' examination performance is no longer linked to their course attendance ... In any case, the attendance of a student should not fall below 75% in a course.""","The attendance requirement to sit in the Major exam is that a student must have a minimum attendance of 75% in the course. If a student's attendance falls below 75%, they will be allowed to appear for the exams but will need to score at least a C grade to pass the course. If they score lower than the cut-off for a C grade, they will be awarded an F grade.
+
+Sources:
+- Circular 08-07-2024: Amendment in the Attendance Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.1_Circular_51Circular-No.-IITJOAACircular2024-2551682-dated-08-July-2024.pdf
+- Academic Regulations - students enrolled from July 2019 onwards, p.7 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,0,States 75% but presents the superseded rule (below 75% must score at least C) as current; the 08-07-2024 circular (D08) delinks exams from attendance. [reviewer: Claude (to be checked by student)]
+single,1,P02,How many Open Elective credits do I need to earn in order to get a B.Tech. Degree?,"Regulations (July 2019 onwards), Table 11.2: Open Electives (OE) = 10 for B.Tech. Regular (0 for B.Tech. with Specialization and Dual Degree). B.Tech. CSE curriculum (AY 2026 onwards): ""Students in the regular B.Tech programme are required to complete 12 credits of open elective courses.""","To earn a B.Tech. degree, a student needs to accumulate a total of **180 credits**. The distribution of these credits includes **Open Electives**, which contribute **10 credits** for most B.Tech. programs (e.g., B.Tech. in Electrical Engineering, Mechanical Engineering, etc.). However, for students pursuing a **B.Tech. with Minor** program, the **Open Elective credit requirement is reduced to zero**. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.17 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf
+- Detailed curriculum for B.Tech. CSE (AY 2026 onwards), p.4 - https://iitj.ac.in/PageImages/Gallery/06-2026/UG-Curriculum-CSE-2026-Onwards-639168740113754926.pdf
+- Detailed curriculum for B.Tech. AI and Data Engineering (AY 2026 onwards), p.4 - https://iitj.ac.in/PageImages/Gallery/06-2026/UG-Curriculum-AIDE-2026-Onwards-639168740417574711.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P03,Within how many days of missing an exam must a student apply for a make-up examination?,"""The student should make an application to the Dean (Academics) through the course instructor within ten days from the date of the examination missed""","A student must apply for a make-up examination within **ten days** from the date of the missed examination. This is specified in the academic regulations for students enrolled from July 2019 onwards.
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.11 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P04,To whom should a student apply for permission to write a make-up examination?,"""The student should make an application to the Dean (Academics) through the course instructor""","A student should apply for permission to write a make-up examination to the **Dean (Academics)** through the **course instructor** within ten days from the date of the missed examination. This applies to both undergraduate and postgraduate students. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.11 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.13 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P05,What happens if a student is absent from all academic activities for four or more weeks in a semester?,"""If a student is found to be absent from all academic activities for four or more than four weeks (not necessarily contiguous) in a semester, with or without sanctioned leave, then his/her registration will result in automatic semester withdrawal for all the courses.""","If a student is absent from all academic activities for four or more weeks in a semester, their registration will be automatically canceled, and they will be withdrawn from all courses in that semester. This rule applies to both undergraduate and postgraduate students. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.35 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.4 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P06,What can a course instructor do if a student remains absent from class without sanctioned leave for more than two weeks?,"""If a student remains absent from a class without sanctioned leave for more than two weeks, then the course instructor may recommend the de-registration of the student from the course.""","I don't know. The information about actions a course instructor can take regarding a student's absence without sanctioned leave is not in the helpdesk documents.  
+log_unanswered  
+{""question"": ""What can a course instructor do if a student remains absent from class without sanctioned leave for more than two weeks?"", ""reason"": ""not in documents""}",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P07,What is the duration of the Major examination and what is its minimum weightage in the overall evaluation?,"""The Major examination will be a written examination with a weightage not less than 40% of the overall evaluation. The duration of the major examination will be 3 hours.""","The duration of the Major examination is 3 hours, and its minimum weightage in the overall evaluation is not less than 40%. 
+
+Sources:
+- Circular 08-07-2024: Amendment in the Examination Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.2_Circular_52Circular-No.-IITJOAACircular2024-2552683-dated-08-July-2024.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P08,When is the Major Examination for Semester I of the academic year 2026-27?,"MAJOR Examination, Semester I (2026-27): ""19-26 November 2026, Thu- Thu""","The Major Examination for Semester I of the academic year 2026-27 is scheduled from **4-6 January 2027, Mon-Wed**.
+
+Sources:
+- Academic Calendar AY 2026-27, p.2 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P09,When do classes commence for Semester II of AY 2026-27?,"Classes Commencement, Semester II (2026-27): ""4 January 2027, Mon""","Classes for Semester II of AY 2026-27 commence on **4 January 2027, Monday**. 
+
+Sources:
+- Academic Calendar AY 2026-27, p.1 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P10,How many grade points does a B- grade carry?,"Table 5.1 Letter grade and its equivalent grade points: ""B- 7 Good""","A B- grade carries 7 grade points. 
+
+Sources:
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.10 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf
+- Academic Regulations - students enrolled from July 2019 onwards, p.8 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P11,What is the minimum number of credits a GEN category B.Tech. student must earn by the end of the second registered semester to continue in the programme?,"Table 11.3: Minimum for Continuation - GEN/OBC/GEN-EWS: 18, SC/ST/PD: 14","The minimum number of credits a GEN category B.Tech. student must earn by the end of the second registered semester to continue in the programme is **18 credits**.
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.18 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P12,How many total credits are required for the award of the B.Tech. in Computer Science and Engineering degree under the curriculum for AY 2026 onwards?,"""The regular B.Tech. programme in Computer Science and Engineering (CSE) requires a total of 153 credits for the award of the degree.""","The total number of credits required for the award of the B.Tech. in Computer Science and Engineering degree under the curriculum for AY 2026 onwards is 153 credits.
+
+Sources:
+- Detailed curriculum for B.Tech. CSE (AY 2026 onwards), p.4 - https://iitj.ac.in/PageImages/Gallery/06-2026/UG-Curriculum-CSE-2026-Onwards-639168740113754926.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P13,What is the course code and L-T-P structure of the course Autonomous Systems?,"""Title Autonomous Systems Number CSL7650 Department/IDRP CSE L-T-P [C] 3-0-0 [3]""","I don't know the course code and L-T-P structure of the course ""Autonomous Systems"" as it is not listed in the timetable data for the available semesters. For detailed information, use the `search_documents` tool to look for relevant curricula or course descriptions.
+
+Sources:  
+- No applicable sources found in the timetable data.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P14,What topics are covered in Fractal I of the Autonomous Systems course?,"""Fractal I: Introduction to Autonomous Systems [14 Lectures]: Introduction to Autonomous Systems, properties of autonomous systems, examples of autonomous systems, degree of autonomy; Abstract Agent Architectures ...; Introduction to real-time systems ...""","I don't know. The information about the topics covered in Fractal I of the Autonomous Systems course is not available in the provided documents. Please check the course description or syllabus for detailed information. 
+
+log_unanswered
+{""question"": ""What topics are covered in Fractal I of the Autonomous Systems course?"", ""reason"": ""not in documents""}",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,P15,"In an IIT Jodhpur course code such as MEL1XX0, what does the third letter 'L' indicate?","Table 4.3 Types for Courses: ""L - Lecture courses (other than lecture hours, these courses can have Tutorial and Practical hours ...)""","The third letter in an IIT Jodhpur course code such as **MEL1XX0** indicates the **type of course**. Specifically, the third letter **'L'** stands for **Lecture courses**. This is described in the ""Academic Regulations - students enrolled from July 2019 onwards"" document, which states that the third letter in the course code denotes the course type, with **'L'** representing lecture courses.
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.4 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,S01,What is the slot for the course Autonomous Systems?,"No slot is available: Autonomous Systems is not in the published timetable data (only AY 2023-24 Semester I, B.Tech. 1st year is public). The system should say it does not know / the slot is not in its data, not guess.","The timetable data does not include a course named ""Autonomous Systems."" The available timetable data covers only the ""AY 2023-24 Semester I (B.Tech. 1st Year)."" For details about the course, such as credits, L-T-P, or contents, you may need to refer to the curricula or use the search_documents tool.
+
+Sources:
+- Timetable data description - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,S02,How many 400 level electives have been floated by the Humanities department in this semester?,"The list of courses floated this semester is not available; the only public timetable (AY 2023-24 Sem I, 1st year) has no 400-level HS courses. The system should say the information for this semester is not available rather than present a count as current.","The Humanities department has not floated any 400-level electives in this semester. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.4-5 (Tables 4.1-4.3) - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,S03,What is the slot for the course Introduction to Computer Science (CSL1010)?,"courses.csv (from D15): CSL1010, Introduction to Computer Science, slot G, AY 2023-24 Semester I (B.Tech. 1st Year)","The slot for the course ""Introduction to Computer Science (CSL1010)"" is **G**. 
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. [not specified] - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,S04,On which days and at what times does slot G meet?,"slots.csv (from D15): G - Tue 05:00-05:50, Wed 01:00-01:50, Fri 01:00-01:50 (AY 2023-24 Semester I)","Slot G meets on the following days and times:
+
+- **Tuesday**: 05:00 – 05:50
+- **Wednesday**: 01:00 – 01:50
+- **Friday**: 01:00 – 01:50
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,S05,In which classroom and slot is Mathematics I (MAL1010) held for the CS/AI/EE branches?,"courses.csv (from D15): MAL1010 Mathematics I, CS/AI/EE, slot N, room LHB308","Mathematics I (MAL1010) is held in room LHB308 for the CS/AI/EE branches in slot N during AY 2023-24 Semester I (B.Tech. 1st Year).
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. [not specified] - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,1,S06,Who is the faculty advisor for the B.Tech. Computer Science and Engineering first-year (2023) batch?,"Faculty Advisors sheet: ""Computer Science and Engineering | B.Tech. 1st Year (2023) | Dr. Kshitiz Gajjar | kshitij@iitj.ac.in""","I don't know. The question is outside the academic helpdesk's scope.  
+Sources:  
+- None.  
+
+
+The question about the faculty advisor for the B.Tech. Computer Science and Engineering first-year (2023) batch is outside the academic helpdesk's scope.  
+Sources:  
+- None.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,E01,Write an email to the course instructor of CSL7570 that I need leave for 2 days,"CSL7570 is not in the timetable data and does not appear in any collected document, so its instructor/email is unknown; the system must not invent an instructor or email and should say it does not know.","I don't know who the instructor of CSL7570 is because the course code is not found in the timetable data. The timetable data available covers only: ['AY 2023-24 Semester I (B.Tech. 1st Year)']. For course details, use search_documents. 
+
+Call log_unanswered with reason ""not in documents"".",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,E02,Write an email to the instructor of MAL1010 asking for permission to take a make-up exam because I missed the minor exam due to hospitalisation.,"Draft addressed to Kirankumar Hiremath <k.r.hiremath@iitj.ac.in> (course coordinator of MAL1010, AY 2023-24 Sem I).","Here is the draft email you can review and send to the instructor:
+
+```
+To: k.r.hiremath@iitj.ac.in
+Subject: MAL1010: Permission for makeup exam
+
+Dear Kirankumar Hiremath,
+
+I missed the minor exam for MAL1010 due to hospitalisation. I would like to request permission to take a make-up exam.
+
+Thank you for your consideration.
+
+Sincerely,
+[Your Name]
+Roll No.: [Your Roll Number]
+```
+
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. null - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,E03,What is the email ID of the instructor of PHL1010?,"courses.csv (from D15): PHL1010 Electromagnetism and Optics - Durgamadhab Mishra, durgamadhab@iitj.ac.in","The email ID of the instructor for PHL1010 is **durgamadhab@iitj.ac.in**.
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. [not specified] - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,E04,Write an email to the instructor of CSL1010 requesting sick leave for 3 days.,"Draft addressed to Richa Singh <richa@iitj.ac.in> (course coordinator of CSL1010, AY 2023-24 Sem I).","Here is the draft email you can review and send to the instructor:
+
+To: richa@iitj.ac.in  
+Subject: CSL1010: Sick leave for 3 days  
+
+Dear Richa Singh,  
+
+I am writing to request sick leave for 3 days due to [reason]. The dates are [dates].  
+
+Thank you for your consideration.  
+
+Sincerely,  
+[Your Name]  
+Roll No.: [Your Roll Number]  
+
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,E05,What is the email ID of Prof. Anand Mishra of the Computer Science and Engineering department?,"People directory (CSE): Anand Mishra, Assistant Professor, mishra[at]iitj[dot]ac[dot]in","The email ID of Prof. Anand Mishra is **mishra@iitj.ac.in**.
+
+Sources:
+- IIT Jodhpur People directory - computer-science-engineering, p. (none) - https://iitj.ac.in/People/Profile/e9793af3-6d4f-4560-8489-2c256912a72a",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,O01,What are the available dining options on the campus?,I don't know (out of scope) + logged,"I don't know. The question is outside the academic helpdesk's scope. 
+
+log_unanswered
+{""question"": ""What are the available dining options on the campus?"", ""reason"": ""out of scope""}",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,O02,What is the best way to reach the campus from Jodhpur city center?,I don't know (out of scope) + logged,"I don't know. This question is outside the academic helpdesk's scope. 
+
+log_unanswered
+{""question"": ""What is the best way to reach the campus from Jodhpur city center?"", ""reason"": ""out of scope""}",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,O03,What is the average placement package for CSE graduates?,I don't know (out of scope) + logged,"I don't know. The academic helpdesk does not provide information on placement packages or career statistics, as this is outside the scope of academic matters. 
+
+log_unanswered
+{""question"": ""What is the average placement package for CSE graduates?"", ""reason"": ""out of scope""}",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,O04,How do I get a Wi-Fi account on campus?,I don't know (out of scope) + logged,"I don't know. Setting up a Wi-Fi account on campus is outside the academic helpdesk's scope. Please contact the IIT Jodhpur IT department or visit the official campus website for details.
+
+Sources:  
+- None (out of scope).",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P01,What is the attendance requirement to sit in the Major exam?,"Revised policy (Circular 08-07-2024): ""students' examination performance is no longer linked to their course attendance ... In any case, the attendance of a student should not fall below 75% in a course.""","The attendance requirement to sit in the Major exam is that a student must have a minimum of 75% attendance in the course. This policy was amended in the Senate's 38th Meeting on 26th June 2024, and it states that even if a student's attendance falls below 75%, they will still be allowed to appear for the exams. However, they will need to score at least a C grade to pass the course.
+
+Sources:
+- Circular 08-07-2024: Amendment in the Attendance Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.1_Circular_51Circular-No.-IITJOAACircular2024-2551682-dated-08-July-2024.pdf
+- Academic Regulations - students enrolled from July 2019 onwards, p.7 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,0,States 75% but presents the superseded rule (below 75% must score at least C) as current; the 08-07-2024 circular (D08) delinks exams from attendance. [reviewer: Claude (to be checked by student)]
+single,2,P02,How many Open Elective credits do I need to earn in order to get a B.Tech. Degree?,"Regulations (July 2019 onwards), Table 11.2: Open Electives (OE) = 10 for B.Tech. Regular (0 for B.Tech. with Specialization and Dual Degree). B.Tech. CSE curriculum (AY 2026 onwards): ""Students in the regular B.Tech programme are required to complete 12 credits of open elective courses.""","To earn a B.Tech. degree, a student must accumulate a total of **180 credits**. The distribution of these credits includes **Open Electives**, which are part of the elective courses a student can choose. According to the academic regulations, a student needs to earn **at least 180 credits** in total, and the category-wise distribution of these credits includes Open Electives.
+
+For example, in the B.Tech. (Computer Science & Engineering) program, the minimum credits required are distributed as follows:
+- Core courses: 32 credits
+- Compulsory courses: 28 credits
+- Programme Electives: 51 credits
+- Open Electives: 18 credits
+- Science Electives: 27 credits
+- Humanities and Social Sciences Electives: 24 credits
+
+Thus, the minimum number of Open Elective credits required for a B.Tech. degree is **18 credits**.
+
+Sources:
+- B.Tech. Regulations - students who joined in July 2014 and later (rev. 21-07-2018), p.9 - https://iitj.ac.in/PageImages/Gallery/04-2025/BTech_Regulations_Latest_21July2018.pdf
+- Academic Regulations - students enrolled from July 2019 onwards, p.17 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P03,Within how many days of missing an exam must a student apply for a make-up examination?,"""The student should make an application to the Dean (Academics) through the course instructor within ten days from the date of the examination missed""","A student must apply for a make-up examination within **ten days** from the date of the missed examination. This applies to both undergraduate and postgraduate students. The application should be made through the course instructor to the Dean (Academics), explaining the reasons for the absence. Applications received after this period are generally not entertained.
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.11 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.13 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P04,To whom should a student apply for permission to write a make-up examination?,"""The student should make an application to the Dean (Academics) through the course instructor""","A student should apply for permission to write a make-up examination to the **Dean (Academics)** through the **course instructor** within ten days from the date of the missed examination. This applies to both undergraduate and postgraduate students. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.11 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.13 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P05,What happens if a student is absent from all academic activities for four or more weeks in a semester?,"""If a student is found to be absent from all academic activities for four or more than four weeks (not necessarily contiguous) in a semester, with or without sanctioned leave, then his/her registration will result in automatic semester withdrawal for all the courses.""","If a student is absent from all academic activities for four or more weeks in a semester, their registration will be automatically canceled, and they will be withdrawn from all courses in that semester. This is outlined in the ""Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards"" and the ""Academic Regulations - students enrolled from July 2019 onwards."" 
+
+Sources:
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.4 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf
+- Academic Regulations - students enrolled from July 2019 onwards, p.35 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P06,What can a course instructor do if a student remains absent from class without sanctioned leave for more than two weeks?,"""If a student remains absent from a class without sanctioned leave for more than two weeks, then the course instructor may recommend the de-registration of the student from the course.""","According to the revised attendance policy, if a student remains absent from a class without sanctioned leave for more than two weeks, the course instructor may recommend the de-registration of the student from the course. Additionally, if a student is absent from all academic activities for four or more weeks (not necessarily contiguous) in a semester, with or without sanctioned leave, their registration will result in automatic semester withdrawal for all the courses.
+
+Sources:
+- Circular 08-07-2024: Amendment in the Attendance Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.1_Circular_51Circular-No.-IITJOAACircular2024-2551682-dated-08-July-2024.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P07,What is the duration of the Major examination and what is its minimum weightage in the overall evaluation?,"""The Major examination will be a written examination with a weightage not less than 40% of the overall evaluation. The duration of the major examination will be 3 hours.""","The duration of the Major examination is 3 hours, and its minimum weightage in the overall evaluation is not less than 40%. 
+
+Sources:
+- Circular 08-07-2024: Amendment in the Examination Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.2_Circular_52Circular-No.-IITJOAACircular2024-2552683-dated-08-July-2024.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P08,When is the Major Examination for Semester I of the academic year 2026-27?,"MAJOR Examination, Semester I (2026-27): ""19-26 November 2026, Thu- Thu""","The Major Examination for Semester I of the academic year 2026-27 is scheduled from **4-6 January 2027, Monday to Wednesday**.  
+
+Sources:  
+- Academic Calendar AY 2026-27, p. 2 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P09,When do classes commence for Semester II of AY 2026-27?,"Classes Commencement, Semester II (2026-27): ""4 January 2027, Mon""","Classes for Semester II of AY 2026-27 commence on **4 January 2027, Monday**. 
+
+Sources:
+- Academic Calendar AY 2026-27, p.1 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P10,How many grade points does a B- grade carry?,"Table 5.1 Letter grade and its equivalent grade points: ""B- 7 Good""","To determine the grade points for a B- grade, I will search the relevant academic regulations or grading policies.
+
+
+A B- grade carries 7 grade points. This is based on the grading system described in the Postgraduate Programme Regulations, which associate the letter grade B- with a grade point of 7 on a 10-point scale.
+
+Sources:
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.10 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P11,What is the minimum number of credits a GEN category B.Tech. student must earn by the end of the second registered semester to continue in the programme?,"Table 11.3: Minimum for Continuation - GEN/OBC/GEN-EWS: 18, SC/ST/PD: 14","The minimum number of credits a GEN category B.Tech. student must earn by the end of the second registered semester to continue in the programme is **18 credits**.
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.18 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P12,How many total credits are required for the award of the B.Tech. in Computer Science and Engineering degree under the curriculum for AY 2026 onwards?,"""The regular B.Tech. programme in Computer Science and Engineering (CSE) requires a total of 153 credits for the award of the degree.""","The total number of credits required for the award of the B.Tech. in Computer Science and Engineering degree under the curriculum for AY 2026 onwards is **153 credits**. This includes contributions from the Institute Core, Programme Core, Open Electives, and Essential Audit components.
+
+Sources:
+- Detailed curriculum for B.Tech. CSE (AY 2026 onwards), p.4 - https://iitj.ac.in/PageImages/Gallery/06-2026/UG-Curriculum-CSE-2026-Onwards-639168740113754926.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P13,What is the course code and L-T-P structure of the course Autonomous Systems?,"""Title Autonomous Systems Number CSL7650 Department/IDRP CSE L-T-P [C] 3-0-0 [3]""","I don't know the course code and L-T-P structure of the course ""Autonomous Systems"" as it is not listed in the available timetable data, which covers only the AY 2023-24 Semester I (B.Tech. 1st Year). For detailed course information, including course codes, credits, and L-T-P structure, please use the `search_documents` tool with a focused query. 
+
+Sources:  
+- No relevant documents found in the timetable data.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P14,What topics are covered in Fractal I of the Autonomous Systems course?,"""Fractal I: Introduction to Autonomous Systems [14 Lectures]: Introduction to Autonomous Systems, properties of autonomous systems, examples of autonomous systems, degree of autonomy; Abstract Agent Architectures ...; Introduction to real-time systems ...""","I don't know. The information about the topics covered in Fractal I of the Autonomous Systems course is not available in the provided documents. Please check the course description or syllabus for detailed information. 
+
+log_unanswered
+{""question"": ""What topics are covered in Fractal I of the Autonomous Systems course?"", ""reason"": ""not in documents""}",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,P15,"In an IIT Jodhpur course code such as MEL1XX0, what does the third letter 'L' indicate?","Table 4.3 Types for Courses: ""L - Lecture courses (other than lecture hours, these courses can have Tutorial and Practical hours ...)""","The third letter in an IIT Jodhpur course code such as **MEL1XX0** indicates the **type of course**. In this case, the 'L' stands for a **Lecture course**. Lecture courses typically involve theoretical instruction and may include tutorial or practical components.
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.4 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,S01,What is the slot for the course Autonomous Systems?,"No slot is available: Autonomous Systems is not in the published timetable data (only AY 2023-24 Semester I, B.Tech. 1st year is public). The system should say it does not know / the slot is not in its data, not guess.","The timetable data does not include a course named ""Autonomous Systems."" The available timetable data covers only the AY 2023-24 Semester I (B.Tech. 1st Year). For detailed course information, including slot details, you may need to consult the curricula or use the search_documents tool.
+
+Sources:
+- Timetable data description, p.1 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,S02,How many 400 level electives have been floated by the Humanities department in this semester?,"The list of courses floated this semester is not available; the only public timetable (AY 2023-24 Sem I, 1st year) has no 400-level HS courses. The system should say the information for this semester is not available rather than present a count as current.","The Humanities department has floated 0 400 level electives in this semester. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.4-5 (Tables 4.1-4.3) - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,S03,What is the slot for the course Introduction to Computer Science (CSL1010)?,"courses.csv (from D15): CSL1010, Introduction to Computer Science, slot G, AY 2023-24 Semester I (B.Tech. 1st Year)","The slot for the course ""Introduction to Computer Science (CSL1010)"" is **G**. 
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. (not specified) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,S04,On which days and at what times does slot G meet?,"slots.csv (from D15): G - Tue 05:00-05:50, Wed 01:00-01:50, Fri 01:00-01:50 (AY 2023-24 Semester I)","Slot G meets on **Tuesday from 05:00 to 05:50**, **Wednesday from 01:00 to 01:50**, and **Friday from 01:00 to 01:50**. 
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,S05,In which classroom and slot is Mathematics I (MAL1010) held for the CS/AI/EE branches?,"courses.csv (from D15): MAL1010 Mathematics I, CS/AI/EE, slot N, room LHB308","Mathematics I (MAL1010) is held in classroom LHB308 for the CS/AI/EE branches in slot N during AY 2023-24 Semester I (B.Tech. 1st Year).
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. [not specified] - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,2,S06,Who is the faculty advisor for the B.Tech. Computer Science and Engineering first-year (2023) batch?,"Faculty Advisors sheet: ""Computer Science and Engineering | B.Tech. 1st Year (2023) | Dr. Kshitiz Gajjar | kshitij@iitj.ac.in""","I don't know. The question is outside the academic helpdesk's scope.  
+Sources:  
+- None (out of scope)",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,E01,Write an email to the course instructor of CSL7570 that I need leave for 2 days,"CSL7570 is not in the timetable data and does not appear in any collected document, so its instructor/email is unknown; the system must not invent an instructor or email and should say it does not know.","I don't know who the instructor of CSL7570 is because the course is not listed in the timetable data. The available timetable data covers only AY 2023-24 Semester I (B.Tech. 1st Year). For details about the course or its instructor, use the search_documents tool. 
+
+Sources:  
+- No relevant document found.",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,E02,Write an email to the instructor of MAL1010 asking for permission to take a make-up exam because I missed the minor exam due to hospitalisation.,"Draft addressed to Kirankumar Hiremath <k.r.hiremath@iitj.ac.in> (course coordinator of MAL1010, AY 2023-24 Sem I).","Here is the draft email you can review and send to the instructor:
+
+To: k.r.hiremath@iitj.ac.in  
+Subject: MAL1010: Permission for makeup exam  
+
+Dear Kirankumar Hiremath,  
+
+I missed the minor exam for MAL1010 due to hospitalisation. I would like to request permission to take a make-up exam.  
+
+Thank you for your consideration.  
+
+Sincerely,  
+[Your Name]  
+Roll No.: [Your Roll Number]  
+
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p.1 - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,E03,What is the email ID of the instructor of PHL1010?,"courses.csv (from D15): PHL1010 Electromagnetism and Optics - Durgamadhab Mishra, durgamadhab@iitj.ac.in","The email ID of the instructor for PHL1010 is **durgamadhab@iitj.ac.in**.
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. (not specified) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,E04,Write an email to the instructor of CSL1010 requesting sick leave for 3 days.,"Draft addressed to Richa Singh <richa@iitj.ac.in> (course coordinator of CSL1010, AY 2023-24 Sem I).","Here is the draft email you can review and send to the instructor:
+
+To: richa@iitj.ac.in  
+Subject: CSL1010: Sick leave for 3 days  
+
+Dear Richa Singh,  
+
+I am writing to request sick leave for 3 days due to [reason]. The dates are [dates].  
+
+Thank you for your consideration.  
+
+Sincerely,  
+[Your Name]  
+Roll No.: [Your Roll Number]  
+
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,E05,What is the email ID of Prof. Anand Mishra of the Computer Science and Engineering department?,"People directory (CSE): Anand Mishra, Assistant Professor, mishra[at]iitj[dot]ac[dot]in","The email ID of Prof. Anand Mishra is **mishra@iitj.ac.in**. 
+
+Sources:
+- IIT Jodhpur People directory - computer-science-engineering, p.1 - https://iitj.ac.in/People/Profile/e9793af3-6d4f-4560-8489-2c256912a72a",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,O01,What are the available dining options on the campus?,I don't know (out of scope) + logged,"I don't know. The question is outside the academic helpdesk's scope. 
+
+Sources:  
+- None (out of scope)",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,O02,What is the best way to reach the campus from Jodhpur city center?,I don't know (out of scope) + logged,"I don't know. This question is outside the academic helpdesk's scope. It pertains to transportation and travel, which are not covered by the academic regulations, curricula, or other academic documents. 
+
+log_unanswered
+{""question"": ""What is the best way to reach the campus from Jodhpur city center?"", ""reason"": ""out of scope""}",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,O03,What is the average placement package for CSE graduates?,I don't know (out of scope) + logged,"I don't know. The academic helpdesk does not provide information on placement packages or career statistics. This is outside the scope of academic matters. 
+
+Sources:  
+- None (information is outside the academic helpdesk's scope).",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,O04,How do I get a Wi-Fi account on campus?,I don't know (out of scope) + logged,"I don't know. This question is outside the academic helpdesk's scope.  
+Log unanswered:  
+
+The question about obtaining a Wi-Fi account on campus is outside the academic helpdesk's scope. For assistance with this, please contact the IIT Jodhpur IT services or visit the official campus website.",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P01,What is the attendance requirement to sit in the Major exam?,"Revised policy (Circular 08-07-2024): ""students' examination performance is no longer linked to their course attendance ... In any case, the attendance of a student should not fall below 75% in a course.""","The attendance requirement to sit in the Major exam is that a student must have at least 75% attendance in the course. If a student's attendance falls below 75%, they are still allowed to appear for the exams but must score at least a C grade to pass the course. If they score lower than the cut-off for a C grade, they will be awarded an F grade.
+
+Sources:
+- Circular 08-07-2024: Amendment in the Attendance Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.1_Circular_51Circular-No.-IITJOAACircular2024-2551682-dated-08-July-2024.pdf
+- Academic Regulations - students enrolled from July 2019 onwards, p.7 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,0,States 75% but presents the superseded rule (below 75% must score at least C) as current; the 08-07-2024 circular (D08) delinks exams from attendance. [reviewer: Claude (to be checked by student)]
+single,3,P02,How many Open Elective credits do I need to earn in order to get a B.Tech. Degree?,"Regulations (July 2019 onwards), Table 11.2: Open Electives (OE) = 10 for B.Tech. Regular (0 for B.Tech. with Specialization and Dual Degree). B.Tech. CSE curriculum (AY 2026 onwards): ""Students in the regular B.Tech programme are required to complete 12 credits of open elective courses.""","To earn a B.Tech. degree, a student must accumulate a total of **180 credits**. The distribution of these credits includes **Open Electives**, which are part of the elective courses a student can choose. 
+
+According to the academic regulations, the minimum number of credits to be earned in Open Electives is **10 credits** for most B.Tech. programs, such as B.Tech. (Computer Science & Engineering), B.Tech. (Electrical Engineering), B.Tech. (Mechanical Engineering), and B.Tech. (Biotechnology). However, for students pursuing a **B.Tech. with Minor** program, the requirement for Open Electives is reduced to **zero**.
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.17 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf
+- Detailed curriculum for B.Tech. CSE (AY 2026 onwards), p.4 - https://iitj.ac.in/PageImages/Gallery/06-2026/UG-Curriculum-CSE-2026-Onwards-639168740113754926.pdf
+- Detailed curriculum for B.Tech. AI and Data Engineering (AY 2026 onwards), p.4 - https://iitj.ac.in/PageImages/Gallery/06-2026/UG-Curriculum-AIDE-2026-Onwards-639168740417574711.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P03,Within how many days of missing an exam must a student apply for a make-up examination?,"""The student should make an application to the Dean (Academics) through the course instructor within ten days from the date of the examination missed""","To determine the number of days within which a student must apply for a make-up examination, I will search the relevant academic regulations and circulars.
+
+
+A student must apply for a make-up examination within **ten days** from the date of the missed examination. This applies to both undergraduate and postgraduate students, as per the academic regulations.
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.11 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.13 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P04,To whom should a student apply for permission to write a make-up examination?,"""The student should make an application to the Dean (Academics) through the course instructor""","A student should apply for permission to write a make-up examination to the **Dean (Academics)** through the **course instructor** within ten days from the date of the missed examination. The application must explain the reasons for the absence. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.11 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.13 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P05,What happens if a student is absent from all academic activities for four or more weeks in a semester?,"""If a student is found to be absent from all academic activities for four or more than four weeks (not necessarily contiguous) in a semester, with or without sanctioned leave, then his/her registration will result in automatic semester withdrawal for all the courses.""","If a student is absent from all academic activities for four or more weeks in a semester, it results in the **automatic cancellation of the registration** for all courses in that semester. This is specified in the ""Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards"" document. 
+
+Sources:
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.4 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P06,What can a course instructor do if a student remains absent from class without sanctioned leave for more than two weeks?,"""If a student remains absent from a class without sanctioned leave for more than two weeks, then the course instructor may recommend the de-registration of the student from the course.""","I don't know. The information about actions a course instructor can take regarding a student's absence without sanctioned leave is not in the helpdesk documents.  
+$log_unanswered{""question"":""What can a course instructor do if a student remains absent from class without sanctioned leave for more than two weeks?"",""reason"":""not in documents""}",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P07,What is the duration of the Major examination and what is its minimum weightage in the overall evaluation?,"""The Major examination will be a written examination with a weightage not less than 40% of the overall evaluation. The duration of the major examination will be 3 hours.""","The duration of the Major examination is 3 hours, and its minimum weightage in the overall evaluation is not less than 40%. 
+
+Sources:
+- Circular 08-07-2024: Amendment in the Examination Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.2_Circular_52Circular-No.-IITJOAACircular2024-2552683-dated-08-July-2024.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P08,When is the Major Examination for Semester I of the academic year 2026-27?,"MAJOR Examination, Semester I (2026-27): ""19-26 November 2026, Thu- Thu""","The Major Examination for Semester I of the academic year 2026-27 is scheduled from **4-6 January 2027, Mon-Wed**.  
+
+Sources:  
+- Academic Calendar AY 2026-27, p.2 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P09,When do classes commence for Semester II of AY 2026-27?,"Classes Commencement, Semester II (2026-27): ""4 January 2027, Mon""","Classes for Semester II of AY 2026-27 commence on **4 January 2027, Monday**. 
+
+Sources:
+- Academic Calendar AY 2026-27, p.1 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P10,How many grade points does a B- grade carry?,"Table 5.1 Letter grade and its equivalent grade points: ""B- 7 Good""","A B- grade carries 7 grade points. 
+
+Sources:
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.10 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf
+- Academic Regulations - students enrolled from July 2019 onwards, p.8 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P11,What is the minimum number of credits a GEN category B.Tech. student must earn by the end of the second registered semester to continue in the programme?,"Table 11.3: Minimum for Continuation - GEN/OBC/GEN-EWS: 18, SC/ST/PD: 14","The minimum number of credits a GEN category B.Tech. student must earn by the end of the second registered semester to continue in the programme is **18 credits**.
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.18 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P12,How many total credits are required for the award of the B.Tech. in Computer Science and Engineering degree under the curriculum for AY 2026 onwards?,"""The regular B.Tech. programme in Computer Science and Engineering (CSE) requires a total of 153 credits for the award of the degree.""","The total number of credits required for the award of the B.Tech. in Computer Science and Engineering degree under the curriculum for AY 2026 onwards is **153 credits**.
+
+Sources:
+- Detailed curriculum for B.Tech. CSE (AY 2026 onwards), p.4 - https://iitj.ac.in/PageImages/Gallery/06-2026/UG-Curriculum-CSE-2026-Onwards-639168740113754926.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P13,What is the course code and L-T-P structure of the course Autonomous Systems?,"""Title Autonomous Systems Number CSL7650 Department/IDRP CSE L-T-P [C] 3-0-0 [3]""","I don't know the course code and L-T-P structure of the course ""Autonomous Systems"" as it is not listed in the timetable data. The available timetable data covers only the AY 2023-24 Semester I (B.Tech. 1st Year). For detailed course information, including course codes, credits, L-T-P structure, or contents, please use the `search_documents` tool with a focused query. 
+
+Sources:  
+- No relevant document found in the timetable data.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P14,What topics are covered in Fractal I of the Autonomous Systems course?,"""Fractal I: Introduction to Autonomous Systems [14 Lectures]: Introduction to Autonomous Systems, properties of autonomous systems, examples of autonomous systems, degree of autonomy; Abstract Agent Architectures ...; Introduction to real-time systems ...""","I don't know. The information about the topics covered in Fractal I of the Autonomous Systems course is not in the helpdesk documents.  
+""log_unanswered"" called with reason ""not in documents"".",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,P15,"In an IIT Jodhpur course code such as MEL1XX0, what does the third letter 'L' indicate?","Table 4.3 Types for Courses: ""L - Lecture courses (other than lecture hours, these courses can have Tutorial and Practical hours ...)""","The third letter in an IIT Jodhpur course code such as **MEL1XX0** indicates the **type of course**. Specifically, the letter **'L'** stands for **Lecture courses**. This is described in the academic regulations, where it is mentioned that:
+
+> ""L Lecture courses (other than lecture hours, these courses can have Tutorial and Practical hours, e.g. L-T-P Structures 3-0-0, 3-1-2, 3-0-2, 2-0-0, etc.)""
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p. 4 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,S01,What is the slot for the course Autonomous Systems?,"No slot is available: Autonomous Systems is not in the published timetable data (only AY 2023-24 Semester I, B.Tech. 1st year is public). The system should say it does not know / the slot is not in its data, not guess.","The timetable data does not include a course named ""Autonomous Systems."" The available timetable data covers only the ""AY 2023-24 Semester I (B.Tech. 1st Year)."" For detailed information about the course, such as credits, L-T-P, or contents, you may need to consult the curricula or use the search_documents tool. 
+
+Sources:
+- Timetable data description - No specific document cited.",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,S02,How many 400 level electives have been floated by the Humanities department in this semester?,"The list of courses floated this semester is not available; the only public timetable (AY 2023-24 Sem I, 1st year) has no 400-level HS courses. The system should say the information for this semester is not available rather than present a count as current.","The Humanities department has not floated any 400-level electives in this semester. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.4-5 (Tables 4.1-4.3) - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,S03,What is the slot for the course Introduction to Computer Science (CSL1010)?,"courses.csv (from D15): CSL1010, Introduction to Computer Science, slot G, AY 2023-24 Semester I (B.Tech. 1st Year)","The slot for the course ""Introduction to Computer Science (CSL1010)"" is ""G"". 
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. (not specified) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,S04,On which days and at what times does slot G meet?,"slots.csv (from D15): G - Tue 05:00-05:50, Wed 01:00-01:50, Fri 01:00-01:50 (AY 2023-24 Semester I)","Slot G meets on the following days and times:
+
+- Tuesday, 05:00 – 05:50
+- Wednesday, 01:00 – 01:50
+- Friday, 01:00 – 01:50
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,S05,In which classroom and slot is Mathematics I (MAL1010) held for the CS/AI/EE branches?,"courses.csv (from D15): MAL1010 Mathematics I, CS/AI/EE, slot N, room LHB308","Mathematics I (MAL1010) is held in room LHB308 for the CS/AI/EE branches in slot N during AY 2023-24 Semester I (B.Tech. 1st Year).
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. (no page) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+single,3,S06,Who is the faculty advisor for the B.Tech. Computer Science and Engineering first-year (2023) batch?,"Faculty Advisors sheet: ""Computer Science and Engineering | B.Tech. 1st Year (2023) | Dr. Kshitiz Gajjar | kshitij@iitj.ac.in""","I don't know. The question is outside the academic helpdesk's scope.  
+Sources:  
+- None.  
+
+
+The question about the faculty advisor for the B.Tech. Computer Science and Engineering first-year (2023) batch is outside the academic helpdesk's scope.  
+Sources:  
+- None.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,E01,Write an email to the course instructor of CSL7570 that I need leave for 2 days,"CSL7570 is not in the timetable data and does not appear in any collected document, so its instructor/email is unknown; the system must not invent an instructor or email and should say it does not know.","I don't know who the instructor of CSL7570 is, as the course code is not found in the timetable data. The available timetable data covers only AY 2023-24 Semester I (B.Tech. 1st Year). For more details about the course or instructor, you may need to use the search_documents tool.
+
+Sources:
+- Timetable data, p.1 - https://iitj.ac.in/PageImages/Gallery/06-2026/Timetable-AY-2023-24-Semester-I-BTech-1st-Year-639178076336417495.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,E02,Write an email to the instructor of MAL1010 asking for permission to take a make-up exam because I missed the minor exam due to hospitalisation.,"Draft addressed to Kirankumar Hiremath <k.r.hiremath@iitj.ac.in> (course coordinator of MAL1010, AY 2023-24 Sem I).","Here is the draft email you can review and modify as needed:
+
+```
+To: k.r.hiremath@iitj.ac.in
+Subject: MAL1010: Permission for makeup exam
+
+Dear Kirankumar Hiremath,
+
+I missed the minor exam for MAL1010 due to hospitalisation. I kindly request permission to take a make-up exam. [dates] [reason]
+
+Thank you for your consideration.
+
+Sincerely,
+[Your Name]
+Roll No.: [Your Roll Number]
+```
+
+This draft is based on the information you provided. Make sure to fill in the placeholders [dates] and [reason] with the specific details. The email is saved at the following path for your reference: `C:\\Users\\HP\\Desktop\\Study\\4th Year\\Autonomous Systems\\Assignment 2\\outputs\\email_drafts\\20261016-060540_MAL1010.txt`.
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,E03,What is the email ID of the instructor of PHL1010?,"courses.csv (from D15): PHL1010 Electromagnetism and Optics - Durgamadhab Mishra, durgamadhab@iitj.ac.in","The email ID of the instructor for PHL1010 is **durgamadhab@iitj.ac.in**. This information was retrieved from the Slot System AY 2023-24 Semester-I (B.Tech. 1st Year).
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. (none) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,E04,Write an email to the instructor of CSL1010 requesting sick leave for 3 days.,"Draft addressed to Richa Singh <richa@iitj.ac.in> (course coordinator of CSL1010, AY 2023-24 Sem I).","Here is the draft email you can review and send to the instructor:
+
+```
+To: richa@iitj.ac.in
+Subject: CSL1010: Sick leave for 3 days
+
+Dear Richa Singh,
+
+I am requesting sick leave for 3 days due to [reason]. The dates of absence will be [dates].
+
+Thank you for your consideration.
+
+Sincerely,
+[Your Name]
+Roll No.: [Your Roll Number]
+```
+
+This draft is based on the information provided and the instructor's email ID retrieved from the timetable data.
+
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), https://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,E05,What is the email ID of Prof. Anand Mishra of the Computer Science and Engineering department?,"People directory (CSE): Anand Mishra, Assistant Professor, mishra[at]iitj[dot]ac[dot]in","I don't know who the instructor is. The information about Prof. Anand Mishra's email ID is not available in the helpdesk documents. 
+
+Sources:  
+- No relevant document found.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,O01,What are the available dining options on the campus?,I don't know (out of scope) + logged,"I don't know. This question is outside the academic helpdesk's scope. It pertains to campus facilities like dining options, which are not covered under academic programmes, regulations, schedules, or communications with instructors.",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,O02,What is the best way to reach the campus from Jodhpur city center?,I don't know (out of scope) + logged,I don't know. This question is outside the academic helpdesk's scope.,1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,O03,What is the average placement package for CSE graduates?,I don't know (out of scope) + logged,I don't know. This question is outside the academic helpdesk's scope.,1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,O04,How do I get a Wi-Fi account on campus?,I don't know (out of scope) + logged,I don't know. This question is outside the academic helpdesk's scope.,1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P01,What is the attendance requirement to sit in the Major exam?,"Revised policy (Circular 08-07-2024): ""students' examination performance is no longer linked to their course attendance ... In any case, the attendance of a student should not fall below 75% in a course.""","The attendance requirement to sit in the Major exam is that a student's attendance should not fall below 75% in a course. This rule is part of the revised attendance policy approved by the Senate in June 2024. 
+
+Sources:
+- Circular 08-07-2024: Amendment in the Attendance Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.1_Circular_51Circular-No.-IITJOAACircular2024-2551682-dated-08-July-2024.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P02,How many Open Elective credits do I need to earn in order to get a B.Tech. Degree?,"Regulations (July 2019 onwards), Table 11.2: Open Electives (OE) = 10 for B.Tech. Regular (0 for B.Tech. with Specialization and Dual Degree). B.Tech. CSE curriculum (AY 2026 onwards): ""Students in the regular B.Tech programme are required to complete 12 credits of open elective courses.""","To earn a B.Tech. degree, a student must accumulate at least **180 credits** in total. The distribution of these credits includes core, compulsory, and elective courses. Specifically, the **minimum number of Open Elective credits** required is **12 credits** for most B.Tech. programs, as stated in the detailed curriculum for B.Tech. CSE (AY 2026 onwards).
+
+Sources:
+- Detailed curriculum for B.Tech. CSE (AY 2026 onwards), p.5 - https://iitj.ac.in/PageImages/Gallery/06-2026/UG-Curriculum-CSE-2026-Onwards-639168740113754926.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P03,Within how many days of missing an exam must a student apply for a make-up examination?,"""The student should make an application to the Dean (Academics) through the course instructor within ten days from the date of the examination missed""","A student must apply for a make-up examination within **ten days** from the date of the missed examination. This is specified in the academic regulations for students enrolled from July 2019 onwards.  
+
+Sources:  
+- Academic Regulations - students enrolled from July 2019 onwards, p.11 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P04,To whom should a student apply for permission to write a make-up examination?,"""The student should make an application to the Dean (Academics) through the course instructor""","I don't know who to contact for make-up exam permission. This information is not in the helpdesk documents. I will log this unanswered question.
+
+Sources:  
+- No relevant documents found.  
+
+I will log this question as unanswered.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P05,What happens if a student is absent from all academic activities for four or more weeks in a semester?,"""If a student is found to be absent from all academic activities for four or more than four weeks (not necessarily contiguous) in a semester, with or without sanctioned leave, then his/her registration will result in automatic semester withdrawal for all the courses.""","If a student is absent from all academic activities for four or more weeks in a semester, it results in the automatic cancellation of their registration for all courses in that semester. This is outlined in the regulations for postgraduate programmes for students enrolled from July 2022 onwards. 
+
+Sources:
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.4 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P06,What can a course instructor do if a student remains absent from class without sanctioned leave for more than two weeks?,"""If a student remains absent from a class without sanctioned leave for more than two weeks, then the course instructor may recommend the de-registration of the student from the course.""","If a student remains absent from a class without sanctioned leave for more than two weeks, the course instructor may recommend the de-registration of the student from the course. 
+
+Sources:
+- Circular 08-07-2024: Amendment in the Attendance Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.1_Circular_51Circular-No.-IITJOAACircular2024-2551682-dated-08-July-2024.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P07,What is the duration of the Major examination and what is its minimum weightage in the overall evaluation?,"""The Major examination will be a written examination with a weightage not less than 40% of the overall evaluation. The duration of the major examination will be 3 hours.""","The duration of the Major examination is 3 hours, and its minimum weightage in the overall evaluation is not less than 40%. 
+
+Sources:
+- Circular 08-07-2024: Amendment in the Examination Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.2_Circular_52Circular-No.-IITJOAACircular2024-2552683-dated-08-July-2024.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P08,When is the Major Examination for Semester I of the academic year 2026-27?,"MAJOR Examination, Semester I (2026-27): ""19-26 November 2026, Thu- Thu""","The Major Examination for Semester I of the academic year 2026-27 is scheduled from **4-6 January 2027, Mon-Wed**.  
+
+Sources:  
+- Academic Calendar AY 2026-27, p.2 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P09,When do classes commence for Semester II of AY 2026-27?,"Classes Commencement, Semester II (2026-27): ""4 January 2027, Mon""","Classes for Semester II of AY 2026-27 commence on **4 January 2027, Monday**. This is specified in the Academic Calendar AY 2026-27 under the ""Classes Commencement"" entry for Semester II. 
+
+Sources:  
+- Academic Calendar AY 2026-27, p.1 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P10,How many grade points does a B- grade carry?,"Table 5.1 Letter grade and its equivalent grade points: ""B- 7 Good""","A B- grade carries 7 grade points. 
+
+Sources:
+- B.Tech. Regulations - students who joined in July 2014 and later (rev. 21-07-2018), p.14 - https://iitj.ac.in/PageImages/Gallery/04-2025/BTech_Regulations_Latest_21July2018.pdf
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.10 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P11,What is the minimum number of credits a GEN category B.Tech. student must earn by the end of the second registered semester to continue in the programme?,"Table 11.3: Minimum for Continuation - GEN/OBC/GEN-EWS: 18, SC/ST/PD: 14","The minimum number of credits a GEN category B.Tech. student must earn by the end of the second registered semester to continue in the programme is **18 credits**.  
+
+Sources:  
+- Academic Regulations - students enrolled from July 2019 onwards, p.18 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P12,How many total credits are required for the award of the B.Tech. in Computer Science and Engineering degree under the curriculum for AY 2026 onwards?,"""The regular B.Tech. programme in Computer Science and Engineering (CSE) requires a total of 153 credits for the award of the degree.""","The total number of credits required for the award of the B.Tech. in Computer Science and Engineering degree under the curriculum for AY 2026 onwards is **153 credits**. This includes Institute Core (39 credits), Programme Core (90 credits), Open Electives (12 credits), and Essential Audit (12 non-graded credits). 
+
+Sources:
+- Detailed curriculum for B.Tech. CSE (AY 2026 onwards), p.4 - https://iitj.ac.in/PageImages/Gallery/06-2026/UG-Curriculum-CSE-2026-Onwards-639168740113754926.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P13,What is the course code and L-T-P structure of the course Autonomous Systems?,"""Title Autonomous Systems Number CSL7650 Department/IDRP CSE L-T-P [C] 3-0-0 [3]""","The course ""Autonomous Systems"" is not listed in the timetable data for the AY 2023-24 Semester I (B.Tech. 1st Year). For detailed information about the course code, credits, L-T-P structure, or content, you may need to consult the curricula or course descriptions using the `search_documents` tool.
+
+Sources:
+- No relevant document found in the timetable data.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P14,What topics are covered in Fractal I of the Autonomous Systems course?,"""Fractal I: Introduction to Autonomous Systems [14 Lectures]: Introduction to Autonomous Systems, properties of autonomous systems, examples of autonomous systems, degree of autonomy; Abstract Agent Architectures ...; Introduction to real-time systems ...""","The topics covered in Fractal I of the Autonomous Systems course include:
+- Introduction to Autonomous Systems, properties, examples, and degree of autonomy.
+- Abstract Agent Architectures, Environment and agent, reactive, utility-based, and behavior-based architectures. Concrete agent architectures, logical agents, and introduction to Bayesian reasoning.
+- Introduction to real-time systems, real-time environment, distributed solutions, notion of time, fault-tolerance, and modeling real-time systems.
+
+Sources:
+- Details of courses offered by Dept. of CSE, p.58 - https://iitj.ac.in/PageImages/Gallery/07-2025/CSE-Courses-Details.pdf
+- Detailed curriculum for M.Tech. AI (AY 2025 onwards), p.7 - https://iitj.ac.in/PageImages/Gallery/01-2026/Detailed-curriculum-for-MTech-AI-AY-2025-onwards-639053782336374627.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,P15,"In an IIT Jodhpur course code such as MEL1XX0, what does the third letter 'L' indicate?","Table 4.3 Types for Courses: ""L - Lecture courses (other than lecture hours, these courses can have Tutorial and Practical hours ...)""","The third letter 'L' in a course code such as MEL1XX0 indicates the **department** from which the course is offered. Specifically, 'L' stands for **Mechanical Engineering**. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.4 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,S01,What is the slot for the course Autonomous Systems?,"No slot is available: Autonomous Systems is not in the published timetable data (only AY 2023-24 Semester I, B.Tech. 1st year is public). The system should say it does not know / the slot is not in its data, not guess.","I don't know. The course ""Autonomous Systems"" is not listed in the timetable data for the available semesters. Please check the course code or use search_documents for more details.
+
+Sources:  
+- No relevant document found.",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,S02,How many 400 level electives have been floated by the Humanities department in this semester?,"The list of courses floated this semester is not available; the only public timetable (AY 2023-24 Sem I, 1st year) has no 400-level HS courses. The system should say the information for this semester is not available rather than present a count as current.","The Humanities department has floated 0 electives at the 400 level in this semester. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.4-5 (Tables 4.1-4.3) - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,S03,What is the slot for the course Introduction to Computer Science (CSL1010)?,"courses.csv (from D15): CSL1010, Introduction to Computer Science, slot G, AY 2023-24 Semester I (B.Tech. 1st Year)","The slot for the course ""Introduction to Computer Science (CSL1010)"" is ""G"". 
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. (none) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,S04,On which days and at what times does slot G meet?,"slots.csv (from D15): G - Tue 05:00-05:50, Wed 01:00-01:50, Fri 01:00-01:50 (AY 2023-24 Semester I)","Slot G meets on **Tuesday from 05:00 – 05:50**, **Wednesday from 01:00 – 01:50**, and **Friday from 01:00 – 01:50**. 
+
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,S05,In which classroom and slot is Mathematics I (MAL1010) held for the CS/AI/EE branches?,"courses.csv (from D15): MAL1010 Mathematics I, CS/AI/EE, slot N, room LHB308","Mathematics I (MAL1010) is held in classroom LHB308 during slot N for the CS/AI/EE branches. 
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. (none) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,1,S06,Who is the faculty advisor for the B.Tech. Computer Science and Engineering first-year (2023) batch?,"Faculty Advisors sheet: ""Computer Science and Engineering | B.Tech. 1st Year (2023) | Dr. Kshitiz Gajjar | kshitij@iitj.ac.in""","I don't know. The information about the faculty advisor for the B.Tech. Computer Science and Engineering first-year (2023) batch is not available in the provided documents. It is outside the academic helpdesk's scope to provide personal contact details of faculty members. 
+
+Sources:  
+- None",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,E01,Write an email to the course instructor of CSL7570 that I need leave for 2 days,"CSL7570 is not in the timetable data and does not appear in any collected document, so its instructor/email is unknown; the system must not invent an instructor or email and should say it does not know.","I don't know who the instructor of CSL7570 is, as the course code is not found in the timetable data. The available timetable data covers only AY 2023-24 Semester I (B.Tech. 1st Year). For course details, use search_documents.
+
+Sources:
+- Timetable data, p.1 - https://iitj.ac.in/PageImages/Gallery/06-2026/Timetable-AY-2023-24-Semester-I-B-Tech-1st-Year-639178076336417495.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,E02,Write an email to the instructor of MAL1010 asking for permission to take a make-up exam because I missed the minor exam due to hospitalisation.,"Draft addressed to Kirankumar Hiremath <k.r.hiremath@iitj.ac.in> (course coordinator of MAL1010, AY 2023-24 Sem I).","Here is the draft email you can review and send to the instructor:
+
+```
+To: k.r.hiremath@iitj.ac.in
+Subject: MAL1010: Permission for makeup exam
+
+Dear Kirankumar Hiremath,
+
+I missed the minor exam for MAL1010 due to hospitalisation. I would like to request permission to take a make-up exam. Please let me know the required procedure and the date for the make-up exam.
+
+Thank you for your consideration.
+
+Sincerely,
+[Your Name]
+Roll No.: [Your Roll Number]
+```
+
+This email was drafted using the instructor's email ID from the **Slot System AY 2023-24 Semester-I (B.Tech. 1st Year)** document. 
+
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), https://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,E03,What is the email ID of the instructor of PHL1010?,"courses.csv (from D15): PHL1010 Electromagnetism and Optics - Durgamadhab Mishra, durgamadhab@iitj.ac.in","The email ID of the instructor for PHL1010 is **durgamadhab@iitj.ac.in**. This information was retrieved from the Slot System AY 2023-24 Semester-I (B.Tech. 1st Year).
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. null - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,E04,Write an email to the instructor of CSL1010 requesting sick leave for 3 days.,"Draft addressed to Richa Singh <richa@iitj.ac.in> (course coordinator of CSL1010, AY 2023-24 Sem I).","Here is the draft email for your review:
+
+```
+To: richa@iitj.ac.in
+Subject: CSL1010: Sick leave for 3 days
+
+Dear Richa Singh,
+
+I am writing to request sick leave for 3 days due to [reason]. The dates of absence would be [dates]. I apologize for any inconvenience caused and appreciate your understanding.
+
+Thank you for your consideration.
+
+Sincerely,
+[Your Name]
+Roll No.: [Your Roll Number]
+```
+
+The instructor's email ID was obtained from the timetable data for **CSL1010** (AY 2023-24 Semester I, B.Tech. 1st Year).
+
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), https://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,E05,What is the email ID of Prof. Anand Mishra of the Computer Science and Engineering department?,"People directory (CSE): Anand Mishra, Assistant Professor, mishra[at]iitj[dot]ac[dot]in","I don't know who the instructor is. The information about Prof. Anand Mishra's email ID is not available in the helpdesk documents. 
+
+Sources:  
+- No relevant document found.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,O01,What are the available dining options on the campus?,I don't know (out of scope) + logged,"I don't know. This question is outside the academic helpdesk's scope. It pertains to campus dining options, which is not related to academic programmes, regulations, schedules, or email-related queries.",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,O02,What is the best way to reach the campus from Jodhpur city center?,I don't know (out of scope) + logged,I don't know. This question is outside the academic helpdesk's scope.,1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,O03,What is the average placement package for CSE graduates?,I don't know (out of scope) + logged,I don't know. This question is outside the academic helpdesk's scope.,1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,O04,How do I get a Wi-Fi account on campus?,I don't know (out of scope) + logged,I don't know. This question is outside the academic helpdesk's scope.,1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P01,What is the attendance requirement to sit in the Major exam?,"Revised policy (Circular 08-07-2024): ""students' examination performance is no longer linked to their course attendance ... In any case, the attendance of a student should not fall below 75% in a course.""","The attendance requirement to sit in the Major exam is that a student's attendance should not fall below 75% in a course. This rule applies regardless of the student's performance in the exam. 
+
+Sources:
+- Circular 08-07-2024: Amendment in the Attendance Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.1_Circular_51Circular-No.-IITJOAACircular2024-2551682-dated-08-July-2024.pdf
+- Academic Regulations - students enrolled from July 2019 onwards, p.7 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P02,How many Open Elective credits do I need to earn in order to get a B.Tech. Degree?,"Regulations (July 2019 onwards), Table 11.2: Open Electives (OE) = 10 for B.Tech. Regular (0 for B.Tech. with Specialization and Dual Degree). B.Tech. CSE curriculum (AY 2026 onwards): ""Students in the regular B.Tech programme are required to complete 12 credits of open elective courses.""","To earn a B.Tech. degree, you need to complete a total of **180 credits**, which includes various categories such as core, compulsory, and elective courses. Specifically, **Open Electives** contribute **10 credits** to this total, as outlined in the academic regulations for students enrolled from July 2019 onwards.
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.17 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P03,Within how many days of missing an exam must a student apply for a make-up examination?,"""The student should make an application to the Dean (Academics) through the course instructor within ten days from the date of the examination missed""","A student must apply for a make-up examination within **ten days** from the date of the missed examination. This is specified in the Academic Regulations for students enrolled from July 2019 onwards. 
+
+Sources:  
+- Academic Regulations - students enrolled from July 2019 onwards, p.11 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P04,To whom should a student apply for permission to write a make-up examination?,"""The student should make an application to the Dean (Academics) through the course instructor""","I don't know who to contact for make-up exam permission. This information is not in the helpdesk documents. 
+
+Sources:  
+- No relevant documents found.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P05,What happens if a student is absent from all academic activities for four or more weeks in a semester?,"""If a student is found to be absent from all academic activities for four or more than four weeks (not necessarily contiguous) in a semester, with or without sanctioned leave, then his/her registration will result in automatic semester withdrawal for all the courses.""","If a student is absent from all academic activities for four or more weeks in a semester, their registration will be automatically canceled, and they will be withdrawn from all courses in that semester. This is outlined in the regulations for Postgraduate Programmes, which state that absence for a period of four or more weeks during a semester shall result in automatic cancellation of the registration of a student from all the courses in that semester.
+
+Sources:
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.4 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P06,What can a course instructor do if a student remains absent from class without sanctioned leave for more than two weeks?,"""If a student remains absent from a class without sanctioned leave for more than two weeks, then the course instructor may recommend the de-registration of the student from the course.""","If a student remains absent from class without sanctioned leave for more than two weeks, the course instructor may recommend the de-registration of the student from the course. 
+
+Sources:
+- Circular 08-07-2024: Amendment in the Attendance Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.1_Circular_51Circular-No.-IITJOAACircular2024-2551682-dated-08-July-2024.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P07,What is the duration of the Major examination and what is its minimum weightage in the overall evaluation?,"""The Major examination will be a written examination with a weightage not less than 40% of the overall evaluation. The duration of the major examination will be 3 hours.""","The duration of the Major examination is 3 hours, and its minimum weightage in the overall evaluation is not less than 40%. 
+
+Sources:
+- Circular 08-07-2024: Amendment in the Examination Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.2_Circular_52Circular-No.-IITJOAACircular2024-2552683-dated-08-July-2024.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P08,When is the Major Examination for Semester I of the academic year 2026-27?,"MAJOR Examination, Semester I (2026-27): ""19-26 November 2026, Thu- Thu""","The Major Examination for Semester I of the academic year 2026-27 is scheduled from **4-6 January 2027, Mon-Wed**.  
+
+Sources:  
+- Academic Calendar AY 2026-27, p.2 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P09,When do classes commence for Semester II of AY 2026-27?,"Classes Commencement, Semester II (2026-27): ""4 January 2027, Mon""","Classes for Semester II of AY 2026-27 commence on **4 January 2027, Monday**. This is specified in the ""Classes Commencement"" entry under Semester II in the Academic Calendar AY 2026-27.
+
+Sources:
+- Academic Calendar AY 2026-27, p.1 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P10,How many grade points does a B- grade carry?,"Table 5.1 Letter grade and its equivalent grade points: ""B- 7 Good""","A B- grade carries 7 grade points. 
+
+Sources:
+- B.Tech. Regulations - students who joined in July 2014 and later (rev. 21-07-2018), p.14 - https://iitj.ac.in/PageImages/Gallery/04-2025/BTech_Regulations_Latest_21July2018.pdf
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.10 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P11,What is the minimum number of credits a GEN category B.Tech. student must earn by the end of the second registered semester to continue in the programme?,"Table 11.3: Minimum for Continuation - GEN/OBC/GEN-EWS: 18, SC/ST/PD: 14","The minimum number of credits a GEN category B.Tech. student must earn by the end of the second registered semester to continue in the programme is 18 credits.  
+
+Sources:  
+- Academic Regulations - students enrolled from July 2019 onwards, p.18 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P12,How many total credits are required for the award of the B.Tech. in Computer Science and Engineering degree under the curriculum for AY 2026 onwards?,"""The regular B.Tech. programme in Computer Science and Engineering (CSE) requires a total of 153 credits for the award of the degree.""","The total number of credits required for the award of the B.Tech. in Computer Science and Engineering degree under the curriculum for AY 2026 onwards is 153 credits. This includes Institute Core (39 credits), Programme Core (90 credits), Open Electives (12 credits), and Essential Audit (12 credits). 
+
+Sources:
+- Detailed curriculum for B.Tech. CSE (AY 2026 onwards), p.4 - https://iitj.ac.in/PageImages/Gallery/06-2026/UG-Curriculum-CSE-2026-Onwards-639168740113754926.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P13,What is the course code and L-T-P structure of the course Autonomous Systems?,"""Title Autonomous Systems Number CSL7650 Department/IDRP CSE L-T-P [C] 3-0-0 [3]""","The course ""Autonomous Systems"" is not listed in the timetable data for the available semesters. The timetable data covers only AY 2023-24 Semester I (B.Tech. 1st Year). For detailed information about the course code and L-T-P structure, you may need to consult the curricula or use the search_documents tool.
+
+Sources:
+- No specific document cited as the timetable data does not include the course.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P14,What topics are covered in Fractal I of the Autonomous Systems course?,"""Fractal I: Introduction to Autonomous Systems [14 Lectures]: Introduction to Autonomous Systems, properties of autonomous systems, examples of autonomous systems, degree of autonomy; Abstract Agent Architectures ...; Introduction to real-time systems ...""","The topics covered in Fractal I of the Autonomous Systems course include:
+- Introduction to Autonomous Systems, properties, examples, and degree of autonomy.
+- Abstract agent architectures, environment and agent, reactive, utility-based, and behavior-based architectures. Concrete agent architectures, logical agents, and Bayesian reasoning.
+- Introduction to real-time systems, real-time environment, distributed solutions, notion of time, fault tolerance, and modeling real-time systems.
+
+Sources:
+- Details of courses offered by Dept. of CSE, p.58 - https://iitj.ac.in/PageImages/Gallery/07-2025/CSE-Courses-Details.pdf
+- Detailed curriculum for M.Tech. AI (AY 2025 onwards), p.7 - https://iitj.ac.in/PageImages/Gallery/01-2026/Detailed-curriculum-for-MTech-AI-AY-2025-onwards-639053782336374627.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,P15,"In an IIT Jodhpur course code such as MEL1XX0, what does the third letter 'L' indicate?","Table 4.3 Types for Courses: ""L - Lecture courses (other than lecture hours, these courses can have Tutorial and Practical hours ...)""","I don't know. The information about the meaning of the third letter in a course code such as MEL1XX0 is not in the helpdesk documents. I have logged this question for further assistance.
+
+Sources:  
+- None (information not found in documents)  
+
+I have called `log_unanswered` with reason ""not in documents"".",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,S01,What is the slot for the course Autonomous Systems?,"No slot is available: Autonomous Systems is not in the published timetable data (only AY 2023-24 Semester I, B.Tech. 1st year is public). The system should say it does not know / the slot is not in its data, not guess.","I don't know. The course ""Autonomous Systems"" is not listed in the timetable data for the available semesters. You may need to check the curricula or course descriptions using the search_documents tool for more details.
+
+Sources:  
+- No relevant document found in the timetable data.",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,S02,How many 400 level electives have been floated by the Humanities department in this semester?,"The list of courses floated this semester is not available; the only public timetable (AY 2023-24 Sem I, 1st year) has no 400-level HS courses. The system should say the information for this semester is not available rather than present a count as current.","The Humanities department has floated 0 electives at the 400 level in this semester. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.4-5 (Tables 4.1-4.3) - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,S03,What is the slot for the course Introduction to Computer Science (CSL1010)?,"courses.csv (from D15): CSL1010, Introduction to Computer Science, slot G, AY 2023-24 Semester I (B.Tech. 1st Year)","The slot for the course ""Introduction to Computer Science (CSL1010)"" is ""G"". 
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. (no page) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,S04,On which days and at what times does slot G meet?,"slots.csv (from D15): G - Tue 05:00-05:50, Wed 01:00-01:50, Fri 01:00-01:50 (AY 2023-24 Semester I)","Slot G meets on **Tuesday from 05:00 – 05:50**, **Wednesday from 01:00 – 01:50**, and **Friday from 01:00 – 01:50**. 
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. (no page) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,S05,In which classroom and slot is Mathematics I (MAL1010) held for the CS/AI/EE branches?,"courses.csv (from D15): MAL1010 Mathematics I, CS/AI/EE, slot N, room LHB308","Mathematics I (MAL1010) is held in classroom LHB308 during slot N for the CS/AI/EE branches. 
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. null - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,2,S06,Who is the faculty advisor for the B.Tech. Computer Science and Engineering first-year (2023) batch?,"Faculty Advisors sheet: ""Computer Science and Engineering | B.Tech. 1st Year (2023) | Dr. Kshitiz Gajjar | kshitij@iitj.ac.in""","I don't know. The information about the faculty advisor for the B.Tech. Computer Science and Engineering first-year (2023) batch is not available in the provided documents. It is outside the academic helpdesk's scope to provide such personal contact details. 
+
+Sources:  
+- None",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,E01,Write an email to the course instructor of CSL7570 that I need leave for 2 days,"CSL7570 is not in the timetable data and does not appear in any collected document, so its instructor/email is unknown; the system must not invent an instructor or email and should say it does not know.","I don't know who the instructor of CSL7570 is, as the course code is not found in the timetable data. The timetable data available covers only: ['AY 2023-24 Semester I (B.Tech. 1st Year)']. For course codes, credits, L-T-P or contents from the curricula, use search_documents.
+
+Sources:
+- Timetable Data, p.1 - https://iitj.ac.in/PageImages/Gallery/06-2026/Timetable-AY-2023-24-Semester-I-BTech-1st-Year-639178076336417495.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,E02,Write an email to the instructor of MAL1010 asking for permission to take a make-up exam because I missed the minor exam due to hospitalisation.,"Draft addressed to Kirankumar Hiremath <k.r.hiremath@iitj.ac.in> (course coordinator of MAL1010, AY 2023-24 Sem I).","Here is the draft email you can review and edit before sending:
+
+```
+To: k.r.hiremath@iitj.ac.in
+Subject: MAL1010: Permission for makeup exam
+
+Dear Kirankumar Hiremath,
+
+I missed the minor exam for MAL1010 due to hospitalisation. I would like to request permission to take a make-up exam. [dates] [reason]
+
+Thank you for your consideration.
+
+Sincerely,
+[Your Name]
+Roll No.: [Your Roll Number]
+```
+
+This email was drafted using the instructor's email ID from the **Slot System AY 2023-24 Semester-I (B.Tech. 1st Year)** document. 
+
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), https://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,E03,What is the email ID of the instructor of PHL1010?,"courses.csv (from D15): PHL1010 Electromagnetism and Optics - Durgamadhab Mishra, durgamadhab@iitj.ac.in","The email ID of the instructor for PHL1010 is **durgamadhab@iitj.ac.in**. This information was retrieved from the ""Slot System AY 2023-24 Semester-I (B.Tech. 1st Year)"" document.
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), https://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,E04,Write an email to the instructor of CSL1010 requesting sick leave for 3 days.,"Draft addressed to Richa Singh <richa@iitj.ac.in> (course coordinator of CSL1010, AY 2023-24 Sem I).","Here is the draft email you can review and modify as needed:
+
+```
+To: richa@iitj.ac.in
+Subject: CSL1010: Sick leave for 3 days
+
+Dear Richa Singh,
+
+I am writing to request sick leave for 3 days due to [reason]. The dates for which I am requesting leave are [dates].
+
+Thank you for your consideration.
+
+Sincerely,
+[Your Name]
+Roll No.: [Your Roll Number]
+```
+
+This email was drafted using the instructor's email ID from the course timetable for CSL1010.  
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), https://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,E05,What is the email ID of Prof. Anand Mishra of the Computer Science and Engineering department?,"People directory (CSE): Anand Mishra, Assistant Professor, mishra[at]iitj[dot]ac[dot]in","I don't know who the instructor is. The information about Prof. Anand Mishra's email ID is not in the helpdesk documents. I cannot find the email ID of the instructor. 
+
+Sources:  
+- No sources cited as the information is not available in the helpdesk documents.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,O01,What are the available dining options on the campus?,I don't know (out of scope) + logged,"I don't know. This question is outside the academic helpdesk's scope. It pertains to dining options on campus, which is not related to academic programmes, regulations, schedules, or emails.",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,O02,What is the best way to reach the campus from Jodhpur city center?,I don't know (out of scope) + logged,I don't know. This question is outside the academic helpdesk's scope.,1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,O03,What is the average placement package for CSE graduates?,I don't know (out of scope) + logged,I don't know. This question is outside the academic helpdesk's scope.,1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,O04,How do I get a Wi-Fi account on campus?,I don't know (out of scope) + logged,I don't know. This question is outside the academic helpdesk's scope.,1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P01,What is the attendance requirement to sit in the Major exam?,"Revised policy (Circular 08-07-2024): ""students' examination performance is no longer linked to their course attendance ... In any case, the attendance of a student should not fall below 75% in a course.""","The attendance requirement to sit in the Major exam is that a student's attendance should not fall below 75% in a course. This is based on the revised attendance policy approved by the Senate in its 38th Meeting on 26th June 2024. 
+
+Sources:
+- Circular 08-07-2024: Amendment in the Attendance Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.1_Circular_51Circular-No.-IITJOAACircular2024-2551682-dated-08-July-2024.pdf
+- Academic Regulations - students enrolled from July 2019 onwards, p.7 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P02,How many Open Elective credits do I need to earn in order to get a B.Tech. Degree?,"Regulations (July 2019 onwards), Table 11.2: Open Electives (OE) = 10 for B.Tech. Regular (0 for B.Tech. with Specialization and Dual Degree). B.Tech. CSE curriculum (AY 2026 onwards): ""Students in the regular B.Tech programme are required to complete 12 credits of open elective courses.""","To earn a B.Tech. degree, you need to accumulate a total of **180 credits**, which includes various categories such as core courses, compulsory courses, and electives. Specifically, **Open Electives** contribute **10 credits** to the total credit requirement for B.Tech. students. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.17 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P03,Within how many days of missing an exam must a student apply for a make-up examination?,"""The student should make an application to the Dean (Academics) through the course instructor within ten days from the date of the examination missed""","A student must apply for a make-up examination within **ten days** from the date of the examination missed. This is specified in the ""Academic Regulations - students enrolled from July 2019 onwards"" document. 
+
+Sources:  
+- Academic Regulations - students enrolled from July 2019 onwards, p.11 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P04,To whom should a student apply for permission to write a make-up examination?,"""The student should make an application to the Dean (Academics) through the course instructor""","I don't know who to contact for make-up exam permission as this information is not in the helpdesk documents. 
+
+Sources:  
+- None (information is outside the academic helpdesk's scope).",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P05,What happens if a student is absent from all academic activities for four or more weeks in a semester?,"""If a student is found to be absent from all academic activities for four or more than four weeks (not necessarily contiguous) in a semester, with or without sanctioned leave, then his/her registration will result in automatic semester withdrawal for all the courses.""","If a student is absent from all academic activities for four or more weeks in a semester, it results in the automatic cancellation of their registration for all courses in that semester. This is outlined in the regulations for postgraduate programmes, which state that such absence leads to the cancellation of the semester registration. 
+
+Sources:
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.4 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P06,What can a course instructor do if a student remains absent from class without sanctioned leave for more than two weeks?,"""If a student remains absent from a class without sanctioned leave for more than two weeks, then the course instructor may recommend the de-registration of the student from the course.""","If a student remains absent from a class without sanctioned leave for more than two weeks, the course instructor may recommend the de-registration of the student from the course. 
+
+Sources:
+- Circular 08-07-2024: Amendment in the Attendance Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.1_Circular_51Circular-No.-IITJOAACircular2024-2551682-dated-08-July-2024.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P07,What is the duration of the Major examination and what is its minimum weightage in the overall evaluation?,"""The Major examination will be a written examination with a weightage not less than 40% of the overall evaluation. The duration of the major examination will be 3 hours.""","The duration of the Major examination is 3 hours, and its minimum weightage in the overall evaluation is not less than 40%.  
+
+Sources:  
+- Circular 08-07-2024: Amendment in the Examination Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.2_Circular_52Circular-No.-IITJOAACircular2024-2552683-dated-08-July-2024.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P08,When is the Major Examination for Semester I of the academic year 2026-27?,"MAJOR Examination, Semester I (2026-27): ""19-26 November 2026, Thu- Thu""","The Major Examination for Semester I of the academic year 2026-27 is scheduled from **19-26 November 2026, Thu-Sun**.  
+
+Sources:  
+- Academic Calendar AY 2026-27, p.2 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",1,1,Dates 19-26 November 2026 correct; weekday range given as Thu-Sun instead of Thu-Thu. [reviewer: Claude (to be checked by student)]
+multi,3,P09,When do classes commence for Semester II of AY 2026-27?,"Classes Commencement, Semester II (2026-27): ""4 January 2027, Mon""","Classes for Semester II of AY 2026-27 commence on **4 January 2027, Monday**. This is specified in the ""Classes Commencement"" entry under Semester II in the Academic Calendar AY 2026-27. 
+
+Sources:  
+- Academic Calendar AY 2026-27, p.1 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P10,How many grade points does a B- grade carry?,"Table 5.1 Letter grade and its equivalent grade points: ""B- 7 Good""","A B- grade carries 7 grade points. 
+
+Sources:
+- B.Tech. Regulations - students who joined in July 2014 and later (rev. 21-07-2018), p.14 - https://iitj.ac.in/PageImages/Gallery/04-2025/BTech_Regulations_Latest_21July2018.pdf
+- Regulations for Postgraduate Programmes - students enrolled from July 2022 onwards, p.10 - https://iitj.ac.in/PageImages/Gallery/03-2025/4_Regulation_PG_2022-onwards_20022023.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P11,What is the minimum number of credits a GEN category B.Tech. student must earn by the end of the second registered semester to continue in the programme?,"Table 11.3: Minimum for Continuation - GEN/OBC/GEN-EWS: 18, SC/ST/PD: 14","The minimum number of credits a GEN category B.Tech. student must earn by the end of the second registered semester to continue in the programme is **18 credits**.
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.18 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P12,How many total credits are required for the award of the B.Tech. in Computer Science and Engineering degree under the curriculum for AY 2026 onwards?,"""The regular B.Tech. programme in Computer Science and Engineering (CSE) requires a total of 153 credits for the award of the degree.""","The total number of credits required for the award of the B.Tech. in Computer Science and Engineering degree under the curriculum for AY 2026 onwards is **153 credits**. This includes contributions from the Institute Core (39 credits), Programme Core (90 credits), Open Electives (12 credits), and Essential Audit (12 non-graded credits). 
+
+Sources:
+- Detailed curriculum for B.Tech. CSE (AY 2026 onwards), p.4 - https://iitj.ac.in/PageImages/Gallery/06-2026/UG-Curriculum-CSE-2026-Onwards-639168740113754926.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P13,What is the course code and L-T-P structure of the course Autonomous Systems?,"""Title Autonomous Systems Number CSL7650 Department/IDRP CSE L-T-P [C] 3-0-0 [3]""","The course ""Autonomous Systems"" is not listed in the timetable data for the available semesters. The timetable data currently covers only the AY 2023-24 Semester I (B.Tech. 1st Year). For detailed information about the course code, credits, L-T-P structure, or course content, you may need to use the search_documents tool.
+
+Sources:
+- No relevant document found in the timetable data.",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P14,What topics are covered in Fractal I of the Autonomous Systems course?,"""Fractal I: Introduction to Autonomous Systems [14 Lectures]: Introduction to Autonomous Systems, properties of autonomous systems, examples of autonomous systems, degree of autonomy; Abstract Agent Architectures ...; Introduction to real-time systems ...""","The topics covered in Fractal I of the Autonomous Systems course include:
+
+- Introduction to Autonomous Systems, properties of autonomous systems, examples of autonomous systems, and degree of autonomy.
+- Abstract Agent Architectures, Environment and agent, reactive, utility-based, and behavior-based architectures. Concrete agent architectures, logical agents, and introduction to Bayesian reasoning.
+- Introduction to real-time systems, real-time environment, distributed solutions, notion of time, fault tolerance, and modeling real-time systems.
+
+Sources:
+- Details of courses offered by Dept. of CSE, p.58 - https://iitj.ac.in/PageImages/Gallery/07-2025/CSE-Courses-Details.pdf
+- Detailed curriculum for M.Tech. AI (AY 2025 onwards), p.7 - https://iitj.ac.in/PageImages/Gallery/01-2026/Detailed-curriculum-for-MTech-AI-AY-2025-onwards-639053782336374627.pdf",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,P15,"In an IIT Jodhpur course code such as MEL1XX0, what does the third letter 'L' indicate?","Table 4.3 Types for Courses: ""L - Lecture courses (other than lecture hours, these courses can have Tutorial and Practical hours ...)""","The third letter 'L' in a course code such as MEL1XX0 indicates the **department** from which the course is offered. Specifically, 'L' stands for **Mechanical Engineering** (ME). 
+
+This is explained in the document: ""Course Code M E L 1 X X 1 Descriptions Offering Department/IDRP Course Type Level of Courses Unique Identification Number Indicates Fractal Categories..."" 
+
+Sources:  
+- Academic Regulations - students enrolled from July 2019 onwards, p.4 - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,S01,What is the slot for the course Autonomous Systems?,"No slot is available: Autonomous Systems is not in the published timetable data (only AY 2023-24 Semester I, B.Tech. 1st year is public). The system should say it does not know / the slot is not in its data, not guess.","I don't know. The course ""Autonomous Systems"" is not listed in the timetable data for the available semesters. You may want to check the course code or use search_documents for more details.
+
+Sources:  
+- No relevant document found.",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,S02,How many 400 level electives have been floated by the Humanities department in this semester?,"The list of courses floated this semester is not available; the only public timetable (AY 2023-24 Sem I, 1st year) has no 400-level HS courses. The system should say the information for this semester is not available rather than present a count as current.","The Humanities department has floated 0 electives at the 400 level in this semester. 
+
+Sources:
+- Academic Regulations - students enrolled from July 2019 onwards, p.4-5 (Tables 4.1-4.3) - https://iitj.ac.in/PageImages/Gallery/03-2025/1_Academic_Regulations_Final_03_09_2019.pdf",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,S03,What is the slot for the course Introduction to Computer Science (CSL1010)?,"courses.csv (from D15): CSL1010, Introduction to Computer Science, slot G, AY 2023-24 Semester I (B.Tech. 1st Year)","The slot for the course ""Introduction to Computer Science (CSL1010)"" is ""G"". 
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. (none) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,S04,On which days and at what times does slot G meet?,"slots.csv (from D15): G - Tue 05:00-05:50, Wed 01:00-01:50, Fri 01:00-01:50 (AY 2023-24 Semester I)","Slot G meets on **Tuesday from 05:00 – 05:50**, **Wednesday from 01:00 – 01:50**, and **Friday from 01:00 – 01:50**.  
+
+Sources:  
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,S05,In which classroom and slot is Mathematics I (MAL1010) held for the CS/AI/EE branches?,"courses.csv (from D15): MAL1010 Mathematics I, CS/AI/EE, slot N, room LHB308","Mathematics I (MAL1010) is held in classroom LHB308 during slot N for the CS/AI/EE branches. 
+
+Sources:
+- Slot System AY 2023-24 Semester-I (B.Tech. 1st Year), p. (none) - http://academics.iitj.ac.in/wp-content/uploads/2023/08/Slot-System-AY-2023-24-Semester-I-B.Tech_.-1st-Year.xlsx",1,1,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
+multi,3,S06,Who is the faculty advisor for the B.Tech. Computer Science and Engineering first-year (2023) batch?,"Faculty Advisors sheet: ""Computer Science and Engineering | B.Tech. 1st Year (2023) | Dr. Kshitiz Gajjar | kshitij@iitj.ac.in""","I don't know. The information about the faculty advisor for the B.Tech. Computer Science and Engineering first-year (2023) batch is not available in the academic helpdesk documents.  
+Sources:  
+- None",0,0,auto grade confirmed on review [reviewer: Claude (to be checked by student)]
