@@ -2,95 +2,45 @@
 
 A local, multi-agent academic helpdesk for IIT Jodhpur students, built with **Google ADK**, **Ollama** (Qwen3 8B / Llama 3.1 8B, `nomic-embed-text`) and **ChromaDB**. It answers questions about regulations, curricula, course contents, the academic calendar and timetable data; drafts (never sends) emails to instructors; cites the document behind every answer; and says "I don't know" (and logs the question) when it has no grounded answer.
 
-*Course:* Autonomous Systems, Assignment 2 ("Academic Helpdesk Agent", 100 points). *Deadline on the assignment page:* **30 Oct 2026, 06:00**. *README last updated:* 2026-10-25.
-
-> **This README is the hand-over document.** The first author is handing the project to someone else. Section 1 says what is finished and what is not; section 5.3 is the specification for the one part that was deliberately removed and must be rebuilt (the document-collection scripts). Everything needed to continue is in this file.
+*Course:* Autonomous Systems, Assignment 2 ("Academic Helpdesk Agent").
 
 ## Contents
 
-1. [Status at hand-over](#1-status-at-hand-over) (done / left to do)
+1. [Overview and deliverables](#1-overview-and-deliverables)
 2. [Quick start](#2-quick-start)
 3. [How the system works](#3-how-the-system-works)
 4. [Evaluation](#4-evaluation)
-5. [Data](#5-data) (sources, tables, **how to rebuild the collection**, gaps, privacy)
-6. [Repository layout](#6-repository-layout)
-7. [Environment notes and gotchas](#7-environment-notes-and-gotchas)
+5. [Data](#5-data)
+6. [Limitations](#6-limitations)
+7. [Repository layout](#7-repository-layout)
+8. [Environment notes](#8-environment-notes)
 
 ---
 
-## 1. Status at hand-over
+## 1. Overview and deliverables
 
-### 1.1 What is done
+| Assignment requirement | Where |
+|---|---|
+| Single-agent version: RAG pipeline + all tools | `agents/single_agent`, `helpdesk/` |
+| Multi-agent version: orchestrator routing to a policy agent, a schedule agent and an email agent | `agents/multi_agent`, `helpdesk/agents.py` |
+| RAG with a local embedding model and ChromaDB (OCR for scanned PDFs, page-bounded chunks, hybrid dense + BM25 retrieval) | `scripts/ingest.py`, `helpdesk/tools.py` |
+| Tools: `search_documents`, `lookup_course`, `list_courses`, `get_slot_timings`, `get_instructor_email`, `draft_email` (saved for review, never sent), `log_unanswered` | `helpdesk/tools.py` |
+| Refuse out-of-scope questions instead of guessing, and log them for a human | `logs/unanswered.jsonl` (a real sample from the evaluation runs) |
+| Answers cite the source document (title, page, URL) | prompts in `helpdesk/prompts.py` |
+| 20-30 real documents (regulations, circulars, timetable, calendars, office orders, faculty emails) | 27 documents + People directory + ERP catalogue + faculty pages; registered in `data/sources.csv` |
+| Question set (30 questions, all 7 examples from the assignment) | `eval/questions.csv` |
+| Evaluation: accuracy, groundedness, correct refusals, LLM replacement, answers that changed between runs | `eval/`, `eval/results/`, section 4 |
+| Report with the findings | `REPORT.pdf` (built from `REPORT.md`), `REPORT.md`, `report/report.tex` |
+| Runs on a 16 GB laptop | measured, see below |
 
-| Area | State | Where |
-|---|---|---|
-| Single-agent helpdesk (RAG + 7 tools) | Done, tested | `agents/single_agent`, `helpdesk/` |
-| Multi-agent helpdesk (orchestrator, policy, schedule, email agents) | Done, tested; `adk web agents` lists both versions | `agents/multi_agent`, `helpdesk/agents.py` |
-| RAG pipeline: text extraction with OCR for scans, page-bounded chunks, embeddings, hybrid dense + BM25 retrieval | Done | `scripts/ingest.py`, `helpdesk/tools.py` |
-| Tools: `search_documents`, `lookup_course`, `list_courses`, `get_slot_timings`, `get_instructor_email`, `draft_email`, `log_unanswered` | Done | `helpdesk/tools.py` |
-| Log of questions the agent cannot answer | Done; a real sample from the evaluation runs is committed | `logs/unanswered.jsonl` |
-| Citations (title, page, URL) in answers | Done (one cosmetic glitch, see C6) | prompts in `helpdesk/prompts.py` |
-| Data: 27 documents + People directory (13 pages) + ERP catalogue + faculty teaching pages, turned into 5 CSV tables | Done, with gaps (section 5.4) | `data/` |
-| Evaluation: 30 questions, 3 runs each, three system/model combinations, rule-based scoring plus manual review | Done | `eval/`, `eval/results/` |
-| LLM replacement (Llama 3.1 8B, multi-agent only) | Done | `eval/results/*llama31*` |
-| Report | Written twice (Markdown and LaTeX); **PDF not built** | `REPORT.md`, `report/report.tex` |
-| Workbook for a human to verify the 30 questions | Built; **not yet filled in** | `eval/review/question_answer_sheet.xlsx` |
+**Memory.** Peak memory was measured on this 15.7 GB laptop while the 7 example questions of the assignment ran through the multi-agent system (`powershell -File eval\measure_ram.ps1 -Command "python eval\smoke_test.py"`, samples in `eval/results/ram_samples.csv`, 2026-10-30). The Qwen3 8B chat model and the embedding model in Ollama peaked at **5.8 GB** and the Python process (agents, ChromaDB, BM25) at **0.4 GB**, about **6.2 GB** for the whole system; the machine as a whole peaked at 14.2 GB of 15.7 GB, including the operating system and the other applications that were open (7.7 GB in use before the run).
 
-What was checked on the final code: all seven example questions from the assignment were run end to end (`python eval/smoke_test.py`); `adk web agents` starts and lists both agents; the LaTeX source passes a static check (balanced environments and braces, no unescaped special characters) but **has never been compiled**; the search index rebuilds from the committed data (`python scripts/ingest.py`).
+**Reference answers.** Every expected answer in `eval/questions.csv` is quoted from an official IIT Jodhpur document (`doc:page` given), and the official document is taken as the truth. Two rulings were needed:
 
-### 1.2 What is left to do
+* **P01** (*attendance requirement to sit the Major exam*): the circular of 08-07-2024 (D08) states that examination performance "is no longer linked to their course attendance" and that it supersedes the earlier policy "in totality". So there is **no attendance requirement to sit the exam**; students are expected to attend fully and attendance "should not fall below 75%", otherwise the instructor may recommend de-registration. An answer that makes 75% a condition for sitting the exam, or presents the old rule (below 75% must score at least a C) as current, is graded wrong.
+* **P08** (*Major exam, Semester I 2026-27*): the detailed schedule of the Academic Calendar AY 2026-27 (D11 p.8, row 79) lists "Major Semester Examination, 19-26 Nov 2026" for Semester I, so the reference is 19-26 November 2026.
 
-Do **A** first; it is what stands between this repository and a submission.
-
-**A. Needed before submission**
-
-| # | Task | How |
-|---|---|---|
-| A1 | **Have a human verify the 30 questions and their reference answers.** The author drafted every expected answer and graded every system answer; nobody else has checked them. | Open `eval/review/question_answer_sheet.xlsx`. Sheet *1 Verify Q&A*: for each row read the reference answer and the quoted evidence, open the source (link, or the local file at the PDF page given) and choose Correct / Wrong / Unsure. Sheet *2* (optional) lets you check the author's grading. Then see "Applying the verdicts" below. |
-| A2 | **Decide two reference answers** that the automatic check cannot settle. **P01:** the circular says attendance "should not fall below 75%" but also that exam performance is "no longer linked to attendance", so there may be *no* attendance requirement to sit the exam; today any answer mentioning 75% passes. **P08:** the calendar row is labelled "MAJOR Examination (Fractal 3 and M.Tech. working professional)"; check that 19-26 November 2026 applies to all Semester I courses. | Rule on them in the workbook; edit `eval/build_questions.py`; re-score (below). |
-| A3 | **Build the PDF report.** | Compile `report/report.tex` (Overleaf, or `pdflatex report.tex` twice with MiKTeX/TeX Live). Packages used: geometry, fontenc, lmodern, booktabs, tabularx, array, enumitem, xcolor, hyperref, listings. Fix any compile error. `REPORT.md` and `report.tex` are kept in parallel **by hand**: change both if any number changes. |
-| A4 | **Measure peak RAM** (the assignment requires a 16 GB laptop). It ran on a 15.7 GB laptop but memory was never measured. | Watch Task Manager while running `python eval/smoke_test.py`; add the figure to the report (section 2 and 6). |
-| A5 | **Submit**: repository link, this README, the question set (`eval/questions.csv`) and the report PDF. | |
-
-*Applying the verdicts (A1/A2).* `eval/questions.csv` is **generated** by `eval/build_questions.py`; edit that file, never the CSV. Each question is a tuple; the last element is the `verified` flag (currently empty): set it to `"yes"` for verified rows and correct `expected_answer` / `key_facts` / `sources` for wrong ones. Then run:
-
-```bash
-python eval/build_questions.py                      # regenerate eval/questions.csv
-python eval/score.py --tag qwen3-8b                 # re-score the EXISTING answers; no model is run
-python eval/score.py --tag llama31-8b
-python eval/build_review_sheet.py                   # regenerate the workbook
-```
-
-`eval/apply_manual_grades.py` holds the author's manual grade overrides, keyed by (system, run, question). They are tied to the committed answers: if a key fact changes, re-read the affected answers and update the overrides, then run `apply_manual_grades.py` and `score.py` again. Update the numbers in the README, `REPORT.md` and `report/report.tex` afterwards.
-
-**B. Data work (the part left for the next person)**
-
-| # | Task | Details |
-|---|---|---|
-| B1 | **Rebuild the document-collection pipeline.** The author's scraping scripts were removed from this repository on purpose: they were written quickly, depended on the campus network and on page layouts that change, and are not something to inherit. The data they produced *is* included. | Section 5.3 is the specification: sources, URLs, quirks, privacy rules and acceptance criteria. |
-| B2 | **Obtain the current-semester timetable and the list of floated courses** (AY 2026-27 Semester I). Neither is published anywhere that could be scraped, so the assignment's own questions "What is the slot for Autonomous Systems?" and "How many 400-level electives has Humanities floated this semester?" can only be answered "not published". | Ask the Academic Office / department, or export from the ERP with a student login. Put the rows into `data/structured/courses.csv` and `slots.csv` (columns in section 5.2) **and** register the file in `data/sources.csv`. `scripts/build_structured.py` regenerates those two tables from `data/raw/D15.xlsx` only, so extend it (or add a loader) or a rebuild will overwrite your rows. Then update `CALENDAR` in `helpdesk/tools.py` if the year changes (it is hard-coded from the AY 2026-27 calendar), re-run `scripts/ingest.py` if documents changed, and update the expected answers of S01, S02 and E01 in `eval/build_questions.py`. |
-| B3 | After any data or code change, **re-run the evaluation** (about 3 hours for all three configurations on a 4 GB GPU) and refresh the numbers everywhere. | Section 4.3. |
-
-**C. Quality improvements (optional, in rough order of value)**
-
-| # | Problem seen in the evaluation | Where to fix |
-|---|---|---|
-| C1 | **Guard bypass.** The strict "must try a tool before refusing" guard counts a call to `log_unanswered` as "a tool was used", so a model can log and refuse without searching (seen once with Llama, question P05). | `helpdesk/callbacks.py`, `_tools_used_this_turn`: ignore `log_unanswered`. |
-| C2 | **Tables are misread** (P08: the Major exam date is wrong in every run of every system). The calendar PDF flattens into rows where several exam windows sit side by side. | `scripts/ingest.py`, `chunk_page`: table-aware chunking (one row per chunk, headers repeated). |
-| C3 | **Routing errors** (87% accuracy). "Whom to apply to for a make-up exam" (P04) goes to the email agent; P13 and P16 go to the schedule agent. | `helpdesk/prompts.py`, `ORCHESTRATOR`: add few-shot examples. |
-| C4 | **Institute holidays treated as out of scope** (P17, every system). | `helpdesk/prompts.py`, `SCOPE`: mention holidays and office orders. |
-| C5 | **Single agent refuses without searching** (28% false refusals, e.g. P03 and P07), because its guard deliberately lets refusals through (it must be able to reject out-of-scope questions). | `helpdesk/callbacks.py` / `helpdesk/prompts.py`. |
-| C6 | **"p. null"** appears in a citation when a tool returns no page. | `helpdesk/tools.py`, `_citation`: drop the page key when it is `None`. |
-| C7 | **Citations are written by the model**, so URLs can be wrong (0 to 1 of 90 answers per system, but possible). | Render the Sources list from the tool results in code. |
-| C8 | `get_slot_timings` returns every semester's rows if several are loaded; `list_courses` / `lookup_course` assume one current semester. | `helpdesk/tools.py`: filter by semester once B2 adds a second timetable. |
-| C9 | Llama 3.1 was evaluated only as a multi-agent system; its email agent fails (7% accuracy). A single-agent Llama run and other 8B models were not tried. | `python eval/run_eval.py --system single --model ollama_chat/llama31-8b-helpdesk --tag llama31-8b`. |
-| C10 | Add more questions, a second human grader, or a larger model / Qwen3 thinking mode (`HELPDESK_THINK=1`) on a bigger GPU. | `eval/build_questions.py`. |
-
-**D. Housekeeping**
-
-* **No licence file has been chosen.** Add one (or state "all rights reserved").
-* The repository publishes 8 source files that the institute serves only on its campus network or intranet (section 5.5). If that is not acceptable, remove them.
-* The institute's documents are the institute's; they are included for academic use.
+`python eval/check_sources.py` checks that the key facts of every answerable reference occur on the cited source page (21 of 22 do; the 22nd, S07, matches the ERP catalogue row, where L-T-P and credits sit in separate columns). The `verified` column of `eval/questions.csv` records this. It shows that the references agree with the sources; it is not an independent human review, and the answers were graded by reading them against the references.
 
 ---
 
@@ -144,6 +94,7 @@ Roll No.: [Your Roll Number]
 
 The instructor is the most recent one listed on a faculty web page (AY 2024-25 Semester I); the answer says so, and the student's name, reason and dates stay as placeholders because they were not given.
 
+
 ---
 
 ## 3. How the system works
@@ -196,13 +147,13 @@ Each question is asked in a fresh ADK session, **3 times** per system, at defaul
 * *groundedness:* the cited document, and the document with page, match an expected source;
 * *retrieval hit, fabricated URL, routing accuracy, run-to-run consistency* (which questions' outcome changed between runs).
 
-Every in-scope answer was then read by hand against its expected answer (`eval/results/grades_*.csv`, 14 automatic grades overridden, reasons in `eval/apply_manual_grades.py`).
+Every in-scope answer was then read against its expected answer (`eval/results/grades_*.csv`, 17 automatic grades overridden, reasons in `eval/apply_manual_grades.py`). The scores were recomputed on 2026-10-30 after ruling on P01 (see section 1); no model was re-run for that.
 
-### 4.2 Results (3 runs × 30 questions, manually reviewed)
+### 4.2 Results (3 runs × 30 questions, answers read against the references)
 
 | | Qwen3 single | **Qwen3 multi-agent** | Llama 3.1 multi-agent |
 |---|---|---|---|
-| Accuracy on answerable questions | 58% (42/72) | **81% (58/72)** | 53% (38/72) |
+| Accuracy on answerable questions | 58% (42/72) | **79% (57/72)** | 50% (36/72) |
 | Cited document is a correct source | 64% | **83%** | 64% |
 | Cited document and page correct | 58% | **76%** | 54% |
 | Out-of-scope refused and logged | 12/12 | 12/12 | 12/12 |
@@ -210,10 +161,10 @@ Every in-scope answer was then read by hand against its expected answer (`eval/r
 | False refusals on answerable questions | 28% | **8%** | 12% |
 | Answers with a fabricated URL | 0% | 0% | 1% |
 | Routing accuracy | none | 87% | 88% |
-| Questions whose outcome changed between runs | 10 | **3** | 17 |
+| Questions whose outcome changed between runs | 10 | **2** | 17 |
 | Median latency | 33 s | 40 s | 30 s |
 
-Findings (full discussion, error analysis and the list of questions whose answers changed are in [REPORT.md](REPORT.md)): the multi-agent version beats the single agent by 23 points; tool-first guards removed the fabricated citations of the first version (52% accuracy, 17% fabricated URLs); swapping the LLM cost 28 points (Llama ignores tool results, e.g. it says it cannot find an email the tool just returned). Wrong in every run of the best system: P08 (Major exam dates, table misread), P15 (meaning of the letter "L" in a course code), P17 (Dussehra holiday treated as out of scope), P04 (misrouted).
+Findings (full discussion, error analysis and the list of questions whose answers changed are in [REPORT.md](REPORT.md)): the multi-agent version beats the single agent by 21 points; tool-first guards removed the fabricated citations of the first version (52% accuracy, 17% fabricated URLs); swapping the LLM cost 29 points (Llama ignores tool results, e.g. it says it cannot find an email the tool just returned). Wrong in every run of the best system: P01 (answers make 75% a condition for the exam instead of saying there is none), P08 (Major exam dates, table misread), P15 (meaning of the letter "L" in a course code), P17 (Dussehra holiday treated as out of scope), P04 (misrouted).
 
 Raw outputs: `eval/results/{single,multi}_qwen3-8b.jsonl` and `multi_llama31-8b.jsonl` (answers, every tool call with arguments and results, answering agent, latency), `scores_*.csv`, `grades_*.csv`, `summary_*.md`. Files with `v1` / `v2` in the name are earlier iterations of the system, scored on an earlier version of the question set (not comparable one-to-one).
 
@@ -227,7 +178,7 @@ python eval/apply_manual_grades.py --tag qwen3-8b
 python eval/score.py --tag qwen3-8b                                              # final numbers, using the manual grades
 ```
 
-**Gotchas.** `run_eval.py` *appends and resumes*: it skips every (system, run, question) already in `eval/results/<system>_<tag>.jsonl`, so re-running with the same tag does nothing. For a fresh run, use a new `--tag` (and pass the same `--tag` to the scoring scripts) or move the old files away. A fresh run produces different answers, so the manual overrides in `apply_manual_grades.py` no longer apply: redo the manual review first.
+**Gotchas.** `run_eval.py` *appends and resumes*: it skips every (system, run, question) already in `eval/results/<system>_<tag>.jsonl`, so re-running with the same tag does nothing. For a fresh run, use a new `--tag` (and pass the same `--tag` to the scoring scripts) or move the old files away. A fresh run produces different answers, so the grade overrides in `apply_manual_grades.py` (tied to the committed answers) no longer apply: read the new answers against the references first.
 
 ---
 
@@ -235,7 +186,7 @@ python eval/score.py --tag qwen3-8b                                             
 
 ### 5.1 Sources
 
-Every source is registered in [`data/sources.csv`](data/sources.csv): id, category, title, URL, the page that links to it, access level, local file, download date, SHA-256, size, status, notes. All of it was obtained from IIT Jodhpur web sources; nothing was typed in by hand. 27 documents plus the People directory (13 pages) are used. The assignment asks for 20-30 real documents covering regulations, timetable, course registration, recent office orders and faculty emails; the corresponding items are the regulations (D01, D04, D05, D10), circulars (D08, D09), calendars with registration dates (D11, D13, D14), the slot timetable (D15), office orders (D32, D33), the fee structure (D34) and the faculty emails (D28).
+Every source is registered in [`data/sources.csv`](data/sources.csv): id, category, title, URL, the page that links to it, access level, local file, download date, SHA-256, size, status, notes. All of it was obtained from IIT Jodhpur web sources; no answer data was typed in by hand. 27 documents plus the People directory (13 pages) are used. The assignment asks for 20-30 real documents covering regulations, timetable, course registration, recent office orders and faculty emails; the corresponding items are the regulations (D01, D04, D05, D10), circulars (D08, D09), calendars with registration dates (D11, D13, D14), the slot timetable (D15), office orders (D32, D33), the fee structure (D34) and the faculty emails (D28).
 
 | ID | Type | Document (link = original URL) | Access | Stored in this repo |
 |---|---|---|---|---|
@@ -286,80 +237,71 @@ Built by `python scripts/build_structured.py` from the raw files. Every row carr
 
 Course codes follow the Regulations (D01 pp.4-5, Tables 4.1-4.3): `<2-letter department><type letter><level digit><2 digits><fractal digit>`, e.g. `CSL7650` = CS department, Lecture course, 700 level. `list_courses` relies on this.
 
-### 5.3 Specification for rebuilding the document-collection pipeline (task B1)
 
-The original scripts fetched everything in this section. They are not in the repository; this is what the replacement must do, including the traps the first version ran into.
+### 5.3 How the data was collected
 
-**General requirements**
+All files were downloaded from IIT Jodhpur web sources (`iitj.ac.in`, plus `academics.iitj.ac.in` and `intranet.iitj.ac.in`, which resolve only on the campus network). `data/sources.csv` records, for every file, the URL, the page that links to it, the access level, download date, SHA-256 and size. The collection scripts themselves are not part of this repository. Points that matter if the data is refreshed:
 
-* One command that (re)downloads everything, is safe to re-run, and rewrites `data/sources.csv` with the columns above, including SHA-256 and download date. Detect duplicates by hash (status `duplicate`).
-* **TLS:** `iitj.ac.in` does not send its intermediate certificate, so Python's `requests` fails verification. Use the operating system's trust store (`pip install truststore; truststore.inject_into_ssl()`); do not disable verification.
-* Send a normal `User-Agent` and wait 0.2-0.3 s between requests.
-* Mark `academics.iitj.ac.in` and `intranet.iitj.ac.in` sources `access = campus-network`; they only resolve inside the campus network, so run the collector from there.
-* **Privacy checks before anything is written to the repository** (see 5.5): no student names, roll numbers or student emails. The check used here: roll numbers match `\b[BMP]2[0-9][A-Za-z]{2,4}[0-9]{3,4}\b`, student emails match the same pattern followed by `@`.
-* Listing pages change and file names carry timestamps (`.../PageImages/Gallery/<MM-YYYY>/<Name>-<timestamp>.pdf`), so crawl the listing pages instead of hard-coding file URLs.
-
-**Per source group**
-
-| Group | Where to look | Notes |
-|---|---|---|
-| Regulations, circulars | `https://iitj.ac.in/office-of-academics/en/academic-regulations`; older rules at `.../Office-of-Academics/en/Old-Regulations` | The July 2020 and 2021 regulation PDFs are byte-identical to the 2019 one. The two 2024 circulars are scanned images (OCR). |
-| Academic calendars | `https://iitj.ac.in/office-of-academics/en/academic-calendar` | One PDF per academic year and programme; the AY 2026-27 one defines the "current semester" (D11 p.1). |
-| Curricula and course lists | `.../office-of-academics/en/curriculum-for-programs-from-2019-to-2025`; `https://iitj.ac.in/computer-science-engineering/en/undergraduate-programs`; `.../school-of-liberal-arts/en/undergraduate-courses` | Several links on the first page point to `intranet.iitj.ac.in` (campus only). |
-| First-year slot timetable | `.../office-of-academics/en/first-year-class-time-table` | The only course-wise timetable that is published (AY 2023-24). **Sanitise before storing:** the sheet "Section and Group allocation..." lists student names and roll numbers; replace the NAME and ROLL NO columns with `Student 0001`, `DUMMY0001`, ... (as done for `data/raw/D15.xlsx`) and never index that sheet. |
-| Office orders | `https://intranet.iitj.ac.in/correspondences/` (table of notifications, circulars, forms; campus only) | Most entries are administrative committees. The two kept are academic-relevant: the 2026 holiday calendar and the course-equivalence committee. Both are scanned (OCR). |
-| Fee structure | `.../office-of-academics/en/fee-structure` | |
-| People directory (D28) | `https://iitj.ac.in/People?dept=<slug>`, then each category page `https://iitj.ac.in/People/List?dept=<slug>&c=<uuid>&ln=en` | 13 department slugs: computer-science-engineering, school-of-artificial-intelligence-data-science, electrical-engineering, mechanical-engineering, civil-and-infrastructure-engineering, chemical-engineering, materials-engineering, bioscience-bioengineering, mathematics, physics, chemistry, school-of-liberal-arts, school-of-design. Emails are obfuscated as `name[at]iitj[dot]ac[dot]in`. Keep the "Head" category and every category whose name contains "Faculty" (faculty members, adjunct, visiting, affiliated, distinguished, core); drop the staff categories. |
-| ERP course catalogue (D29) | `http://academics.iitj.ac.in:8080/ERP_IITJ/courses.do?dept=<code>` (campus only) | 22 department codes: AM, AiDe, BB, CH, CI, CS, CY, DEi, DH, EE, ES, HS, MA, ME, MT, OA, PH, QC, RM, SH, SL, SME. Each course is a card: title in the first `<h4>`, "L \| T \| P \| C" numbers in the second, course code in `span.label`. A code can appear under two departments; keep it once. Public pages show the catalogue only, **no slots or instructors**. |
-| Faculty teaching pages (D30) | Each People profile has a "Web Profile" link to the faculty member's own site. Follow it, then follow up to 3 same-host links whose text or URL contains "teach" or "course" | 261 profiles were crawled; 96 pages from 91 faculty sites were kept because they mention a course code, but only 20 faculty list courses together with a year, and only those produce rows. Sites are Google Sites, GitHub Pages, Wix, `home.iitj.ac.in/~name`: no common layout. `http://home.iitj.ac.in/~x/` redirects to the bare root and returns 403, so request `https://` first. Parse lines holding a course code (`[A-Z]{3}\d{4}`) plus a year (`2024-25`, `AY 2024-2025`, "Fall 2024") and a semester word; if the year is on the next one or two lines (card layouts), use them. Semester words: Semester I/1, Odd, Autumn, Fall → I; II/2, Even, Spring → II; Summer. Ambiguous ones such as Winter are kept as text only. **Do not store the raw pages**: several contain student names, roll numbers and emails. Store only the extracted lines (as `teaching.csv`) and the page URLs. |
-
-**Things already tried that return nothing** (do not repeat): a current-semester course-wise timetable or floated-course list on `iitj.ac.in`, the old `academics.iitj.ac.in` WordPress site (its uploads contain only the AY 2023-24 slot sheet and calendars), the old `cse.iitj.ac.in` course pages (now redirect to the new home page), the Internet Archive for those pages, the WordPress media API (disabled), the public ERP pages (catalogue only), and web search.
-
-**Do not use** the institute's DSpace "Communications Repository" (a private-address server that hosts the academic circulars): it states that its items are "internal use for IIT Jodhpur Community only".
-
-**Acceptance criteria for the new collector:** reproduces `data/sources.csv` and the raw files for the public sources; `python scripts/build_structured.py` then regenerates the five CSVs without error; the privacy scan finds zero student identifiers; a re-run changes nothing when the website has not changed.
+* `iitj.ac.in` does not send its intermediate certificate; the operating system's trust store was used (`truststore`), and certificate verification was never disabled.
+* Listing pages carry file names with timestamps, so the listing pages (not fixed file URLs) are the stable entry points: `.../office-of-academics/en/academic-regulations`, `.../academic-calendar`, `.../first-year-class-time-table`, the department `undergraduate-programs` pages, and `https://iitj.ac.in/People?dept=<slug>` for the faculty directory.
+* The July 2020 and 2021 regulation PDFs are byte-identical to the 2019 one (D02, D03, D04b, D04c are recorded as duplicates and not ingested).
+* Scanned PDFs (two circulars, two office orders) are OCR'd with Tesseract by `scripts/ingest.py`.
+* Faculty emails come from the People directory (obfuscated as `name[at]iitj[dot]ac[dot]in` and decoded). Course-teaching history (D30) was extracted from faculty web pages; only the extracted course lines and the page URLs are stored (section 5.5).
+* On 2026-10-30 the official pages were checked again for newer material: the academic-regulations page lists no document that is missing here that bears on the questions (the 2022 circular on Medical Technologies joint programmes and the M.S. by Research regulations are unrelated), and the Office of Academics still publishes only the first-year timetable of AY 2023-24 as a course-wise timetable.
 
 ### 5.4 Known data gaps
 
-* **No current-semester timetable and no list of floated courses** (task B2). The system therefore (a) says that no slot is published for any course outside D15 instead of guessing, (b) counts "offered this semester" only from faculty pages and states that the count is a lower bound, and (c) names the *most recent listed* instructor of a course together with the semester of that record (for example CSL7570: Rajendra Nagar, AY 2024-25 Semester I, "with Dr Avinash Sharma").
+* **No current-semester timetable and no list of floated courses** is published on the institute's public site. The system therefore (a) says that no slot is published for any course outside D15 instead of guessing, (b) counts "offered this semester" only from faculty pages and states that the count is a lower bound, and (c) names the *most recent listed* instructor of a course together with the semester of that record (for example CSL7570: Rajendra Nagar, AY 2024-25 Semester I, "with Dr Avinash Sharma"). For the assignment's own examples ("What is the slot for Autonomous Systems?", "How many 400 level electives has the Humanities department floated this semester?") the correct answer with the published data is "not published", and that is what the evaluation expects (S01, S02).
 * The only published slot timetable is first-year, AY 2023-24 (25 courses).
 * There is no stand-alone "course registration" document; registration is covered by the registration dates in the academic calendars and by the fee structure.
 * Assignment examples: CSL7570 = Introduction to Augmented Reality and Virtual Reality (3-0-0, 3 credits); Autonomous Systems = CSL7650 (the ERP catalogue also lists RML6020 with the same title).
 
-### 5.5 Privacy, access and what is deliberately not in the repository
+### 5.5 Privacy and access
 
-* **Student data.** `data/raw/D15.xlsx` had a sheet of student names and roll numbers; it was replaced with dummy values before storing. The raw faculty web pages (D30) are **not** in the repository because several contain student names, roll numbers and student emails (30 roll-number matches on 3 pages); only the extracted course lines (`teaching.csv`) and `data/raw/D30_teaching/index.csv` (page URLs) are kept. A scan of every committed file for student identifiers found none.
+* **Student data.** `data/raw/D15.xlsx` had a sheet of student names and roll numbers; it was replaced with dummy values before storing. The raw faculty web pages (D30) are **not** in the repository because several contain student names, roll numbers and student emails; only the extracted course lines (`teaching.csv`) and `data/raw/D30_teaching/index.csv` (page URLs) are kept. A scan of every committed file for student identifiers (`\b[BMP]2[0-9][A-Za-z]{2,4}[0-9]{3,4}\b`) found none.
 * **Faculty emails** are the ones the institute publishes in its People directory.
-* **Campus-only files are published here.** These 8 sources are linked from the public website but served only on the campus network or intranet: D15, D23, D24, D26, D27 (slot sheet, curricula and course lists), D29 (ERP catalogue), D32, D33 (office orders). The author chose to publish the repository with them included. If the institute objects, remove them.
-* The 96 raw faculty pages and the original collection scripts exist only on the previous owner's laptop (folder "Assignment 2 - removed from repo", next to the project folder); ask them if you need the old code. The specification above is meant to make that unnecessary.
+* **Campus-only files.** Eight sources are linked from the public website but served only on the campus network or intranet (D15, D23, D24, D26, D27, D29, D32, D33). They are included, for academic use, and flagged `access=campus-network` in `data/sources.csv`. The institute's documents remain the institute's.
 
 ---
 
-## 6. Repository layout
+## 6. Limitations
+
+* **P01 and P08 are wrong in every run of every system.** The models read the superseded attendance rule (or the 75% figure) as a condition for sitting the exam, and they pick the wrong column of the flattened calendar table.
+* **Single agent refuses without searching** (28% false refusals, e.g. P03 and P07), because its guard deliberately lets refusals through so that it can reject out-of-scope questions.
+* **Routing errors** in the multi-agent version (87% accuracy): "whom to apply to for a make-up exam" (P04) goes to the email agent; P13 and P16 go to the schedule agent. Institute holidays are treated as out of scope (P17, every system).
+* **Guard bypass.** The strict "try a tool before refusing" guard counts a call to `log_unanswered` as a tool use, so a model can log and refuse without searching (seen once with Llama, P05).
+* **Citations are written by the model**, so a URL can be wrong (0 to 1 of 90 answers per system). A citation shows "p. null" when a tool returns no page.
+* **Llama 3.1 8B** was evaluated only as a multi-agent system; its email agent fails (7% accuracy) because it ignores tool results. No other 8B model was tried.
+* **Small, self-made question set** (30 questions, 3 runs, one grader). Answers vary between runs (sampling temperature 0.6); the questions whose outcome changed are listed in `REPORT.md`.
+
+---
+
+## 7. Repository layout
 
 ```text
 agents/             ADK entry points: single_agent/, multi_agent/   (adk web agents)
 helpdesk/           config, llm factory, prompts, tools, callbacks (guards), agent builders, runner
 scripts/            build_structured.py (raw -> CSV tables), ingest.py (text/OCR -> chunks -> embeddings -> Chroma)
-data/raw/           scraped documents (originals; D15 sanitised); D29_erp/ ERP pages; D28_*.html People directory
+                    build_report_pdf.py (REPORT.md -> REPORT.pdf via headless Edge/Chrome)
+data/raw/           collected documents (originals; D15 sanitised); D29_erp/ ERP pages; D28_*.html People directory
 data/text/          extracted page text (incl. OCR) cached by ingest.py
 data/structured/    courses.csv, slots.csv, faculty.csv, catalogue.csv, teaching.csv
 data/sources.csv    provenance of every source
 data/chroma/        vector index (NOT committed; created by ingest.py)
 eval/               build_questions.py (question set source), questions.csv, run_eval.py, score.py,
-                    apply_manual_grades.py, smoke_test.py, build_review_sheet.py
-eval/results/       raw answers, scores, manual grades, summaries (final + v1/v2 iterations)
-eval/review/        question_answer_sheet.xlsx (human verification workbook)
+                    apply_manual_grades.py, check_sources.py, smoke_test.py, measure_ram.ps1, build_review_sheet.py
+eval/results/       raw answers, scores, grades, summaries (final + v1/v2 iterations), RAM samples
+eval/review/        question_answer_sheet.xlsx (optional workbook for an independent check of the references)
 logs/unanswered.jsonl   the log of questions the agent could not answer (sample from the evaluation runs)
 ollama/             Modelfiles (8K context variants of qwen3:8b and llama3.1:8b)
-report/report.tex   LaTeX report (PDF not built)    REPORT.md   Markdown report
+REPORT.pdf          report (built from REPORT.md)       REPORT.md   report source
+report/report.tex   LaTeX version of the report
 ```
 
-## 7. Environment notes and gotchas
+## 8. Environment notes
 
 * **Ollama on an RTX 3050 4 GB** (Ollama 0.40.x) crashed with the CUDA 13 backend (`CUDA error: shared object initialization failed`). Fix: set `OLLAMA_LLM_LIBRARY=cuda_v12` before `ollama serve`. Also keep the embedding model on the GPU: on the CPU its threads compete with the CPU-resident layers of the chat model and prompt processing gets ~8x slower.
 * The default Ollama context truncates retrieved passages; that is why the models are re-created with `num_ctx 8192` (`ollama/Modelfile*`).
 * Qwen3 thinking mode is off by default (`HELPDESK_THINK=0`); with it on, latency multiplies on this GPU. About 64% of the 8B model runs on the CPU, so expect 30-40 s median per question.
 * Use the `ollama_chat/` LiteLLM provider, not `ollama/`.
 * `python -m ...` and the scripts assume the repository root as the working directory; `.venv`, `data/chroma/`, `outputs/` and generated caches are git-ignored.
-* In some Windows shells, here-documents mangle backslashes in Python snippets; put non-trivial Python in a file.

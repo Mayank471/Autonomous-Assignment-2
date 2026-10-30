@@ -1,0 +1,64 @@
+App "academic_helpdesk" can transfer between agents but has no context_cache_config. Every transfer swaps the system instruction and the tool set, so the request prefix changes and the whole prompt is re-sent uncached after each transfer. Set context_cache_config on the app to give each agent its own cache.
+
+Q: What is the attendance requirement to sit in the Major exam?
+   answered by: policy_agent | 60.98 s | tools: ["search_documents(query='attendance requirement to sit ', top_k='3')"]
+   A: The attendance requirement to sit in the Major exam is that a student's attendance should not fall below 75% in a course. This requirement is part of the revised attendance policy approved by the Senate in June 2024. 
+      
+      Sources:
+      - Circular 08-07-2024: Amendment in the Attendance Policy of the Institute, p.1 - https://iitj.ac.in/PageImages/Gallery/03-2025/7.1_Circular_51Circular-No.-IITJOAACircular2024-2551682-dated-08-July-2024.pdf
+
+Q: What is the slot for the course Autonomous Systems?
+   answered by: schedule_agent | 28.18 s | tools: ["lookup_course(course='Autonomous Systems')"]
+   A: The course "Autonomous Systems" does not have a published slot for the current semester, AY 2026-27 Semester I. 
+      
+      Sources:
+      - Academic ERP course catalogue (all departments), p. null - http://academics.iitj.ac.in:8080/ERP_IITJ/courses.do
+
+Q: How many 400 level electives have been floated by the Humanities department in this semester?
+   answered by: schedule_agent | 64.64 s | tools: ["list_courses(department_code='HS', level='400', course_type='', offered_in_current_semester='True')"]
+   A: The Humanities department has floated **0** 400-level electives in this semester. This count is based on faculty web pages listing courses taught in AY 2026-27 Semester I, and it may be incomplete as the official list of floated courses is not publicly available.
+      
+      Sources:
+      - Academic Calendar AY 2026-27, p.1 - https://iitj.ac.in/PageImages/Gallery/06-2026/Academic-Calendar-AY-2026-27-639178076336417495.pdf
+      - Faculty web pages listing courses taught (linked as 'Web Profile' from the People directory) - https://iitj.ac.in/People
+      - Academic Regulations - students enrolled from July 2019 onwards, 
+
+Q: How many Open Elective credits do I need to earn in order to get a B.Tech. Degree?
+   answered by: policy_agent | 82.75 s | tools: ["search_documents(query='open elective credits required', top_k='3')"]
+   A: To earn a B.Tech. degree, you need to complete a total of **180 credits**, with **12 credits** allocated to **Open Electives**. This is applicable for most B.Tech. programs, including Computer Science & Engineering (CSE), Electrical Engineering, Mechanical Engineering, and Biotechnology. 
+      
+      Sources:
+      - B.Tech. Regulations - students who joined in July 2014 and later (rev. 21-07-2018), p.9 - https://iitj.ac.in/PageImages/Gallery/04-2025/BTech_Regulations_Latest_21July2018.pdf
+      - Detailed curriculum for B.Tech. CSE (AY 2026 onwards), p.4 - https://iitj.ac.in/PageImages/Gallery/06-2026/UG-Curriculum
+
+Q: Write an email to the course instructor of CSL7570 that I need leave for 2 days
+   answered by: email_agent | 69.46 s | tools: ["get_instructor_email(course_code='CSL7570')", "draft_email(details='I need to take leave for 2 day', student_name='', roll_number='', to_email='rn@iitj.ac.in', instructor_name='Rajendra Nagar', course_code='CSL7570', purpose='Sick leave for 2 days')"]
+   A: Here is the draft email you can review and modify as needed:
+      
+      ```
+      To: rn@iitj.ac.in
+      Subject: CSL7570: Sick leave for 2 days
+      
+      Dear Rajendra Nagar,
+      
+      I need to take leave for 2 days due to [reason]. The dates of leave are [dates].
+      
+      Thank you for your consideration.
+      
+      Sincerely,
+      [Your Name]
+      Roll No.: [Your Roll Number]
+      ```
+      
+      This email is based on the instructor's email ID from the faculty web page for the course CSL7570, which refers to the most recent offering listed in AY 2024-25 Semester I.
+      
+      Sources:  
+      - Web page of Rajendra Nagar, p.1 - https://home.iitj.ac.in/~rn/teaching.html
+
+Q: What are the available dining options on the campus?
+   answered by: helpdesk_orchestrator | 8.47 s | tools: none
+   A: I don't know. This question is outside the academic helpdesk's scope. It pertains to campus dining options, which is not related to academic programmes, regulations, schedules, or emails.
+
+Q: What is the best way to reach the campus from Jodhpur city center?
+   answered by: helpdesk_orchestrator | 5.74 s | tools: none
+   A: I don't know. This question is outside the academic helpdesk's scope.

@@ -1,11 +1,21 @@
 # Multi-Agent Academic Helpdesk for IIT Jodhpur: Report
 
 **Course:** Autonomous Systems, Assignment 2
+
+**Group members**
+
+| Name | Roll Number |
+|---|---|
+| Om Chandra Sharma | B23CS1048 |
+| Mayank Dahiya | B23CS1035 |
+| Anmol Yadav | B23CS1004 |
+| Rudra Gupta | B23CS1098 |
+
 **Models:**
 - Qwen3 8B (main) and Llama 3.1 8B (comparison), both Q4 via Ollama;
 - nomic-embed-text embeddings, ChromaDB and Google ADK 2.12.
 
-**Hardware:** laptop with 16 GB RAM and an NVIDIA RTX 3050 (4 GB VRAM).
+**Hardware:** laptop with 16 GB RAM and an NVIDIA RTX 3050 (4 GB VRAM). Peak memory, measured on this 15.7 GB machine while the 7 assignment example questions ran through the multi-agent system (`eval/measure_ram.ps1`, samples in `eval/results/ram_samples.csv`): Ollama (Qwen3 8B chat model + embedding model) 5.8 GB, Python process 0.4 GB, about 6.2 GB for the whole system; the machine as a whole peaked at 14.2 GB of 15.7 GB including the operating system and other open applications (7.7 GB in use before the run).
 
 ## 1. Summary
 
@@ -17,7 +27,7 @@ We built a local helpdesk that answers IIT Jodhpur academic questions:
 
 | Final results (3 runs × 30 questions, manually reviewed) | Qwen3 single | **Qwen3 multi-agent** | Llama 3.1 multi-agent |
 |---|---|---|---|
-| Accuracy on answerable questions | 58% (42/72) | **81% (58/72)** | 53% (38/72) |
+| Accuracy on answerable questions | 58% (42/72) | **79% (57/72)** | 50% (36/72) |
 | Groundedness: cited document is a correct source | 64% | **83%** | 64% |
 | Groundedness: cited document *and page* correct | 58% | **76%** | 54% |
 | Correct refusals, out-of-scope (refused and logged) | 100% (12/12) | 100% (12/12) | 100% (12/12) |
@@ -25,13 +35,13 @@ We built a local helpdesk that answers IIT Jodhpur academic questions:
 | False refusals on answerable questions | 28% | **8%** | 12% |
 | Answers with a fabricated URL | 0% | 0% | 1% |
 | Routing accuracy | – | 87% | 88% |
-| Questions whose outcome changed across runs | 10 | **3** | 17 |
+| Questions whose outcome changed across runs | 10 | **2** | 17 |
 | Median latency | 33 s | 40 s | 30 s |
 
 **Key findings.**
-1. **Specialisation pays off.** The multi-agent system beats the single agent by 23 points (81% vs 58%), with far fewer false refusals and more stable answers. Each specialist sees few tools and a short prompt. Its weaknesses are misroutes (87% routing accuracy) and misreading tables.
+1. **Specialisation pays off.** The multi-agent system beats the single agent by 21 points (79% vs 58%), with far fewer false refusals and more stable answers. Each specialist sees few tools and a short prompt. Its weaknesses are misroutes (87% routing accuracy) and misreading tables.
 2. **Tool-first guards are the most important design element.** In the first version, the 8B model often answered from memory and invented facts and source URLs: 52% accuracy, 17% fabricated URLs. Callbacks that force a tool call before any answer removed fabricated URLs in the Qwen systems.
-3. **Swapping the LLM matters as much as the architecture.** With the same multi-agent system, Llama 3.1 8B scored 28 points lower than Qwen3 8B. Its email agent got the right instructor email from the tool and then said it could not find it, or drafted emails without the draft tool. Its answers changed between runs on 17 of 30 questions, against 3 for Qwen.
+3. **Swapping the LLM matters as much as the architecture.** With the same multi-agent system, Llama 3.1 8B scored 29 points lower than Qwen3 8B. Its email agent got the right instructor email from the tool and then said it could not find it, or drafted emails without the draft tool. Its answers changed between runs on 17 of 30 questions, against 2 for Qwen.
 4. **All three systems refused all 12 out-of-scope attempts and logged each one.**
 
 ## 2. System design
@@ -158,8 +168,9 @@ Every expected answer is a verbatim quote from a scraped source, with its accept
   - *fabricated URL:* a URL that is none of the scraped sources or pages.
   - *routing accuracy.*
   - *run-to-run consistency.*
-- **Manual review:** every answer to an in-scope or "not published" question (234 of 270) was read against its expected answer. Out-of-scope answers were checked through the refusal text and the log entry. 14 automatic grades were overridden, with the reasons recorded in `eval/apply_manual_grades.py`. These were answers that:
-  - contain "75%" but present the superseded C-grade attendance rule as current;
+- **Reference answers:** every expected answer is quoted from an official IIT Jodhpur document and taken as true. Two rulings were needed on 2026-10-30. P01: the circular of 08-07-2024 (D08) delinks examination performance from attendance, so there is no attendance requirement to sit the exam. P08: the detailed calendar (D11 p.8, row 79) gives 19-26 November 2026 for the Semester I Major exam. `eval/check_sources.py` confirmed that the key facts of 21 of 22 sourced answerable questions occur on the cited page (the 22nd, S07, matches the ERP catalogue row). This is a consistency check against the sources, not an independent human review.
+- **Manual review:** every answer to an in-scope or "not published" question (234 of 270) was read against its expected answer. Out-of-scope answers were checked through the refusal text and the log entry. 17 automatic grades were overridden, with the reasons recorded in `eval/apply_manual_grades.py`. These were answers that:
+  - contain "75%" but present the superseded C-grade attendance rule as current, or make 75% a condition for sitting the exam (P01: the 08-07-2024 circular says exam performance is no longer linked to attendance);
   - give correct "no published slot" answers in wording the pattern missed;
   - attach the wrong semester to an email ID.
 
@@ -171,26 +182,26 @@ Every expected answer is a verbatim quote from a scraped source, with its accept
 |---|---|---|---|
 | v1 | base system, no guard | 52% (1 run) | 17% |
 | v2 | + retrieve-first guard, course-code parsing fix, minimum of 3 passages | 74% (3 runs) | 0% |
-| v3 (final) | + all-scraped data (ERP catalogue, faculty teaching pages, office orders), strict guards for specialists, email-lookup guard, name matching | 58% single / **81% multi** | 0% |
+| v3 (final) | + all-scraped data (ERP catalogue, faculty teaching pages, office orders), strict guards for specialists, email-lookup guard, name matching | 58% single / **79% multi** | 0% |
 
 - **v1 and v2** were scored on an earlier version of the question set. Four questions were later replaced to cover the new sources, so the v2 and v3 numbers are not directly comparable.
 - **v1 failure mode:** the 8B model answered from memory, e.g. "Major exam December 1–15, 2026", citing a non-existent PDF. The guard removed this failure.
-- **v3, single agent:** the strict guards and richer data helped the multi-agent system (v2 → v3: 75% → 81%). The single agent's accuracy fell, because its longer prompt and seven tools led to more refusals *without any tool call*: 28% false refusals, on P03, P07, P12, P14, P16, P17 and S06. Its lenient guard deliberately lets refusals through.
+- **v3, single agent:** the strict guards and richer data helped the multi-agent system (v2 → v3: 75% → 79%). The single agent's accuracy fell, because its longer prompt and seven tools led to more refusals *without any tool call*: 28% false refusals, on P03, P07, P12, P14, P16, P17 and S06. Its lenient guard deliberately lets refusals through.
 
 ### 5.2 Single agent vs multi-agent (Qwen3 8B)
 
 | Category | Single | Multi |
 |---|---|---|
-| Policy (14 × 3) | 43% | **67%** |
+| Policy (14 × 3) | 43% | **64%** |
 | Schedule (7 × 3) | 76% | **100%** |
 | Email (5 × 3) | 80% | **100%** |
 | Out of scope (4 × 3) | 100% | 100% |
-| **Answerable overall** | 58% | **81%** |
+| **Answerable overall** | 58% | **79%** |
 
 - **Better tool use.** The multi-agent specialists search before answering and do not give up early.
   - The single agent refused P03 (make-up deadline) and P07 (exam duration) 3/3 without searching. The policy agent answered both 3/3 from D01 and D09.
   - The email agent always used `draft_email`. The single agent wrote E04 as plain text without the instructor's address, 3/3.
-- **Superseded rules.** The policy agent reported the revised 2024 attendance rule in 1 of 3 runs; the single agent presented the superseded rule in all 3.
+- **Superseded rules (P01).** The multi-agent policy agent gave only the revised 2024 rule in run 2 and mixed in the superseded C-grade rule in runs 1 and 3; the single agent presented the superseded rule in all 3. All 6 answers are graded wrong: every one gives 75% as the requirement to sit the exam, while the circular delinks exam performance from attendance.
 - **Costs of the multi-agent system:**
   - **Routing:** 87%. P04 ("whom to apply to for a make-up exam") went to the email agent, P13 and P16 went to the schedule agent, and P17 was treated as out of scope by the orchestrator.
   - **Wrong despite search:** P15 ("L" in a course code) was answered wrongly 3/3 by the policy agent, even though it retrieved D01.
@@ -200,13 +211,13 @@ Every expected answer is a verbatim quote from a scraped source, with its accept
 
 | Category | Qwen3 8B | Llama 3.1 8B |
 |---|---|---|
-| Policy | **67%** | 60% |
+| Policy | **64%** | 55% |
 | Schedule | **100%** | 86% |
 | Email | **100%** | 7% |
 | Out of scope | 100% | 100% |
-| Answerable overall | **81%** | 53% |
+| Answerable overall | **79%** | 50% |
 | Groundedness (document / page) | **83% / 76%** | 64% / 54% |
-| Changed across runs | **3** | 17 |
+| Changed across runs | **2** | 17 |
 | Median latency | 40 s | **30 s** |
 
 Llama 3.1 routes about as well (88%) and is faster, but it uses tool outputs poorly. Its failure modes:
@@ -229,7 +240,7 @@ Llama 3.1 routes about as well (88%) and is faster, but it uses tool outputs poo
 
 | System | Questions whose outcome changed | What varied |
 |---|---|---|
-| Qwen3 multi | P01, P02, P10 | P01: the revised rule in run 2 only. P02 and P10: only the cited documents changed (D01/D05/D10/D16/D20 contain the same clause or table) |
+| Qwen3 multi | P02, P10 | P02 and P10: only the cited documents changed (D01/D05/D10/D16/D20 contain the same clause or table) |
 | Qwen3 single | P01, P02, P04, P05, P08, P10, P12, P14, S01, S02 | P12, P14: correct answer vs refusal. P02: run 1 gave no OE number. S02: the caveat appeared only in run 3. P08: wrong date vs refusal. Others: cited documents |
 | Llama 3.1 multi | E01–E05, P01, P02, P04, P05, P08, P13, P15, P16, S02, S03, S06, S07 | Routing varied (S07 and P16 went to different agents in different runs), refusals varied (E04, E05, P05), and tool use varied |
 
@@ -244,7 +255,7 @@ Questions wrong in every run of the Qwen multi-agent system:
 ### 5.6 Error analysis
 
 1. **Table misreading (P08, all systems).** The calendar PDF flattens into rows where "4–6 January 2027", "10–13 July 2027" and "19–26 November 2026" sit side by side, and the models pick the wrong column.
-2. **Superseded rules (P01).** D01 and the "existing policy" paragraph in D08 both state the old C-grade rule. The models often merge it with the revised rule.
+2. **Superseded rules (P01).** D01 and the "existing policy" paragraph in D08 both state the old C-grade rule. The models merge it with the revised rule, and even when they quote the revised rule they say 75% is the requirement to sit the exam. The reference answer (ruled from the official circular, D08) is that there is no attendance requirement to sit the exam: examination performance "is no longer linked to their course attendance"; 75% is only the level attendance should not fall below. No run of any system said this, so P01 is wrong in all 9 runs.
 3. **Surface-word routing (P04).** "Apply … permission" sends the question to the email agent.
 4. **Refusal without trying.** This is the single agent's main failure: the lenient guard lets refusals through. In one Llama run the strict guard was bypassed because calling `log_unanswered` counted as "a tool was used" (P05). The guard should ignore that tool.
 5. **Tool-output comprehension (Llama 3.1).** It is given the right instructor and email, then states the opposite.
@@ -267,7 +278,7 @@ Questions wrong in every run of the Qwen multi-agent system:
 ## 7. Reproducing the results
 
 ```bash
-# the scraped data is already in data/ (the collection scripts were removed for the hand-over; see README section 5.3)
+# the collected data is already in data/ (README section 5.3 describes how it was collected)
 python scripts/build_structured.py && python scripts/ingest.py
 python eval/build_questions.py
 python eval/run_eval.py --system both --runs 3                       # about 3 h with Llama below
@@ -279,4 +290,4 @@ for t in qwen3-8b llama31-8b; do python eval/score.py --tag $t; python eval/appl
 - `{single,multi}_qwen3-8b.jsonl` and `multi_llama31-8b.jsonl`: answers, tool calls with arguments and results, answering agent, latency;
 - `scores_*.csv`, `grades_*.csv` (manual review) and `summary_*.md`;
 - `*_v1-*` and `*_v2-*`: the earlier iterations;
-- `logs/unanswered.jsonl`: the human hand-off log.
+- `logs/unanswered.jsonl`: the log of questions for a human to answer.

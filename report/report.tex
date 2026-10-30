@@ -15,7 +15,14 @@
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
 \title{Multi-Agent Academic Helpdesk for IIT Jodhpur\\[2pt]\large Autonomous Systems -- Assignment 2}
-\author{}
+\author{%
+  \begin{tabular}{@{}ll@{}}
+    \textbf{Group member} & \textbf{Roll Number} \\[2pt]
+    Om Chandra Sharma & B23CS1048 \\
+    Mayank Dahiya & B23CS1035 \\
+    Anmol Yadav & B23CS1004 \\
+    Rudra Gupta & B23CS1098 \\
+  \end{tabular}}
 \date{October 2026}
 
 \begin{document}
@@ -28,8 +35,8 @@ scraping institute web sources: 28 sources, comprising regulations, circulars, o
 curricula, the ERP course catalogue, faculty teaching pages and the People directory. A single-agent version
 and a multi-agent version (an orchestrator routing to policy, schedule and email agents) were built with
 Google ADK on Ollama-hosted 8B models, and evaluated on 30 questions with three runs each. With Qwen3~8B,
-the multi-agent system reaches 81\% accuracy and 83\% citation groundedness on answerable questions, against
-58\% and 64\% for the single agent. Replacing the LLM with Llama~3.1~8B lowers multi-agent accuracy to 53\%.
+the multi-agent system reaches 79\% accuracy and 83\% citation groundedness on answerable questions, against
+58\% and 64\% for the single agent. Replacing the LLM with Llama~3.1~8B lowers multi-agent accuracy to 50\%.
 All systems refuse and log 100\% of out-of-scope questions. Tool-first guards were the most effective design
 element: they removed the fabricated citations of the first version.
 \end{abstract}
@@ -39,13 +46,13 @@ element: they removed the fabricated citations of the first version.
 
 \noindent\textbf{Models:} Qwen3~8B (main) and Llama~3.1~8B (comparison), both Q4 via Ollama.\\
 \textbf{Retrieval and agents:} nomic-embed-text embeddings, ChromaDB and Google ADK~2.12.\\
-\textbf{Hardware:} laptop with 16~GB RAM and an NVIDIA RTX~3050 (4~GB VRAM).
+\textbf{Hardware:} laptop with 16~GB RAM and an NVIDIA RTX~3050 (4~GB VRAM). Peak memory, measured on this 15.7~GB machine while the 7 assignment example questions ran through the multi-agent system (\code{eval/measure\_ram.ps1}, samples in \code{eval/results/ram\_samples.csv}): Ollama (Qwen3 8B chat model and embedding model) 5.8~GB, Python process 0.4~GB, about 6.2~GB for the whole system; the machine as a whole peaked at 14.2~GB of 15.7~GB including the operating system and other open applications (7.7~GB in use before the run).
 
 \medskip
 \begin{tabularx}{\textwidth}{@{}Yccc@{}}
 \toprule
 Final results (3 runs $\times$ 30 questions, manually reviewed) & Qwen3 single & \textbf{Qwen3 multi} & Llama 3.1 multi \\ \midrule
-Accuracy on answerable questions & 58\% (42/72) & \textbf{81\% (58/72)} & 53\% (38/72) \\
+Accuracy on answerable questions & 58\% (42/72) & \textbf{79\% (57/72)} & 50\% (36/72) \\
 Groundedness: cited document is a correct source & 64\% & \textbf{83\%} & 64\% \\
 Groundedness: cited document \emph{and page} correct & 58\% & \textbf{76\%} & 54\% \\
 Correct refusals, out-of-scope (refused and logged) & 100\% (12/12) & 100\% (12/12) & 100\% (12/12) \\
@@ -53,7 +60,7 @@ Correct ``data not published'' handling & 67\% (4/6) & \textbf{100\% (6/6)} & 10
 False refusals on answerable questions & 28\% & \textbf{8\%} & 12\% \\
 Answers with a fabricated URL & 0\% & 0\% & 1\% \\
 Routing accuracy & -- & 87\% & 88\% \\
-Questions whose outcome changed across runs & 10 & \textbf{3} & 17 \\
+Questions whose outcome changed across runs & 10 & \textbf{2} & 17 \\
 Median latency & 33 s & 40 s & 30 s \\
 \bottomrule
 \end{tabularx}
@@ -61,16 +68,16 @@ Median latency & 33 s & 40 s & 30 s \\
 \medskip
 \noindent\textbf{Key findings.}
 \begin{enumerate}
-  \item \textbf{Specialisation pays off.} The multi-agent system beats the single agent by 23 points
-        (81\% vs.\ 58\%), with far fewer false refusals and more stable answers. Each specialist sees few tools
+  \item \textbf{Specialisation pays off.} The multi-agent system beats the single agent by 21 points
+        (79\% vs.\ 58\%), with far fewer false refusals and more stable answers. Each specialist sees few tools
         and a short prompt. Its weaknesses are misroutes (87\% routing accuracy) and misreading tables.
   \item \textbf{Tool-first guards are the most important design element.} In the first version, the 8B model
         often answered from memory and invented facts and source URLs (52\% accuracy, 17\% fabricated URLs).
         Callbacks that force a tool call before any answer removed fabricated URLs in the Qwen systems.
   \item \textbf{Swapping the LLM matters as much as the architecture.} With the same multi-agent system,
-        Llama~3.1~8B scored 28 points lower than Qwen3~8B. Its email agent got the right instructor email from
+        Llama~3.1~8B scored 29 points lower than Qwen3~8B. Its email agent got the right instructor email from
         the tool and then said it could not find it, or drafted emails without the draft tool. Its answers
-        changed between runs on 17 of 30 questions, against 3 for Qwen.
+        changed between runs on 17 of 30 questions, against 2 for Qwen.
   \item \textbf{Out-of-scope handling is reliable.} All three systems refused all 12 out-of-scope attempts and
         logged each one.
 \end{enumerate}
@@ -242,10 +249,11 @@ Out of scope & 4 & dining and travel (assignment examples), placements, campus W
       \item \emph{fabricated URL}: a URL that is none of the scraped sources or pages;
       \item \emph{routing accuracy} and \emph{run-to-run consistency}.
     \end{itemize}
+  \item \textbf{Reference answers:} every expected answer is quoted from an official IIT Jodhpur document and taken as true. Two rulings were needed on 2026-10-30. P01: the circular of 08-07-2024 (D08) delinks examination performance from attendance, so there is no attendance requirement to sit the exam. P08: the detailed calendar (D11, p.~8, row 79) gives 19--26 November 2026 for the Semester~I Major exam. \code{eval/check\_sources.py} confirmed that the key facts of 21 of 22 sourced answerable questions occur on the cited page (the 22nd, S07, matches the ERP catalogue row). This is a consistency check against the sources, not an independent human review.
   \item \textbf{Manual review:} every answer to an in-scope or ``not published'' question (234 of 270) was read
         against its expected answer; out-of-scope answers were checked through the refusal text and the log entry.
-        14 automatic grades were overridden, with reasons recorded in \code{eval/apply\_manual\_grades.py}. These
-        were answers that contain ``75\%'' but present the superseded C-grade attendance rule as current, correct
+        17 automatic grades were overridden, with reasons recorded in \code{eval/apply\_manual\_grades.py}. These
+        were answers that contain ``75\%'' but present the superseded C-grade attendance rule as current, or make 75\% a condition for sitting the exam (P01), correct
         ``no published slot'' answers in wording the pattern missed, and an email ID given with the wrong semester.
 \end{itemize}
 
@@ -258,7 +266,7 @@ Out of scope & 4 & dining and travel (assignment examples), placements, campus W
 Version & Change & Single-agent accuracy & Fabricated URLs \\ \midrule
 v1 & base system, no guard & 52\% (1 run) & 17\% \\
 v2 & + retrieve-first guard, course-code parsing fix, minimum of 3 passages & 74\% (3 runs) & 0\% \\
-v3 (final) & + all-scraped data (ERP catalogue, faculty teaching pages, office orders), strict guards for specialists, email-lookup guard, name matching & 58\% single / \textbf{81\% multi} & 0\% \\
+v3 (final) & + all-scraped data (ERP catalogue, faculty teaching pages, office orders), strict guards for specialists, email-lookup guard, name matching & 58\% single / \textbf{79\% multi} & 0\% \\
 \bottomrule
 \end{tabularx}
 
@@ -268,7 +276,7 @@ v3 (final) & + all-scraped data (ERP catalogue, faculty teaching pages, office o
   \item \textbf{v1 failure mode:} the 8B model answered from memory, e.g.\ ``Major exam December 1--15, 2026'',
         citing a non-existent PDF. The guard removed this failure.
   \item \textbf{v3, single agent:} the strict guards and richer data helped the multi-agent system (v2 $\rightarrow$
-        v3: 75\% $\rightarrow$ 81\%). The single agent's accuracy fell, because its longer prompt and seven tools
+        v3: 75\% $\rightarrow$ 79\%). The single agent's accuracy fell, because its longer prompt and seven tools
         led to more refusals \emph{without any tool call} (28\% false refusals, on P03, P07, P12, P14, P16, P17 and
         S06). Its lenient guard deliberately lets refusals through.
 \end{itemize}
@@ -277,11 +285,11 @@ v3 (final) & + all-scraped data (ERP catalogue, faculty teaching pages, office o
 \begin{tabular}{@{}lcc@{}}
 \toprule
 Category & Single & Multi \\ \midrule
-Policy (14 $\times$ 3) & 43\% & \textbf{67\%} \\
+Policy (14 $\times$ 3) & 43\% & \textbf{64\%} \\
 Schedule (7 $\times$ 3) & 76\% & \textbf{100\%} \\
 Email (5 $\times$ 3) & 80\% & \textbf{100\%} \\
 Out of scope (4 $\times$ 3) & 100\% & 100\% \\
-\textbf{Answerable overall} & 58\% & \textbf{81\%} \\
+\textbf{Answerable overall} & 58\% & \textbf{79\%} \\
 \bottomrule
 \end{tabular}
 
@@ -293,8 +301,10 @@ Out of scope (4 $\times$ 3) & 100\% & 100\% \\
       \item The email agent always used \code{draft\_email}. The single agent wrote E04 as plain text without the
             instructor's address, 3/3.
     \end{itemize}
-  \item \textbf{Superseded rules.} The policy agent reported the revised 2024 attendance rule in 1 of 3 runs; the
-        single agent presented the superseded rule in all 3.
+  \item \textbf{Superseded rules.} (P01) The multi-agent policy agent gave only the revised 2024 rule in run~2 and mixed in the superseded
+        C-grade rule in runs 1 and 3; the single agent presented the superseded rule in all 3. All 6 answers are graded
+        wrong: every one gives 75\% as the requirement to sit the exam, while the circular delinks exam performance
+        from attendance.
   \item \textbf{Costs of the multi-agent system:}
     \begin{itemize}
       \item \emph{Routing} (87\%): P04 (``whom to apply to for a make-up exam'') went to the email agent, P13 and
@@ -309,13 +319,13 @@ Out of scope (4 $\times$ 3) & 100\% & 100\% \\
 \begin{tabular}{@{}lcc@{}}
 \toprule
 Category & Qwen3 8B & Llama 3.1 8B \\ \midrule
-Policy & \textbf{67\%} & 60\% \\
+Policy & \textbf{64\%} & 55\% \\
 Schedule & \textbf{100\%} & 86\% \\
 Email & \textbf{100\%} & 7\% \\
 Out of scope & 100\% & 100\% \\
-Answerable overall & \textbf{81\%} & 53\% \\
+Answerable overall & \textbf{79\%} & 50\% \\
 Groundedness (document / page) & \textbf{83\% / 76\%} & 64\% / 54\% \\
-Changed across runs & \textbf{3} & 17 \\
+Changed across runs & \textbf{2} & 17 \\
 Median latency & 40 s & \textbf{30 s} \\
 \bottomrule
 \end{tabular}
@@ -357,7 +367,7 @@ Median latency & 40 s & \textbf{30 s} \\
 \begin{tabularx}{\textwidth}{@{}lp{4.6cm}Y@{}}
 \toprule
 System & Questions whose outcome changed & What varied \\ \midrule
-Qwen3 multi & P01, P02, P10 & P01: the revised rule in run 2 only. P02 and P10: only the cited documents changed (D01/D05/D10/D16/D20 contain the same clause or table) \\
+Qwen3 multi & P02, P10 & P02 and P10: only the cited documents changed (D01/D05/D10/D16/D20 contain the same clause or table) \\
 Qwen3 single & P01, P02, P04, P05, P08, P10, P12, P14, S01, S02 & P12, P14: correct answer vs.\ refusal. P02: run 1 gave no OE number. S02: the caveat appeared only in run 3. P08: wrong date vs.\ refusal. Others: cited documents \\
 Llama 3.1 multi & E01--E05, P01, P02, P04, P05, P08, P13, P15, P16, S02, S03, S06, S07 & Routing varied (S07 and P16 went to different agents in different runs), refusals varied (E04, E05, P05), and tool use varied \\
 \bottomrule
@@ -374,7 +384,7 @@ scope) and P04 (misrouted).
   \item \textbf{Table misreading (P08, all systems).} The calendar PDF flattens into rows where ``4--6 January 2027'',
         ``10--13 July 2027'' and ``19--26 November 2026'' sit side by side, and the models pick the wrong column.
   \item \textbf{Superseded rules (P01).} D01 and the ``existing policy'' paragraph in D08 both state the old C-grade
-        rule; the models often merge it with the revised rule.
+        rule. The models merge it with the revised rule, and even when they quote the revised rule they say that 75\% is the requirement to sit the exam. The reference answer (ruled from the official circular D08) is that there is no attendance requirement to sit the exam: examination performance ``is no longer linked to their course attendance''; 75\% is only the level attendance should not fall below. No run of any system said this, so P01 is wrong in all 9 runs.
   \item \textbf{Surface-word routing (P04).} ``Apply \ldots{} permission'' sends the question to the email agent.
   \item \textbf{Refusal without trying.} This is the single agent's main failure: the lenient guard lets refusals
         through. In one Llama run the strict guard was bypassed because calling \code{log\_unanswered} counted as
@@ -410,7 +420,7 @@ scope) and P04 (misrouted).
 %=====================================================================
 \section{Reproducing the results}
 \begin{lstlisting}
-# the scraped data is already in data/ (collection scripts removed for the hand-over; see README, section 5.3)
+# the collected data is already in data/ (README, section 5.3, describes how it was collected)
 python scripts/build_structured.py && python scripts/ingest.py
 python eval/build_questions.py
 python eval/run_eval.py --system both --runs 3
@@ -426,7 +436,7 @@ done
         arguments and results, answering agent, latency;
   \item \code{scores\_*.csv}, \code{grades\_*.csv} (manual review) and \code{summary\_*.md};
   \item \code{*\_v1-*} and \code{*\_v2-*}: the earlier iterations;
-  \item \code{logs/unanswered.jsonl}: the human hand-off log.
+  \item \code{logs/unanswered.jsonl}: the log of questions for a human to answer.
 \end{itemize}
 
 \end{document}

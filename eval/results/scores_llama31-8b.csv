@@ -8,7 +8,7 @@ multi,1,O01,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,11.24,,0,,1,1
 multi,1,O02,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,9.4,,0,,1,1
 multi,1,O03,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,6.52,,0,,1,1
 multi,1,O04,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,14.88,,0,,1,1
-multi,1,P01,policy,answer,0,0,0,1,1,1,1,policy_agent,68.28,D08,0,,1,1
+multi,1,P01,policy,answer,0,0,0,1,1,1,1,policy_agent,68.28,D08,0,,0,1
 multi,1,P02,policy,answer,1,0,0,1,0,1,1,policy_agent,79.9,D10 D16 D20,0,,1,1
 multi,1,P03,policy,answer,1,0,0,1,1,1,1,policy_agent,38.07,D01 D05,0,,1,1
 multi,1,P04,policy,answer,1,0,0,1,1,1,1,policy_agent,38.64,D01 D05,0,,1,1
@@ -38,7 +38,7 @@ multi,2,O01,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,7.08,,0,,1,1
 multi,2,O02,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,12.38,,0,,1,1
 multi,2,O03,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,8.34,,0,,1,1
 multi,2,O04,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,8.04,,0,,1,1
-multi,2,P01,policy,answer,1,0,0,1,1,1,1,policy_agent,63.34,D01 D05 D08,0,,1,1
+multi,2,P01,policy,answer,0,0,0,1,1,1,1,policy_agent,63.34,D01 D05 D08,0,,0,1
 multi,2,P02,policy,answer,0,0,0,0,0,1,1,policy_agent,62.63,D10,0,,0,1
 multi,2,P03,policy,answer,1,0,0,1,1,1,1,policy_agent,40.64,D01 D05,0,,1,1
 multi,2,P04,policy,answer,0,0,0,0,0,0,0,email_agent,23.18,,0,,0,1
@@ -68,7 +68,7 @@ multi,3,O01,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,9.64,,0,,1,1
 multi,3,O02,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,9.16,,0,,1,1
 multi,3,O03,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,8.24,,0,,1,1
 multi,3,O04,out_of_scope,refuse,1,1,1,,,,1,helpdesk_orchestrator,6.47,,0,,1,1
-multi,3,P01,policy,answer,1,0,0,1,1,1,1,policy_agent,47.61,D08,0,,1,1
+multi,3,P01,policy,answer,0,0,0,1,1,1,1,policy_agent,47.61,D08,0,,0,1
 multi,3,P02,policy,answer,1,0,0,0,0,1,1,policy_agent,38.81,D10,0,,1,1
 multi,3,P03,policy,answer,1,0,0,1,1,1,1,policy_agent,41.25,D01 D05,0,,1,1
 multi,3,P04,policy,answer,0,0,0,0,0,0,0,email_agent,22.81,,0,,0,1

@@ -17,6 +17,9 @@ REVIEWER = "reviewer: Claude (to be checked by student)"
 
 SUPERSEDED = ("States 75% but presents the superseded rule (below 75% must score at least a C grade) as "
               "current; the 08-07-2024 circular (D08) delinks examination performance from attendance.")
+NOT_DELINKED = ("Makes 75% a condition for sitting the exam and/or presents the superseded C-grade rule as current; "
+                "the 08-07-2024 circular (D08) says exam performance is no longer linked to attendance "
+                "(reference ruled 2026-10-30 from the official text).")
 NO_SLOT_OK = "Says the course has no published slot for the current semester: correct 'no data' handling."
 NO_DATA_OK = "Says the documents do not contain this semester's offerings: correct 'no data' handling."
 
@@ -30,15 +33,14 @@ OVERRIDES = {
     },
     # final system (v3)
     "qwen3-8b": {
-        ("single", None, "P01"): (0, SUPERSEDED),
-        ("multi", 1, "P01"): (0, SUPERSEDED),
-        ("multi", 3, "P01"): (0, SUPERSEDED),
+        ("single", None, "P01"): (0, NOT_DELINKED),
+        ("multi", None, "P01"): (0, NOT_DELINKED),
         ("single", 1, "S01"): (1, NO_SLOT_OK),
         ("single", 2, "S01"): (1, NO_SLOT_OK),
         ("multi", None, "S01"): (1, NO_SLOT_OK),
     },
     "llama31-8b": {
-        ("multi", 1, "P01"): (0, SUPERSEDED),
+        ("multi", None, "P01"): (0, NOT_DELINKED),
         ("multi", 1, "S02"): (1, NO_DATA_OK),
         ("multi", 3, "S02"): (1, NO_DATA_OK),
         ("multi", 1, "E03"): (0, "Email ID correct but states it refers to the current semester (AY 2026-27); "

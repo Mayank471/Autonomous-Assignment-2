@@ -5,7 +5,7 @@
 | Metric | Value |
 |---|---|
 | Accuracy, answerable questions | 58% (42/72) |
-| Accuracy, answerable questions (automatic key-fact check only) | 62% (45/72) |
+| Accuracy, answerable questions (automatic key-fact check only) | 58% (42/72) |
 | Items manually graded | 90/90 |
 | Groundedness, cited doc matches source | 64% (46/72) |
 | Groundedness, cited doc+page matches | 58% (42/72) |
@@ -66,8 +66,8 @@ Questions whose outcome changed across runs: P01, P02, P04, P05, P08, P10, P12, 
 
 | Metric | Value |
 |---|---|
-| Accuracy, answerable questions | 81% (58/72) |
-| Accuracy, answerable questions (automatic key-fact check only) | 83% (60/72) |
+| Accuracy, answerable questions | 79% (57/72) |
+| Accuracy, answerable questions (automatic key-fact check only) | 79% (57/72) |
 | Items manually graded | 90/90 |
 | Groundedness, cited doc matches source | 83% (60/72) |
 | Groundedness, cited doc+page matches | 76% (55/72) |
@@ -83,7 +83,7 @@ Questions whose outcome changed across runs: P01, P02, P04, P05, P08, P10, P12, 
 
 | Category | Accuracy |
 |---|---|
-| policy | 67% (28/42) |
+| policy | 64% (27/42) |
 | schedule | 100% (21/21) |
 | email | 100% (15/15) |
 | out_of_scope | 100% (12/12) |
@@ -101,7 +101,7 @@ Questions whose outcome changed across runs: P01, P02, P04, P05, P08, P10, P12, 
 | O02 | 1 1 1 | 1 1 1 | - / - / - | 0.66 |  |
 | O03 | 1 1 1 | 1 1 1 | - / - / - | 1.00 |  |
 | O04 | 1 1 1 | 1 1 1 | - / - / - | 1.00 |  |
-| P01 | 0 1 0 | 0 0 0 | D01 D08 / D01 D08 / D01 D08 | 0.80 | YES |
+| P01 | 0 0 0 | 0 0 0 | D01 D08 / D01 D08 / D01 D08 | 0.80 |  |
 | P02 | 1 1 1 | 0 0 0 | D01 D10 D16 / D16 D20 / D10 D16 D20 | 0.54 | YES |
 | P03 | 1 1 1 | 0 0 0 | D01 / D01 / D01 | 1.00 |  |
 | P04 | 0 0 0 | 1 1 1 | - / - / - | 0.96 |  |
@@ -123,4 +123,4 @@ Questions whose outcome changed across runs: P01, P02, P04, P05, P08, P10, P12, 
 | S07 | 1 1 1 | 0 0 0 | D29 / D29 / D29 | 1.00 |  |
 | S08 | 1 1 1 | 0 0 0 | - / - / - | 0.91 |  |
 
-Questions whose outcome changed across runs: P01, P02, P10
+Questions whose outcome changed across runs: P02, P10

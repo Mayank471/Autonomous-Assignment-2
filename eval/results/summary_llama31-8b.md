@@ -4,8 +4,8 @@
 
 | Metric | Value |
 |---|---|
-| Accuracy, answerable questions | 53% (38/72) |
-| Accuracy, answerable questions (automatic key-fact check only) | 56% (40/72) |
+| Accuracy, answerable questions | 50% (36/72) |
+| Accuracy, answerable questions (automatic key-fact check only) | 51% (37/72) |
 | Items manually graded | 90/90 |
 | Groundedness, cited doc matches source | 64% (46/72) |
 | Groundedness, cited doc+page matches | 54% (39/72) |
@@ -21,7 +21,7 @@
 
 | Category | Accuracy |
 |---|---|
-| policy | 60% (25/42) |
+| policy | 55% (23/42) |
 | schedule | 86% (18/21) |
 | email | 7% (1/15) |
 | out_of_scope | 100% (12/12) |
@@ -39,7 +39,7 @@
 | O02 | 1 1 1 | 1 1 1 | - / - / - | 0.56 |  |
 | O03 | 1 1 1 | 1 1 1 | - / - / - | 0.68 |  |
 | O04 | 1 1 1 | 1 1 1 | - / - / - | 0.40 |  |
-| P01 | 0 1 1 | 0 0 0 | D08 / D01 D05 D08 / D08 | 0.47 | YES |
+| P01 | 0 0 0 | 0 0 0 | D08 / D01 D05 D08 / D08 | 0.47 | YES |
 | P02 | 1 0 1 | 0 0 0 | D10 D16 D20 / D10 / D10 | 0.29 | YES |
 | P03 | 1 1 1 | 0 0 0 | D01 D05 / D01 D05 / D01 D05 | 0.94 |  |
 | P04 | 1 0 0 | 0 0 0 | D01 D05 / - / - | 0.29 | YES |

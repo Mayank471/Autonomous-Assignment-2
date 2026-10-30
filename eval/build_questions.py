@@ -4,7 +4,8 @@ Every expected answer is quoted from a collected document (doc_id + page) or fro
 structured-table row whose source_doc_id is given. Nothing is invented.
 key_facts: facts separated by ';' must all appear; alternatives within a fact are separated by '|'.
 sources: acceptable citations as doc_id or doc_id:page, separated by '|'.
-`verified` is left blank for the human reviewer.
+`verified`: blank = not checked; "official source" = reference ruled directly from the official document;
+"source-check" = key facts found in the cited page by eval/check_sources.py (no human review).
 """
 import csv
 from pathlib import Path
@@ -15,11 +16,15 @@ F = ["id", "question", "category", "expected_route", "expected_behavior", "expec
 Q = [
     # ---------------------------------------------------------------- policy
     ("P01", "What is the attendance requirement to sit in the Major exam?", "policy", "policy_agent", "answer",
-     "Revised policy (Circular 08-07-2024): \"students' examination performance is no longer linked to their course "
-     "attendance ... In any case, the attendance of a student should not fall below 75% in a course.\"",
-     "75%", "D08:1",
-     "Assignment example. D01 p.7 states the superseded policy (below 75% must score at least C); "
-     "an answer presenting that as current is inaccurate.", ""),
+     "There is no attendance requirement to sit the Major exam. Circular 08-07-2024: \"students' examination performance "
+     "is no longer linked to their course attendance\"; the student is still expected to have full attendance and \"in any "
+     "case, the attendance of a student should not fall below 75% in a course\" (below 75% without a valid reason, the "
+     "instructor can recommend de-registration from the course).",
+     "no longer linked|not linked|not dependent|independent of", "D08:1",
+     "Assignment example. Ruling (2026-10-30, taking the official circular as true): the revised policy delinks exam "
+     "performance from attendance and supersedes the earlier policy \"in totality\", so an answer that makes 75% a "
+     "condition for sitting the exam, or presents the old rule (below 75% must score at least C) as current, is wrong.",
+     "official source"),
     ("P02", "How many Open Elective credits do I need to earn in order to get a B.Tech. Degree?", "policy",
      "policy_agent", "answer",
      "Regulations (July 2019 onwards), Table 11.2: Open Electives (OE) = 10 for B.Tech. Regular (0 for B.Tech. with "
@@ -51,7 +56,10 @@ Q = [
      "3 hours|three hours|3-hour;40%", "D09:1", "", ""),
     ("P08", "When is the Major Examination for Semester I of the academic year 2026-27?", "policy", "policy_agent",
      "answer", "MAJOR Examination, Semester I (2026-27): \"19-26 November 2026, Thu- Thu\"",
-     "19;26 November 2026|26th November 2026|November 26, 2026", "D11:2", "", ""),
+     "19;26 November 2026|26th November 2026|November 26, 2026", "D11:2|D11:8",
+     "Ruling (2026-10-30, taking the official calendar as true): page 2 labels the row \"MAJOR Examination (Fractal 3 and "
+     "M.Tech. working professional)\", but the detailed schedule (page 8, row 79) lists \"Major Semester Examination, "
+     "19-26 Nov 2026\" for Semester I without that qualifier, so the dates apply to Semester I.", "official source"),
     ("P10", "How many grade points does a B- grade carry?", "policy", "policy_agent", "answer",
      "Table 5.1 Letter grade and its equivalent grade points: \"B- 7 Good\"", "7", "D01:8|D05:10", "", ""),
     ("P12", "How many total credits are required for the award of the B.Tech. in Computer Science and Engineering "
@@ -111,7 +119,7 @@ Q = [
     ("S07", "How many credits is the course CSL7570 and what is its L-T-P structure?", "schedule",
      "schedule_agent|policy_agent", "answer",
      "ERP catalogue (D29): CSL7570 Introduction to Augmented Reality and Virtual Reality, L-T-P 3-0-0, 3 credits.",
-     "3-0-0|3 lecture;3 credits|credits: 3|3-credit", "D29", "", ""),
+     "3-0-0|3 lecture;3 credits|credits: 3|3-credit", "D29", "", "official source"),
     ("S08", "According to the available records, who most recently taught the course Autonomous Systems (CSL7650) and in which semester?",
      "schedule", "schedule_agent", "answer",
      "Faculty page of Rajendra Nagar (D30): \"CSL7650: Autonomous Systems, Semester II, 2022-2023\".",
